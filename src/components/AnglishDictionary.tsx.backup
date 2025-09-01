@@ -1,0 +1,524 @@
+import React, { useState, useMemo } from 'react';
+import { Search, BookOpen, Globe2, Languages, Zap, Crown } from 'lucide-react';
+
+const AnglishWordbook = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const wordEntries = [
+    {
+      word: "Alternative",
+      origin: "Latin alternativus, from alternare (to alternate), from alter (other, second)",
+      anglish: ["Other-choice", "Switchway", "Elseway", "Otherway"],
+      category: "general"
+    },
+    {
+      word: "Choice",
+      origin: "Old French chois, from choisir (to choose), ultimately from Gothic kausjan (to test, taste)",
+      anglish: ["Pick", "Wale", "Choosing"],
+      category: "general"
+    },
+    {
+      word: "Other",
+      origin: "Old English ōþer, from Proto-Germanic anþeraz",
+      anglish: ["Already Anglish!"],
+      category: "authentic",
+      isAuthentic: true
+    },
+    {
+      word: "Mathematics",
+      origin: "Latin mathematica, from Greek mathēmatikē (mathematical art)",
+      anglish: ["Rimecraft", "Telcraft", "Numbercraft"],
+      category: "academic"
+    },
+    {
+      word: "Mathematician",
+      origin: "Latin mathematicus, from Greek mathēmatikos (fond of learning)",
+      anglish: ["Rimecrafter", "Telcrafter", "Numberwright"],
+      category: "academic"
+    },
+    {
+      word: "Accountant",
+      origin: "Old French aconter (to count), from Latin computare (to calculate)",
+      anglish: ["Reckoner", "Teller", "Bookkeeper"],
+      category: "professional"
+    },
+    {
+      word: "Engineer",
+      origin: "Old French engigneor, from engin (skill, cleverness, war machine)",
+      anglish: ["Craftwright", "Buildwright", "Builder"],
+      category: "professional"
+    },
+    {
+      word: "Code",
+      origin: "Old French code, from Latin codex (book, manuscript)",
+      anglish: ["Writ", "Rune", "Token"],
+      category: "technical"
+    },
+    {
+      word: "Computer",
+      origin: "Latin computare (to calculate, reckon)",
+      anglish: ["Reckoner", "Thinkbox", "Reckenbox"],
+      category: "technical"
+    },
+    {
+      word: "Machine",
+      origin: "Old French machine, from Latin machina, from Greek mēkhanē",
+      anglish: ["Gear", "Tool", "Workstead"],
+      category: "technical"
+    },
+    {
+      word: "Electricity",
+      origin: "New Latin electricus, from Greek ēlektron (amber)",
+      anglish: ["Sparkcraft", "Levinfire", "Gleedfire"],
+      category: "technical"
+    },
+    {
+      word: "System",
+      origin: "Late Latin systema, from Greek systēma (organized whole)",
+      anglish: ["Setup", "Framework", "Workset"],
+      category: "technical"
+    },
+    {
+      word: "Digital",
+      origin: "Latin digitalis, from digitus (finger, toe)",
+      anglish: ["Runewise", "Tokenwise", "Stepwise"],
+      category: "technical"
+    },
+    {
+      word: "Binary",
+      origin: "Latin binarius (consisting of two), from bini (two each)",
+      anglish: ["Twowise", "Yea-nay", "On-off"],
+      category: "technical"
+    },
+    {
+      word: "Artificial",
+      origin: "Latin artificialis, from artificium (skill, handicraft)",
+      anglish: ["Wrought", "Aftermade", "Craftmade"],
+      category: "general"
+    },
+    {
+      word: "New",
+      origin: "Old English nīwe, from Proto-Germanic neujaz",
+      anglish: ["Already Anglish!"],
+      category: "authentic",
+      isAuthentic: true
+    },
+    {
+      word: "Copper",
+      origin: "Old English coper, from Late Latin cuprum",
+      anglish: ["Redmetal", "Sparkwire", "Redwire"],
+      category: "materials"
+    },
+    {
+      word: "Silver",
+      origin: "Old English seolfor, from Proto-Germanic silubra",
+      anglish: ["Already Anglish!"],
+      category: "authentic",
+      isAuthentic: true
+    },
+    {
+      word: "Gold",
+      origin: "Old English gold, from Proto-Germanic gulþą",
+      anglish: ["Already Anglish!"],
+      category: "authentic",
+      isAuthentic: true
+    },
+    {
+      word: "Aluminum",
+      origin: "Latin alumen (alum)",
+      anglish: ["Lightiron", "Thinriron", "Swiftiron"],
+      category: "materials"
+    },
+    {
+      word: "Titanium",
+      origin: "Latin Titan (Greek mythological giants)",
+      anglish: ["Strongiron", "Lightiron", "Skyiron"],
+      category: "materials"
+    },
+    // New Albion Constructed Terms
+    {
+      word: "Software Developer",
+      origin: "Software: Old English sōfte + waru; Developer: Old French desveloper",
+      anglish: ["Runewright", "Software wright", "Codewright"],
+      category: "newalbion",
+      isConstructed: true
+    },
+    {
+      word: "Computer",
+      origin: "Latin computare (to calculate, reckon)",
+      anglish: ["Reckoner", "Thinkgear", "Reckenbox"],
+      category: "newalbion",
+      isConstructed: true
+    },
+    {
+      word: "Processor/CPU",
+      origin: "Latin processus; Central Processing Unit",
+      anglish: ["Reckon gem"],
+      category: "newalbion",
+      isConstructed: true
+    },
+    {
+      word: "Data Storage",
+      origin: "Latin data + Old French estorage",
+      anglish: ["Runeblock"],
+      category: "newalbion",
+      isConstructed: true
+    },
+    {
+      word: "Binary Code",
+      origin: "Latin binarius (two each)",
+      anglish: ["Reckon ticks"],
+      category: "newalbion",
+      isConstructed: true
+    },
+    {
+      word: "Electricity",
+      origin: "New Latin electricus, from Greek ēlektron (amber)",
+      anglish: ["Sparkcraft"],
+      category: "newalbion",
+      isConstructed: true
+    },
+    {
+      word: "Electrical Wire",
+      origin: "Greek ēlektron + Old English wīr",
+      anglish: ["Sparkways"],
+      category: "newalbion",
+      isConstructed: true
+    },
+    {
+      word: "Electrical Circuit",
+      origin: "Greek ēlektron + Latin circuitus (going around)",
+      anglish: ["Sparkcircles"],
+      category: "newalbion",
+      isConstructed: true
+    },
+    {
+      word: "Battery",
+      origin: "French batterie (beating, striking)",
+      anglish: ["Sparkkeeper"],
+      category: "newalbion",
+      isConstructed: true
+    },
+    {
+      word: "Capacitor",
+      origin: "Latin capax (able to hold)",
+      anglish: ["Sparkstone"],
+      category: "newalbion",
+      isConstructed: true
+    },
+    {
+      word: "Metal Ore",
+      origin: "Various origins for metal names + Old English ōra",
+      anglish: ["Ironstone", "Grey ironstone", "Red ironstone"],
+      category: "newalbion",
+      isConstructed: true
+    },
+    {
+      word: "Copper",
+      origin: "Old English coper, from Late Latin cuprum",
+      anglish: ["Red iron"],
+      category: "newalbion",
+      isConstructed: true
+    },
+    {
+      word: "Aluminum",
+      origin: "Latin alumen (alum)",
+      anglish: ["Swift iron"],
+      category: "newalbion",
+      isConstructed: true
+    },
+    {
+      word: "Steel",
+      origin: "Old English stēle",
+      anglish: ["Strongiron"],
+      category: "newalbion",
+      isConstructed: true
+    },
+    {
+      word: "Tin",
+      origin: "Old English tin",
+      anglish: ["Softiron"],
+      category: "newalbion",
+      isConstructed: true
+    },
+    {
+      word: "Bronze",
+      origin: "French bronze, from Italian bronzo",
+      anglish: ["Redsoft iron"],
+      category: "newalbion",
+      isConstructed: true
+    },
+    {
+      word: "Brass",
+      origin: "Old English bræs",
+      anglish: ["Redwhite iron"],
+      category: "newalbion",
+      isConstructed: true
+    },
+    {
+      word: "Conductive Metals",
+      origin: "Latin conducere + metallum",
+      anglish: ["Sparkiron"],
+      category: "newalbion",
+      isConstructed: true
+    },
+    {
+      word: "Magnet",
+      origin: "Latin magnes, from Greek Magnesia",
+      anglish: ["Lodestone", "Lodeblock"],
+      category: "newalbion",
+      isConstructed: true
+    },
+    {
+      word: "Magnetic Field",
+      origin: "Greek magnētikos + Old English feld",
+      anglish: ["Lodefield", "Ironreach"],
+      category: "newalbion",
+      isConstructed: true
+    },
+    {
+      word: "Electromagnetic",
+      origin: "Greek ēlektron + magnētikos",
+      anglish: ["Sparklodestone", "Sparklodefield"],
+      category: "newalbion",
+      isConstructed: true
+    },
+    {
+      word: "Power Armor",
+      origin: "Old French pooir + Latin armatura",
+      anglish: ["Wardplate"],
+      category: "newalbion",
+      isConstructed: true
+    },
+    {
+      word: "Energy Sword",
+      origin: "Greek energeia + Old English sweord",
+      anglish: ["Glowbrand"],
+      category: "newalbion",
+      isConstructed: true
+    }
+  ];
+
+  const categories = [
+    { value: 'all', label: 'All Categories' },
+    { value: 'authentic', label: 'Already Anglish' },
+    { value: 'general', label: 'General Terms' },
+    { value: 'academic', label: 'Academic' },
+    { value: 'professional', label: 'Professions' },
+    { value: 'technical', label: 'Technical' },
+    { value: 'materials', label: 'Materials' },
+    { value: 'newalbion', label: 'New Albion Terms' }
+  ];
+
+  const filteredWords = useMemo(() => {
+    return wordEntries.filter(entry => {
+      const matchesSearch = entry.word.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                          entry.anglish.some(alt => alt.toLowerCase().includes(searchTerm.toLowerCase()));
+      const matchesCategory = selectedCategory === 'all' || entry.category === selectedCategory;
+      return matchesSearch && matchesCategory;
+    });
+  }, [searchTerm, selectedCategory]);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-purple-950 via-indigo-950 to-teal-950 relative overflow-hidden">
+      {/* Holographic Background Effects */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-20 left-20 w-96 h-96 bg-teal-400 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-400 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-400 rounded-full blur-3xl animate-pulse delay-2000"></div>
+      </div>
+
+      {/* Grid Pattern Overlay */}
+      <div className="absolute inset-0 opacity-10" 
+           style={{
+             backgroundImage: `
+               linear-gradient(rgba(148, 163, 184, 0.1) 1px, transparent 1px),
+               linear-gradient(90deg, rgba(148, 163, 184, 0.1) 1px, transparent 1px)
+             `,
+             backgroundSize: '20px 20px'
+           }}>
+      </div>
+
+      {/* Scanning Lines Effect */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute w-full h-1 bg-gradient-to-r from-transparent via-teal-400 to-transparent opacity-30 animate-pulse"
+             style={{ top: '20%', animation: 'scan 4s linear infinite' }}></div>
+        <div className="absolute w-full h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent opacity-30 animate-pulse"
+             style={{ top: '60%', animation: 'scan 6s linear infinite reverse' }}></div>
+      </div>
+
+      <style jsx>{`
+        @keyframes scan {
+          0% { transform: translateY(-100vh); }
+          100% { transform: translateY(100vh); }
+        }
+      `}</style>
+
+      <div className="relative z-10 max-w-7xl mx-auto p-8">
+        {/* Main Container with Holographic Border */}
+        <div className="bg-gradient-to-br from-slate-900/90 via-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-2xl border border-teal-400/30 shadow-2xl shadow-purple-500/20 p-8 relative overflow-hidden">
+          
+          {/* Inner Glow Effect */}
+          <div className="absolute inset-0 bg-gradient-to-br from-teal-400/5 via-purple-400/5 to-cyan-400/5 rounded-2xl"></div>
+          
+          {/* Decorative Corner Elements */}
+          <div className="absolute top-4 left-4 w-8 h-8 border-l-2 border-t-2 border-teal-400/60"></div>
+          <div className="absolute top-4 right-4 w-8 h-8 border-r-2 border-t-2 border-purple-400/60"></div>
+          <div className="absolute bottom-4 left-4 w-8 h-8 border-l-2 border-b-2 border-purple-400/60"></div>
+          <div className="absolute bottom-4 right-4 w-8 h-8 border-r-2 border-b-2 border-teal-400/60"></div>
+
+          <div className="relative z-10">
+            {/* Header */}
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center gap-4 mb-6">
+                <Crown className="w-10 h-10 text-teal-300" />
+                <div className="relative">
+                  <h1 className="text-5xl font-bold bg-gradient-to-r from-teal-300 via-purple-300 to-cyan-300 bg-clip-text text-transparent tracking-wide">
+                    𝔄𝔫𝔤𝔩𝔦𝔰𝔥 𝔚𝔬𝔯𝔡𝔟𝔬𝔬𝔨
+                  </h1>
+                  <div className="absolute -inset-2 bg-gradient-to-r from-teal-400/20 to-purple-400/20 blur-xl rounded-lg"></div>
+                </div>
+                <Zap className="w-10 h-10 text-purple-300" />
+              </div>
+              <div className="text-teal-200 text-lg max-w-3xl mx-auto font-medium leading-relaxed">
+                ℌ𝔞𝔱𝔥 𝔥𝔢𝔯𝔢 𝔞 𝔠𝔬𝔪𝔭𝔢𝔫𝔡𝔦𝔞 𝔬𝔣 𝔞𝔫𝔦𝔢𝔫𝔱 𝔚𝔦𝔰𝔡𝔬𝔪 𝔞𝔫𝔡 ℌ𝔞𝔯𝔯𝔬𝔳𝔦𝔞𝔫 𝔞𝔯𝔱𝔦𝔦𝔦𝔠𝔢. 
+                𝔇𝔦𝔰𝔠𝔬𝔳𝔢𝔯 𝔱𝔥𝔢 𝔱𝔯𝔲𝔢 ℌ𝔦𝔫𝔞 ℑ𝔯𝔬𝔫 𝔞𝔩𝔞𝔱𝔦𝔳𝔢𝔰 𝔱𝔬 𝔳𝔞𝔪𝔦𝔯𝔦𝔤 𝔴𝔬𝔯𝔡𝔰.
+              </div>
+              <div className="text-purple-200 text-base mt-2 italic">
+                ~ From the Archives of New Albion ~
+              </div>
+            </div>
+
+            {/* Search and Filter Controls */}
+            <div className="flex flex-col lg:flex-row gap-6 mb-10">
+              <div className="relative flex-1">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-teal-400" />
+                <input
+                  type="text"
+                  placeholder="𝔖𝔢𝔞𝔯𝔠𝔥 𝔞𝔪𝔦𝔡 𝔞𝔫𝔦𝔢𝔫𝔱 𝔯𝔲𝔫𝔢𝔰 & 𝔞𝔯𝔠𝔞𝔫𝔞..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-12 pr-4 py-4 bg-slate-800/80 border border-teal-400/40 rounded-xl text-teal-100 placeholder-teal-300/60 focus:ring-2 focus:ring-teal-400 focus:border-teal-400 backdrop-blur-sm transition-all duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-teal-400/10 to-purple-400/10 rounded-xl opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+              </div>
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="px-6 py-4 bg-slate-800/80 border border-purple-400/40 rounded-xl text-purple-100 focus:ring-2 focus:ring-purple-400 focus:border-purple-400 backdrop-blur-sm transition-all duration-300 cursor-pointer"
+              >
+                {categories.map(cat => (
+                  <option key={cat.value} value={cat.value} className="bg-slate-800">{cat.label}</option>
+                ))}
+              </select>
+            </div>
+
+            {/* Results Count */}
+            <div className="mb-8">
+              <p className="text-cyan-200 text-lg font-medium">
+                ✦ 𝔖𝔥𝔬𝔴𝔦𝔫𝔤 {filteredWords.length} 𝔬𝔣 {wordEntries.length} 𝔞𝔫𝔦𝔢𝔫𝔱 𝔦𝔫𝔰𝔞𝔦𝔦𝔦𝔦𝔳𝔬𝔦𝔰 ✦
+              </p>
+            </div>
+
+            {/* Word Entries Grid */}
+            <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+              {filteredWords.map((entry, index) => (
+                <div key={index} className={`p-6 rounded-xl border-2 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm relative overflow-hidden group ${
+                  entry.isAuthentic 
+                    ? 'bg-gradient-to-br from-emerald-900/60 to-green-800/60 border-emerald-400/50 hover:border-emerald-300 hover:shadow-xl hover:shadow-emerald-400/20' 
+                    : entry.isConstructed
+                      ? 'bg-gradient-to-br from-blue-900/60 to-indigo-800/60 border-blue-400/50 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-400/20'
+                      : 'bg-gradient-to-br from-slate-800/60 to-slate-700/60 border-amber-400/50 hover:border-amber-300 hover:shadow-xl hover:shadow-amber-400/20'
+                }`}>
+                  
+                  {/* Card Glow Effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+                  
+                  <div className="relative z-10">
+                    <div className="flex items-start justify-between mb-4">
+                      <h3 className="text-xl font-bold text-white drop-shadow-lg">{entry.word}</h3>
+                      {entry.isAuthentic ? (
+                        <span className="bg-emerald-400/20 text-emerald-200 text-xs px-3 py-1 rounded-full border border-emerald-400/40 backdrop-blur-sm">
+                          ⚜ Authentic ⚜
+                        </span>
+                      ) : entry.isConstructed ? (
+                        <span className="bg-blue-400/20 text-blue-200 text-xs px-3 py-1 rounded-full border border-blue-400/40 backdrop-blur-sm">
+                          ⚡ New Albion ⚡
+                        </span>
+                      ) : (
+                        <Globe2 className="w-6 h-6 text-amber-400 drop-shadow-lg" />
+                      )}
+                    </div>
+
+                    <div className="mb-4">
+                      <div className="flex items-center gap-2 mb-3">
+                        <Languages className="w-4 h-4 text-cyan-300" />
+                        <span className="text-sm font-semibold text-cyan-200">ℌ𝔦𝔫𝔞 ℌ𝔦𝔰𝔱𝔯𝔞𝔦:</span>
+                      </div>
+                      <p className="text-sm text-slate-300 italic leading-relaxed bg-black/20 p-3 rounded-lg border border-white/10">
+                        {entry.origin}
+                      </p>
+                    </div>
+
+                    <div>
+                      <h4 className="text-sm font-semibold text-purple-200 mb-3">
+                        {entry.isAuthentic ? "𝔖𝔞𝔦𝔞𝔞𝔰:" : "𝔄𝔫𝔤𝔩𝔦𝔰𝔥 ℌ𝔯𝔞𝔞𝔞𝔱𝔞𝔞𝔦𝔳𝔢𝔰:"}
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        {entry.anglish.map((alt, i) => (
+                          <span key={i} className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${
+                            entry.isAuthentic 
+                              ? 'bg-emerald-400/20 text-emerald-100 border border-emerald-400/40 shadow-lg shadow-emerald-400/10' 
+                              : entry.isConstructed
+                                ? 'bg-blue-400/20 text-blue-100 border border-blue-400/40 shadow-lg shadow-blue-400/10'
+                                : 'bg-amber-400/20 text-amber-100 border border-amber-400/40 shadow-lg shadow-amber-400/10'
+                          }`}>
+                            {alt}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {filteredWords.length === 0 && (
+              <div className="text-center py-16">
+                <BookOpen className="w-20 h-20 text-slate-400 mx-auto mb-6 opacity-50" />
+                <p className="text-slate-300 text-xl mb-2">𝔑𝔞 𝔞𝔪𝔦𝔦𝔫𝔥 𝔢𝔫𝔪𝔯𝔦𝔦𝔦𝔦𝔦𝔦𝔦 𝔞𝔞𝔞𝔞𝔞</p>
+                <p className="text-slate-400">ℌ𝔞𝔱𝔦𝔫𝔶 𝔞 𝔞𝔞𝔞𝔞𝔞 𝔞𝔫 𝔞𝔞𝔞𝔞𝔞𝔞𝔞𝔞 ...</p>
+              </div>
+            )}
+
+            {/* Footer */}
+            <div className="mt-16 pt-8 border-t border-gradient-to-r from-teal-400/30 to-purple-400/30">
+              <div className="text-center text-sm text-slate-300 space-y-3">
+                <p className="text-lg font-semibold text-teal-200">
+                  ⚔ <strong>𝔄𝔫𝔤𝔩𝔦𝔦𝔦𝔦</strong> 𝔞𝔞𝔞 𝔦𝔞 ℌ𝔞𝔯𝔦𝔞𝔫𝔦 ⚔
+                </p>
+                <div className="flex justify-center items-center gap-4 flex-wrap">
+                  <div className="flex items-center gap-2">
+                    <span className="inline-block w-4 h-4 bg-emerald-400/30 border border-emerald-400/60 rounded"></span>
+                    <span>Authentic Germanic Heritage</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="inline-block w-4 h-4 bg-blue-400/30 border border-blue-400/60 rounded"></span>
+                    <span>New Albion Arcane Terms</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="inline-block w-4 h-4 bg-amber-400/30 border border-amber-400/60 rounded"></span>
+                    <span>Suggested Anglish Alternatives</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AnglishWordbook;
