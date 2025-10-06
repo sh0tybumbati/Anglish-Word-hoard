@@ -1,5 +1,5 @@
 import React from 'react';
-import { Crown, Zap, BookOpen, Download, Grid, List, Shield, Globe2, Tag } from 'lucide-react';
+import { Crown, BookOpen, Download, Grid, List, Shield, Globe2, Tag } from 'lucide-react';
 import { SearchBar } from './components/SearchBar';
 import { WordCard } from './components/WordCard';
 import { TableView } from './components/TableView';
@@ -14,6 +14,10 @@ function App() {
     setSearchTerm,
     selectedCategory,
     setSelectedCategory,
+    selectedAttestation,
+    setSelectedAttestation,
+    sortAlphabetically,
+    setSortAlphabetically,
     resultsCount,
     totalCount
   } = useSearch({ data: authentikWordEntries });
@@ -44,99 +48,125 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-950 via-indigo-950 to-teal-950 relative overflow-hidden">
-      {/* Holographic Background Effects */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-teal-400 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-400 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-400 rounded-full blur-3xl animate-pulse delay-2000"></div>
-      </div>
-
-      {/* Grid Pattern Overlay */}
-      <div className="absolute inset-0 opacity-10" 
+    <div className="min-h-screen parchment-bg relative overflow-hidden">
+      {/* Parchment texture and aged paper effect */}
+      <div className="absolute inset-0 opacity-30 pointer-events-none"
            style={{
              backgroundImage: `
-               linear-gradient(rgba(148, 163, 184, 0.1) 1px, transparent 1px),
-               linear-gradient(90deg, rgba(148, 163, 184, 0.1) 1px, transparent 1px)
-             `,
-             backgroundSize: '20px 20px'
+               radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+               radial-gradient(circle at 80% 70%, rgba(139, 30, 63, 0.06) 0%, transparent 50%),
+               radial-gradient(circle at 50% 50%, rgba(139, 111, 71, 0.04) 0%, transparent 70%)
+             `
            }}>
       </div>
 
-      {/* Scanning Lines Effect */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute w-full h-1 bg-gradient-to-r from-transparent via-teal-400 to-transparent opacity-30"
-             style={{ top: '20%', animation: 'scan 4s linear infinite' }}></div>
-        <div className="absolute w-full h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent opacity-30"
-             style={{ top: '60%', animation: 'scan 6s linear infinite reverse' }}></div>
+      {/* Subtle paper grain texture */}
+      <div className="absolute inset-0 opacity-[0.15] pointer-events-none"
+           style={{
+             backgroundImage: `
+               repeating-linear-gradient(0deg, transparent, transparent 1px, rgba(139, 111, 71, 0.1) 1px, rgba(139, 111, 71, 0.1) 2px),
+               repeating-linear-gradient(90deg, transparent, transparent 1px, rgba(139, 111, 71, 0.1) 1px, rgba(139, 111, 71, 0.1) 2px)
+             `,
+             backgroundSize: '3px 3px'
+           }}>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto p-4 lg:p-8">
-        {/* Main Container with Holographic Border */}
-        <div className="bg-gradient-to-br from-slate-900/90 via-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-2xl border border-teal-400/30 shadow-2xl shadow-purple-500/20 p-4 lg:p-8 relative overflow-hidden">
-          
-          {/* Inner Glow Effect */}
-          <div className="absolute inset-0 bg-gradient-to-br from-teal-400/5 via-purple-400/5 to-cyan-400/5 rounded-2xl"></div>
-          
-          {/* Decorative Corner Elements */}
-          <div className="absolute top-4 left-4 w-8 h-8 border-l-2 border-t-2 border-teal-400/60"></div>
-          <div className="absolute top-4 right-4 w-8 h-8 border-r-2 border-t-2 border-purple-400/60"></div>
-          <div className="absolute bottom-4 left-4 w-8 h-8 border-l-2 border-b-2 border-purple-400/60"></div>
-          <div className="absolute bottom-4 right-4 w-8 h-8 border-r-2 border-b-2 border-teal-400/60"></div>
+        {/* Main Container - Medieval Manuscript Style */}
+        <div className="bg-gradient-to-br from-amber-50/95 via-orange-50/95 to-amber-50/95 rounded-lg border-4 border-double border-amber-900/80 shadow-2xl shadow-amber-900/30 p-4 lg:p-8 relative overflow-hidden"
+             style={{
+               boxShadow: '0 10px 40px rgba(139, 30, 63, 0.3), inset 0 1px 0 rgba(245, 238, 215, 0.5)'
+             }}>
+
+          {/* Parchment inner glow */}
+          <div className="absolute inset-0 bg-gradient-to-br from-yellow-50/40 via-transparent to-orange-50/30 rounded-lg"></div>
+
+          {/* Decorative Corner Flourishes - Medieval Style */}
+          <div className="absolute top-2 left-2 w-12 h-12 border-l-3 border-t-3 border-amber-900/70"
+               style={{ borderWidth: '3px' }}>
+            <div className="absolute -top-1 -left-1 w-3 h-3 bg-burgundy-600 rounded-full" style={{ backgroundColor: '#8B1E3F' }}></div>
+          </div>
+          <div className="absolute top-2 right-2 w-12 h-12 border-r-3 border-t-3 border-amber-900/70"
+               style={{ borderWidth: '3px' }}>
+            <div className="absolute -top-1 -right-1 w-3 h-3 bg-burgundy-600 rounded-full" style={{ backgroundColor: '#8B1E3F' }}></div>
+          </div>
+          <div className="absolute bottom-2 left-2 w-12 h-12 border-l-3 border-b-3 border-amber-900/70"
+               style={{ borderWidth: '3px' }}>
+            <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-burgundy-600 rounded-full" style={{ backgroundColor: '#8B1E3F' }}></div>
+          </div>
+          <div className="absolute bottom-2 right-2 w-12 h-12 border-r-3 border-b-3 border-amber-900/70"
+               style={{ borderWidth: '3px' }}>
+            <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-burgundy-600 rounded-full" style={{ backgroundColor: '#8B1E3F' }}></div>
+          </div>
 
           <div className="relative z-10">
-            {/* Header */}
+            {/* Header - Medieval Illuminated Style */}
             <div className="text-center mb-8 lg:mb-12">
               <div className="flex items-center justify-center gap-2 lg:gap-4 mb-4 lg:mb-6">
-                <Crown className="w-8 h-8 lg:w-10 lg:h-10 text-teal-300" />
+                <Crown className="w-8 h-8 lg:w-10 lg:h-10" style={{ color: '#D4AF37' }} />
                 <div className="relative">
-                  <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-300 via-purple-300 to-cyan-300 bg-clip-text text-transparent tracking-wide font-chomsky">
+                  <h1 className="text-4xl lg:text-6xl font-bold tracking-wide font-blackletter"
+                      style={{
+                        color: '#8B1E3F',
+                        textShadow: '2px 2px 0px #D4AF37, 4px 4px 8px rgba(139, 30, 63, 0.3)'
+                      }}>
                     Anglish Wordbook
                   </h1>
-                  <div className="absolute -inset-2 bg-gradient-to-r from-teal-400/20 to-purple-400/20 blur-xl rounded-lg"></div>
+                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-transparent via-amber-700 to-transparent"></div>
                 </div>
-                <Zap className="w-8 h-8 lg:w-10 lg:h-10 text-purple-300" />
+                <BookOpen className="w-8 h-8 lg:w-10 lg:h-10" style={{ color: '#D4AF37' }} />
               </div>
-              <div className="text-teal-200 text-base lg:text-lg max-w-3xl mx-auto font-medium leading-relaxed px-4">
+              <div className="text-base lg:text-lg max-w-3xl mx-auto font-medium leading-relaxed px-4"
+                   style={{ color: '#3D2817' }}>
                 A comprehensive dictionary exploring Germanic alternatives to Latin and Greek loanwords in English.
                 Discover the true Anglo-Saxon heritage behind our modern vocabulary.
               </div>
-              <div className="text-purple-200 text-sm lg:text-base mt-2 italic">
+              <div className="text-sm lg:text-base mt-3 italic font-medieval-title"
+                   style={{ color: '#8B1E3F' }}>
                 ~ Inspired by the Anglish Community ~
               </div>
             </div>
 
-            {/* View Controls */}
+            {/* View Controls - Medieval Button Style */}
             <div className="flex justify-between items-center mb-6">
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => setViewMode('cards')}
-                  className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-all duration-300 text-sm ${
-                    viewMode === 'cards' 
-                      ? 'bg-teal-600/30 text-teal-200 border border-teal-400/40' 
-                      : 'bg-slate-700/50 hover:bg-slate-700 text-slate-300 hover:text-white'
+                  className={`flex items-center gap-2 px-3 py-2 rounded transition-all duration-300 text-sm border-2 ${
+                    viewMode === 'cards'
+                      ? 'border-amber-800 text-amber-50 shadow-md'
+                      : 'border-amber-700/40 hover:border-amber-700 hover:bg-amber-100/30'
                   }`}
+                  style={{
+                    backgroundColor: viewMode === 'cards' ? '#8B1E3F' : '#F0E6D2',
+                    color: viewMode === 'cards' ? '#F5EED7' : '#4A3728'
+                  }}
                 >
                   <Grid className="w-4 h-4" />
                   <span className="hidden sm:inline">Cards</span>
                 </button>
                 <button
                   onClick={() => setViewMode('table')}
-                  className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-all duration-300 text-sm ${
-                    viewMode === 'table' 
-                      ? 'bg-teal-600/30 text-teal-200 border border-teal-400/40' 
-                      : 'bg-slate-700/50 hover:bg-slate-700 text-slate-300 hover:text-white'
+                  className={`flex items-center gap-2 px-3 py-2 rounded transition-all duration-300 text-sm border-2 ${
+                    viewMode === 'table'
+                      ? 'border-amber-800 text-amber-50 shadow-md'
+                      : 'border-amber-700/40 hover:border-amber-700 hover:bg-amber-100/30'
                   }`}
+                  style={{
+                    backgroundColor: viewMode === 'table' ? '#8B1E3F' : '#F0E6D2',
+                    color: viewMode === 'table' ? '#F5EED7' : '#4A3728'
+                  }}
                 >
                   <List className="w-4 h-4" />
                   <span className="hidden sm:inline">Table</span>
                 </button>
               </div>
-              
+
               <div className="flex gap-2">
                 <button
                   onClick={exportData}
-                  className="flex items-center gap-2 px-3 py-2 bg-slate-700/50 hover:bg-slate-700 text-slate-300 hover:text-white rounded-lg transition-all duration-300 text-sm"
+                  className="flex items-center gap-2 px-3 py-2 rounded transition-all duration-300 text-sm border-2 border-amber-700/40 hover:border-amber-700 hover:bg-amber-100/30"
+                  style={{ backgroundColor: '#F0E6D2', color: '#4A3728' }}
                   title="Export word database"
                 >
                   <Download className="w-4 h-4" />
@@ -151,8 +181,12 @@ function App() {
               onSearchChange={setSearchTerm}
               selectedCategory={selectedCategory}
               onCategoryChange={setSelectedCategory}
+              selectedAttestation={selectedAttestation}
+              onAttestationChange={setSelectedAttestation}
               showOnlyFavorites={showOnlyFavorites}
               onToggleFavorites={() => setShowOnlyFavorites(!showOnlyFavorites)}
+              sortAlphabetically={sortAlphabetically}
+              onToggleSort={() => setSortAlphabetically(!sortAlphabetically)}
               resultsCount={showOnlyFavorites ? displayedWords.length : resultsCount}
               totalCount={totalCount}
             />
@@ -176,10 +210,10 @@ function App() {
                 )
               ) : (
                 <div className="text-center py-16">
-                  <BookOpen className="w-20 h-20 text-slate-400 mx-auto mb-6 opacity-50" />
-                  <p className="text-slate-300 text-xl mb-2">No entries found</p>
-                  <p className="text-slate-400">
-                    {showOnlyFavorites 
+                  <BookOpen className="w-20 h-20 mx-auto mb-6 opacity-50" style={{ color: '#8B6F47' }} />
+                  <p className="text-xl mb-2" style={{ color: '#3D2817' }}>No entries found</p>
+                  <p style={{ color: '#8B6F47' }}>
+                    {showOnlyFavorites
                       ? 'You haven\'t added any words to your favorites yet.'
                       : 'Try adjusting your search terms or filters...'
                     }
@@ -187,7 +221,11 @@ function App() {
                   {showOnlyFavorites && (
                     <button
                       onClick={() => setShowOnlyFavorites(false)}
-                      className="mt-4 px-4 py-2 bg-teal-600/20 hover:bg-teal-600/30 text-teal-200 rounded-lg transition-colors duration-300"
+                      className="mt-4 px-4 py-2 rounded border-2 border-amber-700 transition-colors duration-300"
+                      style={{
+                        backgroundColor: '#8B1E3F',
+                        color: '#F5EED7'
+                      }}
                     >
                       Show All Words
                     </button>
@@ -196,27 +234,27 @@ function App() {
               )}
             </div>
 
-            {/* Footer */}
-            <div className="mt-16 pt-8 border-t border-gradient-to-r from-teal-400/30 to-purple-400/30">
-              <div className="text-center text-sm text-slate-300 space-y-3">
-                <p className="text-lg font-semibold text-teal-200">
-                  ⚔ <strong>Anglish</strong> - English with Germanic Heritage ⚔
+            {/* Footer - Medieval Style */}
+            <div className="mt-16 pt-8 border-t-2" style={{ borderColor: '#8B6F47' }}>
+              <div className="text-center text-sm space-y-3" style={{ color: '#4A3728' }}>
+                <p className="text-lg font-semibold font-medieval-title" style={{ color: '#8B1E3F' }}>
+                  <strong>Anglish</strong> - English with Germanic Heritage
                 </p>
                 <div className="flex justify-center items-center gap-4 flex-wrap text-xs lg:text-sm">
                   <div className="flex items-center gap-2">
-                    <Shield className="w-4 h-4 text-emerald-400" />
+                    <Shield className="w-4 h-4" style={{ color: '#4A5D4A' }} />
                     <span>Attested (Historical)</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <BookOpen className="w-4 h-4 text-blue-400" />
+                    <BookOpen className="w-4 h-4" style={{ color: '#2B4162' }} />
                     <span>Reconstructed</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Globe2 className="w-4 h-4 text-cyan-400" />
+                    <Globe2 className="w-4 h-4" style={{ color: '#2B4162' }} />
                     <span>Modern Neologism</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Tag className="w-4 h-4 text-amber-400" />
+                    <Tag className="w-4 h-4" style={{ color: '#CC5500' }} />
                     <span>Community Proposal</span>
                   </div>
                 </div>

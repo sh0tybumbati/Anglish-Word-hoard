@@ -10,67 +10,87 @@ export const TableView: React.FC<TableViewProps> = ({ words }) => {
   const getAttestationIcon = (attestation?: string) => {
     switch (attestation) {
       case 'attested':
-        return <Shield className="w-3 h-3 text-emerald-400" />;
+        return <Shield className="w-3 h-3" style={{ color: '#4A5D4A' }} />;
       case 'reconstructed':
-        return <BookOpen className="w-3 h-3 text-blue-400" />;
+        return <BookOpen className="w-3 h-3" style={{ color: '#2B4162' }} />;
       case 'neologism':
-        return <Globe2 className="w-3 h-3 text-cyan-400" />;
+        return <Globe2 className="w-3 h-3" style={{ color: '#2B4162' }} />;
       case 'proposed':
-        return <Tag className="w-3 h-3 text-amber-400" />;
+        return <Tag className="w-3 h-3" style={{ color: '#CC5500' }} />;
       default:
         return null;
     }
   };
 
   return (
-    <div className="bg-slate-800/90 backdrop-blur-sm rounded-xl border border-slate-600/30 overflow-hidden">
+    <div className="rounded border-2 overflow-hidden"
+         style={{
+           backgroundColor: '#FFF8E7',
+           borderColor: '#8B6F47'
+         }}>
       <div className="overflow-x-auto">
         <table className="w-full text-sm">
           <thead>
-            <tr className="bg-slate-700/50 border-b border-slate-600/30">
-              <th className="text-left py-3 px-4 font-semibold text-slate-200">Word</th>
-              <th className="text-left py-3 px-4 font-semibold text-slate-200">Meaning</th>
-              <th className="text-center py-3 px-4 font-semibold text-slate-200">Kind</th>
-              <th className="text-left py-3 px-4 font-semibold text-slate-200">Anglish</th>
-              <th className="text-center py-3 px-4 font-semibold text-slate-200">Status</th>
+            <tr className="border-b-2"
+                style={{
+                  backgroundColor: '#F0E6D2',
+                  borderColor: '#8B6F47'
+                }}>
+              <th className="text-left py-3 px-4 font-semibold" style={{ color: '#2C1810' }}>Word</th>
+              <th className="text-left py-3 px-4 font-semibold" style={{ color: '#2C1810' }}>Meaning</th>
+              <th className="text-center py-3 px-4 font-semibold" style={{ color: '#2C1810' }}>Kind</th>
+              <th className="text-left py-3 px-4 font-semibold" style={{ color: '#2C1810' }}>Anglish</th>
+              <th className="text-center py-3 px-4 font-semibold" style={{ color: '#2C1810' }}>Status</th>
             </tr>
           </thead>
           <tbody>
             {words.map((entry, index) => (
-              <tr 
-                key={entry.id} 
-                className={`border-b border-slate-600/20 hover:bg-slate-700/30 transition-colors ${
-                  index % 2 === 0 ? 'bg-slate-800/30' : 'bg-slate-800/10'
-                }`}
+              <tr
+                key={entry.id}
+                className="border-b transition-colors"
+                style={{
+                  backgroundColor: index % 2 === 0 ? '#FEFBF3' : '#FFF8E7',
+                  borderColor: '#E0D4B8'
+                }}
               >
                 <td className="py-3 px-4">
-                  <div className="font-medium text-white">{entry.word}</div>
+                  <div className="font-medium" style={{ color: '#8B1E3F' }}>{entry.word}</div>
                   {entry.etymology?.oldEnglish && (
-                    <div className="text-xs text-slate-400 font-mono mt-1">
+                    <div className="text-xs font-mono mt-1" style={{ color: '#8B6F47' }}>
                       OE: {entry.etymology.oldEnglish}
                     </div>
                   )}
                 </td>
-                <td className="py-3 px-4 text-slate-300 leading-relaxed max-w-xs">
+                <td className="py-3 px-4 leading-relaxed max-w-xs" style={{ color: '#3D2817' }}>
                   {entry.meaning}
                 </td>
                 <td className="py-3 px-4 text-center">
-                  <span className="inline-block bg-slate-600/50 text-slate-200 text-xs px-2 py-1 rounded font-mono">
+                  <span className="inline-block text-xs px-2 py-1 rounded font-mono border"
+                        style={{
+                          backgroundColor: '#F0E6D2',
+                          color: '#4A3728',
+                          borderColor: '#8B6F47'
+                        }}>
                     {entry.kind}
                   </span>
                 </td>
                 <td className="py-3 px-4">
                   <div className="flex flex-wrap gap-1">
                     {entry.anglish.slice(0, 3).map((alt, i) => (
-                      <span 
-                        key={i} 
-                        className="inline-block bg-purple-500/20 text-purple-200 text-xs px-2 py-1 rounded border border-purple-400/30"
+                      <span
+                        key={i}
+                        className="inline-block text-xs px-2 py-1 rounded border"
+                        style={{
+                          backgroundColor: '#E8DCC5',
+                          color: '#4A3728',
+                          borderColor: '#8B6F47'
+                        }}
                       >
                         {alt}
                       </span>
                     ))}
                     {entry.anglish.length > 3 && (
-                      <span className="text-slate-400 text-xs">
+                      <span className="text-xs" style={{ color: '#8B6F47' }}>
                         +{entry.anglish.length - 3} more
                       </span>
                     )}
@@ -79,7 +99,7 @@ export const TableView: React.FC<TableViewProps> = ({ words }) => {
                 <td className="py-3 px-4 text-center">
                   <div className="flex items-center justify-center gap-1">
                     {getAttestationIcon(entry.attestation)}
-                    <span className="text-xs text-slate-300 capitalize">
+                    <span className="text-xs capitalize" style={{ color: '#4A3728' }}>
                       {entry.attestation || 'unknown'}
                     </span>
                   </div>
@@ -89,10 +109,10 @@ export const TableView: React.FC<TableViewProps> = ({ words }) => {
           </tbody>
         </table>
       </div>
-      
+
       {words.length === 0 && (
-        <div className="text-center py-12 text-slate-400">
-          <BookOpen className="w-12 h-12 mx-auto mb-4 opacity-50" />
+        <div className="text-center py-12" style={{ color: '#8B6F47' }}>
+          <BookOpen className="w-12 h-12 mx-auto mb-4 opacity-50" style={{ color: '#8B6F47' }} />
           <p>No entries found</p>
         </div>
       )}

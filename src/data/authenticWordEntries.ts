@@ -10,9 +10,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Telltale', 'Reckonbox', 'Thinkbox'],
     etymology: {
-      oldEnglish: 'tellan (to tell, count) + tæl (tale, number)',
-      protoGermanic: '*taljan + *talō',
-      cognates: ['German zählen', 'Dutch tellen', 'Old Norse telja']
+      reconstruction: 'Latin computare (to calculate, sum up), from com- (together) + putare (to reckon)',
+      cognates: ['French computer', 'Spanish computadora', 'Italian computer']
     },
     attestation: 'neologism',
     category: 'technical',
@@ -25,9 +24,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Farspeaker', 'Longtalker'],
     etymology: {
-      oldEnglish: 'feorr (far) + sprecan (to speak)',
-      protoGermanic: '*ferrai + *sprekaną',
-      cognates: ['German Fernsprecher', 'Dutch spreken']
+      reconstruction: 'Greek tele- (far, distant) + phone (sound, voice)',
+      cognates: ['French téléphone', 'Spanish teléfono', 'Italian telefono']
     },
     attestation: 'neologism',
     category: 'technical',
@@ -40,9 +38,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Farseer', 'Faresight'],
     etymology: {
-      oldEnglish: 'feorr (far) + sēon (to see)',
-      protoGermanic: '*ferrai + *sehwaną',
-      cognates: ['German Fernseher', 'Dutch zien']
+      reconstruction: 'Greek tele- (far, distant) + Latin visio (seeing), from videre (to see)',
+      cognates: ['French télévision', 'Spanish televisión', 'Italian televisione']
     },
     attestation: 'neologism',
     category: 'technical'
@@ -54,9 +51,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Highschool', 'Learningstead', 'Wisdomhall'],
     etymology: {
-      oldEnglish: 'hēah (high) + scōl (school)',
-      protoGermanic: '*hauhaz + *skōlō',
-      cognates: ['German Hochschule', 'Dutch school']
+      reconstruction: 'Latin universitas (the whole, universe, guild), from universus (whole, entire)',
+      cognates: ['French université', 'Spanish universidad', 'Italian università']
     },
     attestation: 'proposed',
     category: 'academic'
@@ -68,9 +64,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Sickhouse', 'Healhouse', 'Lazarhouse'],
     etymology: {
-      oldEnglish: 'sēoc (sick) + hūs (house)',
-      protoGermanic: '*seukaz + *hūsą',
-      cognates: ['German Krankenhaus', 'Dutch ziekenhuis']
+      reconstruction: 'Latin hospitale (guest house), from hospes (host, guest)',
+      cognates: ['French hôpital', 'Spanish hospital', 'Italian ospedale']
     },
     attestation: 'neologism',
     category: 'professional'
@@ -99,9 +94,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'V',
     anglish: ['Shape', 'Make', 'Craft', 'Build'],
     etymology: {
-      oldEnglish: 'sceppan (to shape), macian (to make)',
-      protoGermanic: '*skepjaną, *makōną',
-      cognates: ['German schaffen, machen', 'Dutch scheppen, maken']
+      reconstruction: 'Latin creare (to make, produce, create), from crescere (to grow)',
+      cognates: ['French créer', 'Spanish crear', 'Italian creare']
     },
     attestation: 'attested',
     category: 'general'
@@ -113,9 +107,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'V',
     anglish: ['Fordo', 'Undo', 'Break', 'Wreck'],
     etymology: {
-      oldEnglish: 'fordōn (to destroy utterly)',
-      protoGermanic: '*fra + *dōną',
-      cognates: ['German verderben', 'Dutch verderven']
+      reconstruction: 'Old French destruire, from Latin destruere (to pull down, demolish), from de- (down) + struere (to build)',
+      cognates: ['French détruire', 'Spanish destruir', 'Italian distruggere']
     },
     attestation: 'reconstructed',
     category: 'general'
@@ -129,9 +122,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'AJ',
     anglish: ['Weighty', 'Heavy', 'Grave', 'Momentous'],
     etymology: {
-      oldEnglish: 'hefig (heavy, weighty)',
-      protoGermanic: '*habīgaz',
-      cognates: ['German schwerwiegend', 'Dutch zwaarwegend']
+      reconstruction: 'Medieval Latin importantem, from Latin importare (to bring in, be of consequence), from in- (into) + portare (to carry)',
+      cognates: ['French important', 'Spanish importante', 'Italian importante']
     },
     attestation: 'attested',
     category: 'general'
@@ -143,9 +135,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'AJ',
     anglish: ['Fair', 'Lovely', 'Winsome', 'Sightly'],
     etymology: {
-      oldEnglish: 'fæger (fair, beautiful)',
-      protoGermanic: '*fagraz',
-      cognates: ['German schön', 'Dutch mooi']
+      reconstruction: 'Old French bealte (beauty), from Latin bellus (pretty, handsome) + -ful suffix',
+      cognates: ['French beau/belle', 'Spanish bello', 'Italian bello']
     },
     attestation: 'attested',
     category: 'general'
@@ -157,9 +148,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'AJ',
     anglish: ['Wise', 'Witty', 'Clever', 'Sharp'],
     etymology: {
-      oldEnglish: 'wīs (wise), wittig (intelligent)',
-      protoGermanic: '*wīsaz, *wittugaz',
-      cognates: ['German weise, witzig', 'Dutch wijs']
+      reconstruction: 'Latin intelligentem, from intelligere (to understand, comprehend), from inter- (between) + legere (to choose, pick out, read)',
+      cognates: ['French intelligent', 'Spanish inteligente', 'Italian intelligente']
     },
     attestation: 'attested',
     category: 'general'
@@ -173,8 +163,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Sourstuff', 'Breathstuff'],
     etymology: {
-      oldEnglish: 'sūr (sour) + stuff',
-      reconstruction: 'Calque based on "acid-former" meaning'
+      reconstruction: 'French oxygène, from Greek oxys (sharp, acid) + -genes (producing), coined by Antoine Lavoisier in 1777',
+      cognates: ['French oxygène', 'Spanish oxígeno', 'Italian ossigeno']
     },
     attestation: 'neologism',
     category: 'technical',
@@ -187,8 +177,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Waterstuff', 'Watermatter'],
     etymology: {
-      oldEnglish: 'wæter (water) + stuff',
-      reconstruction: 'Calque of "water-former"'
+      reconstruction: 'French hydrogène, from Greek hydro- (water) + -genes (forming), coined by Lavoisier in 1783',
+      cognates: ['French hydrogène', 'Spanish hidrógeno', 'Italian idrogeno']
     },
     attestation: 'neologism',
     category: 'technical',
@@ -201,8 +191,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Coalstuff', 'Blackstuff'],
     etymology: {
-      oldEnglish: 'col (coal, charcoal) + stuff',
-      cognates: ['German Kohlenstoff', 'Dutch koolstof']
+      reconstruction: 'French carbone, from Latin carbo (coal, charcoal)',
+      cognates: ['French carbone', 'Spanish carbono', 'Italian carbonio']
     },
     attestation: 'neologism',
     category: 'technical'
@@ -216,8 +206,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Wisdom-love', 'Loveofwisdom', 'Thoughtlore'],
     etymology: {
-      oldEnglish: 'wīsdōm (wisdom) + lufu (love)',
-      reconstruction: 'Direct translation of Greek elements'
+      reconstruction: 'Greek philosophia, from philo- (loving) + sophia (wisdom)',
+      cognates: ['French philosophie', 'Spanish filosofía', 'Italian filosofia']
     },
     attestation: 'proposed',
     category: 'academic'
@@ -229,8 +219,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Folkright', 'Peoplerule', 'Commonweal'],
     etymology: {
-      oldEnglish: 'folc (folk, people) + riht (right, rule)',
-      cognates: ['German Volksherrschaft', 'Dutch volksregering']
+      reconstruction: 'Greek demokratia, from demos (people) + kratos (power, rule)',
+      cognates: ['French démocratie', 'Spanish democracia', 'Italian democrazia']
     },
     attestation: 'proposed',
     category: 'social'
@@ -242,8 +232,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Earthlore', 'Landlore', 'Worldknowledge'],
     etymology: {
-      oldEnglish: 'eorþe (earth) + lār (lore, learning)',
-      cognates: ['German Erdkunde', 'Dutch aardrijkskunde']
+      reconstruction: 'Greek geographia, from geo- (earth) + -graphia (writing, description)',
+      cognates: ['French géographie', 'Spanish geografía', 'Italian geografia']
     },
     attestation: 'neologism',
     category: 'academic'
@@ -341,8 +331,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Cookwrit', 'Foodway', 'Dishcraft'],
     etymology: {
-      oldEnglish: 'cōc (cook) + writ (writing)',
-      cognates: ['German Kochschrift', 'Dutch kookschrift']
+      reconstruction: 'Latin recipe (take!, receive!), imperative of recipere (to take, receive)',
+      cognates: ['French recette', 'Spanish receta', 'Italian ricetta']
     },
     attestation: 'neologism',
     category: 'culinary'
@@ -369,8 +359,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Seapig', 'Waveridder', 'Smartfish'],
     etymology: {
-      oldEnglish: 'sæ (sea) + picg (pig)',
-      cognates: ['German Meeresschwein', 'Dutch zeeverken']
+      reconstruction: 'Greek delphinos, possibly from delphys (womb), via Latin delphinus',
+      cognates: ['French dauphin', 'Spanish delfín', 'Italian delfino']
     },
     attestation: 'reconstructed',
     category: 'nature'
@@ -410,8 +400,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Treadwheel', 'Footwain', 'Pushbike'],
     etymology: {
-      oldEnglish: 'tredan (to tread) + hwēol (wheel)',
-      cognates: ['German Fahrrad', 'Dutch fiets']
+      reconstruction: 'French bicyclette, from bi- (two) + Greek kyklos (circle, wheel)',
+      cognates: ['French bicyclette', 'Spanish bicicleta', 'Italian bicicletta']
     },
     attestation: 'neologism',
     category: 'technical'
@@ -423,8 +413,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Flycraft', 'Windship', 'Skyboat'],
     etymology: {
-      oldEnglish: 'flēogan (to fly) + cræft (craft)',
-      cognates: ['German Flugzeug', 'Dutch vliegtuig']
+      reconstruction: 'French aéroplane, from Greek aero- (air) + Latin planum (flat surface, plane)',
+      cognates: ['French avion', 'Spanish avión', 'Italian aeroplano']
     },
     attestation: 'neologism',
     category: 'technical'
@@ -438,9 +428,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Leech', 'Healer', 'Sickhelper'],
     etymology: {
-      oldEnglish: 'lǣce (physician, healer)',
-      protoGermanic: '*lēkijaz',
-      cognates: ['German Arzt', 'Dutch arts']
+      reconstruction: 'Latin doctor (teacher), from docere (to teach)',
+      cognates: ['French docteur', 'Spanish doctor', 'Italian dottore']
     },
     attestation: 'attested',
     category: 'professional'
@@ -452,8 +441,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Leechcraft', 'Healwort', 'Sickbane'],
     etymology: {
-      oldEnglish: 'lǣcecræft (healing art)',
-      cognates: ['German Heilkunde', 'Dutch geneeskunde']
+      reconstruction: 'Latin medicina (healing art), from medicus (physician), from mederi (to heal)',
+      cognates: ['French médecine', 'Spanish medicina', 'Italian medicina']
     },
     attestation: 'reconstructed',
     category: 'technical'
@@ -465,8 +454,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Knifewerk', 'Cutcraft', 'Bodywork'],
     etymology: {
-      oldEnglish: 'cnīf (knife) + weorc (work)',
-      cognates: ['German Chirurgie', 'Dutch heelkunde']
+      reconstruction: 'Old French surgerie, from Latin chirurgia, from Greek kheirourgia (handiwork, surgery), from kheir (hand) + ergon (work)',
+      cognates: ['French chirurgie', 'Spanish cirugía', 'Italian chirurgia']
     },
     attestation: 'neologism',
     category: 'technical'
@@ -480,8 +469,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Learner', 'Scholar', 'Bookman'],
     etymology: {
-      oldEnglish: 'leornere (learner)',
-      cognates: ['German Schüler', 'Dutch leerling']
+      reconstruction: 'Latin studentem, from studere (to study, be eager)',
+      cognates: ['French étudiant', 'Spanish estudiante', 'Italian studente']
     },
     attestation: 'attested',
     category: 'academic'
@@ -506,8 +495,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Bookhall', 'Readhouse', 'Bookstead'],
     etymology: {
-      oldEnglish: 'bōc (book) + heall (hall)',
-      cognates: ['German Bibliothek', 'Dutch bibliotheek']
+      reconstruction: 'Latin libraria (bookshop, library), from liber (book)',
+      cognates: ['French bibliothèque', 'Spanish biblioteca', 'Italian biblioteca']
     },
     attestation: 'neologism',
     category: 'academic'
@@ -521,8 +510,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Stormwind', 'Whirlwind', 'Wreathwind'],
     etymology: {
-      oldEnglish: 'storm + wind',
-      cognates: ['German Orkan', 'Dutch orkaan']
+      reconstruction: 'Spanish huracán, from Taino (indigenous Caribbean) hurakán (god of the storm)',
+      cognates: ['French ouragan', 'Spanish huracán', 'Italian uragano']
     },
     attestation: 'attested',
     category: 'nature'
@@ -562,9 +551,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'V',
     anglish: ['Buy', 'Barter', 'Trade'],
     etymology: {
-      oldEnglish: 'bycgan (to buy)',
-      protoGermanic: '*bugjaną',
-      cognates: ['German kaufen', 'Dutch kopen']
+      reconstruction: 'Old French purchaser (to seek to obtain), from pur- (forth) + chaser (to chase, pursue)',
+      cognates: ['French poursuivre', 'Spanish procurar', 'Italian procurare']
     },
     attestation: 'attested',
     category: 'authentic'
@@ -576,9 +564,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'V',
     anglish: ['Find out', 'Uncover', 'Come upon'],
     etymology: {
-      oldEnglish: 'findan (to find)',
-      protoGermanic: '*finþaną',
-      cognates: ['German finden', 'Dutch vinden']
+      reconstruction: 'Old French descovrir (to uncover, reveal), from des- (opposite) + covrir (to cover)',
+      cognates: ['French découvrir', 'Spanish descubrir', 'Italian scoprire']
     },
     attestation: 'attested',
     category: 'general'
@@ -590,8 +577,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'V',
     anglish: ['Spell out', 'Make clear', 'Unfold'],
     etymology: {
-      oldEnglish: 'onfoldan (to unfold, explain)',
-      cognates: ['German erklären', 'Dutch uitleggen']
+      reconstruction: 'Latin explanare (to make plain or clear), from ex- (out) + planus (flat, plain)',
+      cognates: ['French expliquer', 'Spanish explicar', 'Italian spiegare']
     },
     attestation: 'reconstructed',
     category: 'general'
@@ -605,9 +592,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'AJ',
     anglish: ['Huge', 'Mighty', 'Oversized'],
     etymology: {
-      oldEnglish: 'micel (great, much)',
-      protoGermanic: '*mikilaz',
-      cognates: ['German groß', 'Dutch groot']
+      reconstruction: 'Latin enormis (irregular, immense), from e- (out of) + norma (rule, norm)',
+      cognates: ['French énorme', 'Spanish enorme', 'Italian enorme']
     },
     attestation: 'attested',
     category: 'general'
@@ -619,8 +605,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'AJ',
     anglish: ['Outstanding', 'First-rate', 'Top-shelf'],
     etymology: {
-      oldEnglish: 'ūtstandan (to stand out)',
-      cognates: ['German hervorragend', 'Dutch uitstekend']
+      reconstruction: 'Latin excellentem, from excellere (to surpass, excel), from ex- (out) + cellere (to rise high)',
+      cognates: ['French excellent', 'Spanish excelente', 'Italian eccellente']
     },
     attestation: 'attested',
     category: 'general'
@@ -632,8 +618,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'AJ',
     anglish: ['Awful', 'Dreadful', 'Frightsome'],
     etymology: {
-      oldEnglish: 'egeful (awful, terrible)',
-      cognates: ['German schrecklich', 'Dutch verschrikkelijk']
+      reconstruction: 'Latin terribilis (frightful), from terrere (to frighten)',
+      cognates: ['French terrible', 'Spanish terrible', 'Italian terribile']
     },
     attestation: 'attested',
     category: 'general'
@@ -647,8 +633,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Worldwide Web', 'Netweb', 'Linkwork'],
     etymology: {
-      oldEnglish: 'net (net) + web (web)',
-      reconstruction: 'Modern networking concept'
+      reconstruction: 'Latin inter (between, among) + English network, coined in the 1970s',
+      cognates: ['French internet', 'Spanish internet', 'Italian internet']
     },
     attestation: 'neologism',
     category: 'technical'
@@ -660,8 +646,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Handthink', 'Pocketbrain', 'Thinkspeaker'],
     etymology: {
-      oldEnglish: 'hand + þencan (to think)',
-      reconstruction: 'Portable thinking device'
+      reconstruction: 'English smart + phone, where phone comes from Greek phone (sound, voice), modern compound from 1990s',
+      cognates: ['French smartphone', 'Spanish smartphone', 'Italian smartphone']
     },
     attestation: 'neologism',
     category: 'technical'
@@ -673,8 +659,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Picturebox', 'Imagecatcher', 'Lightsnare'],
     etymology: {
-      oldEnglish: 'lēoht (light) + sneare (snare)',
-      reconstruction: 'Light-capturing device'
+      reconstruction: 'Latin camera (vaulted chamber), from Greek kamara (vault). Short for "camera obscura" (dark chamber)',
+      cognates: ['French caméra', 'Spanish cámara', 'Italian camera']
     },
     attestation: 'neologism',
     category: 'technical'
@@ -701,8 +687,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Redyellow', 'Flame-hue', 'Sunset-color'],
     etymology: {
-      oldEnglish: 'read (red) + geolu (yellow)',
-      cognates: ['German rotorange', 'Dutch roodgeel']
+      reconstruction: 'Old French orenge, from Arabic nāranj, from Persian nārang, from Sanskrit nāraṅga (orange tree)',
+      cognates: ['French orange', 'Spanish naranja', 'Italian arancia']
     },
     attestation: 'reconstructed',
     category: 'general'
@@ -716,9 +702,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Belly', 'Gut', 'Maw'],
     etymology: {
-      oldEnglish: 'maga (stomach, maw)',
-      protoGermanic: '*magô',
-      cognates: ['German Magen', 'Dutch maag']
+      reconstruction: 'Latin stomachus, from Greek stomakhos (throat, gullet, stomach), from stoma (mouth)',
+      cognates: ['French estomac', 'Spanish estómago', 'Italian stomaco']
     },
     attestation: 'attested',
     category: 'authentic'
@@ -730,9 +715,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Sinew', 'Flesh', 'Thew'],
     etymology: {
-      oldEnglish: 'sinu (sinew)',
-      protoGermanic: '*senawô',
-      cognates: ['German Sehne', 'Dutch zenuw']
+      reconstruction: 'Latin musculus (little mouse), diminutive of mus (mouse), from the appearance of flexing muscles',
+      cognates: ['French muscle', 'Spanish músculo', 'Italian muscolo']
     },
     attestation: 'attested',
     category: 'authentic'
@@ -744,8 +728,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Bonework', 'Boneframe', 'Deadframe'],
     etymology: {
-      oldEnglish: 'bān (bone) + weorc (work)',
-      cognates: ['German Skelett', 'Dutch skelet']
+      reconstruction: 'Greek skeleton (dried up body), from skeletos (dried up), from skellein (to dry up)',
+      cognates: ['French squelette', 'Spanish esqueleto', 'Italian scheletro']
     },
     attestation: 'neologism',
     category: 'technical'
@@ -773,8 +757,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Gloom', 'Downcast', 'Heavyheart'],
     etymology: {
-      oldEnglish: 'glōm (gloom, darkness)',
-      cognates: ['German Schwermut', 'Dutch zwaarmoedigheid']
+      reconstruction: 'Latin depressio, from deprimere (to press down), from de- (down) + premere (to press)',
+      cognates: ['French dépression', 'Spanish depresión', 'Italian depressione']
     },
     attestation: 'reconstructed',
     category: 'general'
@@ -786,8 +770,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Thrill', 'Eagerness', 'Highspirit'],
     etymology: {
-      oldEnglish: 'geornnes (eagerness)',
-      cognates: ['German Aufregung', 'Dutch opwinding']
+      reconstruction: 'Latin excitare (to call forth, rouse), from ex- (out) + citare (to set in motion)',
+      cognates: ['French excitation', 'Spanish excitación', 'Italian eccitamento']
     },
     attestation: 'reconstructed',
     category: 'general'
@@ -801,8 +785,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Daybook', 'Timebook', 'Yearwheel'],
     etymology: {
-      oldEnglish: 'dæg (day) + bōc (book)',
-      cognates: ['German Kalender', 'Dutch kalender']
+      reconstruction: 'Latin calendarium (account book), from calendae (first day of the month)',
+      cognates: ['French calendrier', 'Spanish calendario', 'Italian calendario']
     },
     attestation: 'neologism',
     category: 'general'
@@ -814,8 +798,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Hundredyear', 'Yearhundred'],
     etymology: {
-      oldEnglish: 'hundteontig (hundred) + gēar (year)',
-      cognates: ['German Jahrhundert', 'Dutch eeuw']
+      reconstruction: 'Latin centuria (group of a hundred), from centum (hundred)',
+      cognates: ['French siècle', 'Spanish siglo', 'Italian secolo']
     },
     attestation: 'reconstructed',
     category: 'general'
@@ -827,8 +811,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Mindsecond', 'Shortwhile', 'Tick'],
     etymology: {
-      oldEnglish: 'hwīl (while, time)',
-      cognates: ['German Minute', 'Dutch minuut']
+      reconstruction: 'Medieval Latin minuta (small part), from Latin minutus (small), from minuere (to diminish)',
+      cognates: ['French minute', 'Spanish minuto', 'Italian minuto']
     },
     attestation: 'proposed',
     category: 'general'
@@ -842,9 +826,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Sib', 'Kinchild', 'Nearkin'],
     etymology: {
-      oldEnglish: 'sibb (kinship, relative)',
-      protoGermanic: '*sibjō',
-      cognates: ['German Vetter', 'Dutch neef']
+      reconstruction: 'Old French cosin, from Latin consobrinus (cousin), from con- (together) + sobrinus (cousin on mother\'s side)',
+      cognates: ['French cousin', 'Spanish primo', 'Italian cugino']
     },
     attestation: 'attested',
     category: 'authentic'
@@ -856,8 +839,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Wedding', 'Wedlock', 'Handfasting'],
     etymology: {
-      oldEnglish: 'weddung (wedding ceremony)',
-      cognates: ['German Hochzeit', 'Dutch huwelijk']
+      reconstruction: 'Old French mariage, from marier (to marry), from Latin maritare (to wed), from maritus (husband)',
+      cognates: ['French mariage', 'Spanish matrimonio', 'Italian matrimonio']
     },
     attestation: 'attested',
     category: 'authentic'
@@ -869,8 +852,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Wedbreak', 'Unweeding', 'Bondbreak'],
     etymology: {
-      oldEnglish: 'wedd (pledge) + brecan (to break)',
-      reconstruction: 'Breaking of marriage bond'
+      reconstruction: 'Old French divorce, from Latin divortium (separation), from divertere (to turn aside), from di- (apart) + vertere (to turn)',
+      cognates: ['French divorce', 'Spanish divorcio', 'Italian divorzio']
     },
     attestation: 'neologism',
     category: 'social'
@@ -884,8 +867,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Shortcoat', 'Overgarb', 'Topwear'],
     etymology: {
-      oldEnglish: 'scort (short) + cāsul (coat)',
-      reconstruction: 'Short outer garment'
+      reconstruction: 'Old French jaquet (diminutive of jaque, a type of tunic), possibly from Jacques (James)',
+      cognates: ['French jaquette', 'Spanish chaqueta', 'Italian giacca']
     },
     attestation: 'neologism',
     category: 'general'
@@ -897,8 +880,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Garb-way', 'Dressway', 'Style'],
     etymology: {
-      oldEnglish: 'wīse (way, manner)',
-      cognates: ['German Mode', 'Dutch mode']
+      reconstruction: 'Old French façon (shape, manner), from Latin factio (a making), from facere (to make, do)',
+      cognates: ['French façon', 'Spanish facción', 'Italian fazione']
     },
     attestation: 'reconstructed',
     category: 'social'
@@ -910,8 +893,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'AJ',
     anglish: ['Graceful', 'Shapely', 'Wellmade'],
     etymology: {
-      oldEnglish: 'fæger (fair, beautiful)',
-      cognates: ['German elegant', 'Dutch elegant']
+      reconstruction: 'Latin elegantem, from eligere (to choose, select), from e- (out) + legere (to choose)',
+      cognates: ['French élégant', 'Spanish elegante', 'Italian elegante']
     },
     attestation: 'reconstructed',
     category: 'general'
@@ -925,8 +908,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Boardwar', 'Kingplay', 'Checkmate'],
     etymology: {
-      oldEnglish: 'cyning (king) + plega (play)',
-      reconstruction: 'Game of kings'
+      reconstruction: 'Old French esches (plural of eschec, check), from Persian shāh (king)',
+      cognates: ['French échecs', 'Spanish ajedrez', 'Italian scacchi']
     },
     attestation: 'proposed',
     category: 'social'
@@ -938,9 +921,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Win', 'Triumph', 'Overcoming'],
     etymology: {
-      oldEnglish: 'sige (victory)',
-      protoGermanic: '*sigiz',
-      cognates: ['German Sieg', 'Dutch overwinning']
+      reconstruction: 'Latin victoria (victory), from victor (conqueror), from vincere (to conquer)',
+      cognates: ['French victoire', 'Spanish victoria', 'Italian vittoria']
     },
     attestation: 'attested',
     category: 'authentic'
@@ -952,8 +934,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Loss', 'Downfall', 'Beating'],
     etymology: {
-      oldEnglish: 'fǣr (sudden attack, defeat)',
-      cognates: ['German Niederlage', 'Dutch nederlaag']
+      reconstruction: 'Old French desfait (undone), from desfaire (to undo), from Latin dis- (opposite) + facere (to do)',
+      cognates: ['French défaite', 'Spanish derrota', 'Italian sconfitta']
     },
     attestation: 'attested',
     category: 'authentic'
@@ -967,8 +949,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Songshow', 'Musicplay', 'Tunehall'],
     etymology: {
-      oldEnglish: 'song + scēawung (showing)',
-      reconstruction: 'Performance of songs'
+      reconstruction: 'French concert, from Italian concerto (harmony, agreement), from Latin concertare (to contend, compete)',
+      cognates: ['French concert', 'Spanish concierto', 'Italian concerto']
     },
     attestation: 'neologism',
     category: 'artistic'
@@ -980,8 +962,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Playhall', 'Showhouse', 'Stagehouse'],
     etymology: {
-      oldEnglish: 'plega (play) + heall (hall)',
-      cognates: ['German Theater', 'Dutch theater']
+      reconstruction: 'Greek theatron (place for viewing), from theasthai (to behold), from thea (a view)',
+      cognates: ['French théâtre', 'Spanish teatro', 'Italian teatro']
     },
     attestation: 'neologism',
     category: 'artistic'
@@ -993,8 +975,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Watchers', 'Onlookers', 'Showfolk'],
     etymology: {
-      oldEnglish: 'sceawere (watcher, observer)',
-      cognates: ['German Zuschauer', 'Dutch toeschouwers']
+      reconstruction: 'Old French audience (hearing, listening), from Latin audientia (a hearing), from audire (to hear)',
+      cognates: ['French audience', 'Spanish audiencia', 'Italian udienza']
     },
     attestation: 'reconstructed',
     category: 'social'
@@ -1036,8 +1018,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Gain', 'Winning', 'Earnings'],
     etymology: {
-      oldEnglish: 'gestrīen (gain, profit)',
-      cognates: ['German Gewinn', 'Dutch winst']
+      reconstruction: 'Old French profit, from Latin profectus (progress, profit), from proficere (to make progress), from pro- (forward) + facere (to make)',
+      cognates: ['French profit', 'Spanish provecho', 'Italian profitto']
     },
     attestation: 'attested',
     category: 'authentic'
@@ -1064,8 +1046,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Testroom', 'Trialhouse', 'Workstead'],
     etymology: {
-      oldEnglish: 'weorc (work) + stede (place)',
-      cognates: ['German Labor', 'Dutch laboratorium']
+      reconstruction: 'Medieval Latin laboratorium (workshop), from Latin laborare (to work), from labor (work, toil)',
+      cognates: ['French laboratoire', 'Spanish laboratorio', 'Italian laboratorio']
     },
     attestation: 'neologism',
     category: 'academic'
@@ -1077,8 +1059,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Forsaking', 'Deep-seeking', 'Truthhunt'],
     etymology: {
-      oldEnglish: 'forscēawung (investigation)',
-      cognates: ['German Forschung', 'Dutch onderzoek']
+      reconstruction: 'French recherche, from rechercher (to seek again), from re- (again) + chercher (to search)',
+      cognates: ['French recherche', 'Spanish investigación', 'Italian ricerca']
     },
     attestation: 'reconstructed',
     category: 'academic'
@@ -1092,8 +1074,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'V',
     anglish: ['Order', 'Set up', 'Shape up'],
     etymology: {
-      oldEnglish: 'endebyrdan (to put in order)',
-      cognates: ['German ordnen', 'Dutch ordenen']
+      reconstruction: 'Medieval Latin organizare (to organize), from Latin organum (instrument, organ), from Greek organon (tool, instrument)',
+      cognates: ['French organiser', 'Spanish organizar', 'Italian organizzare']
     },
     attestation: 'reconstructed',
     category: 'general'
@@ -1105,8 +1087,8 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'V',
     anglish: ['Feast', 'Make merry', 'Hold high'],
     etymology: {
-      oldEnglish: 'fēostrian (to feast)',
-      cognates: ['German feiern', 'Dutch vieren']
+      reconstruction: 'Latin celebrare (to honor, celebrate), from celeber (frequented, famous)',
+      cognates: ['French célébrer', 'Spanish celebrar', 'Italian celebrare']
     },
     attestation: 'reconstructed',
     category: 'social'
@@ -1124,6 +1106,646 @@ export const authentikWordEntries: WordEntry[] = [
     },
     attestation: 'attested',
     category: 'authentic'
+  },
+
+  // Common Verbs - Additional entries
+  {
+    id: 'discuss',
+    word: 'Discuss',
+    meaning: 'To talk about something in detail',
+    kind: 'V',
+    anglish: ['Talk over', 'Bespeak', 'Talk through'],
+    etymology: {
+      reconstruction: 'Latin discutere (to strike apart, break up), from dis- (apart) + quatere (to shake)',
+      cognates: ['French discuter', 'Spanish discutir', 'Italian discutere']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'permit',
+    word: 'Permit',
+    meaning: 'To allow something to happen',
+    kind: 'V',
+    anglish: ['Allow', 'Let', 'Give leave'],
+    etymology: {
+      reconstruction: 'Latin permittere (to let pass through), from per- (through) + mittere (to send)',
+      cognates: ['French permettre', 'Spanish permitir', 'Italian permettere']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'continue',
+    word: 'Continue',
+    meaning: 'To keep doing something without stopping',
+    kind: 'V',
+    anglish: ['Keep on', 'Go on', 'Last'],
+    etymology: {
+      reconstruction: 'Latin continuare (to make continuous), from continuus (uninterrupted), from continere (to hold together)',
+      cognates: ['French continuer', 'Spanish continuar', 'Italian continuare']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'receive',
+    word: 'Receive',
+    meaning: 'To get or accept something given',
+    kind: 'V',
+    anglish: ['Get', 'Take in', 'Welcome'],
+    etymology: {
+      reconstruction: 'Old French receivre, from Latin recipere (to take back, receive), from re- (back) + capere (to take)',
+      cognates: ['French recevoir', 'Spanish recibir', 'Italian ricevere']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'develop',
+    word: 'Develop',
+    meaning: 'To grow or cause to grow gradually',
+    kind: 'V',
+    anglish: ['Unfold', 'Grow', 'Build up'],
+    etymology: {
+      reconstruction: 'French développer (to unwrap, unfold), from des- (un-) + voloper (to wrap)',
+      cognates: ['French développer', 'Spanish desarrollar', 'Italian sviluppare']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'require',
+    word: 'Require',
+    meaning: 'To need something as necessary',
+    kind: 'V',
+    anglish: ['Need', 'Call for', 'Must have'],
+    etymology: {
+      reconstruction: 'Old French requerre, from Latin requirere (to seek again, need), from re- (again) + quaerere (to seek)',
+      cognates: ['French requérir', 'Spanish requerir', 'Italian richiedere']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'arrive',
+    word: 'Arrive',
+    meaning: 'To reach a destination',
+    kind: 'V',
+    anglish: ['Come', 'Reach', 'Get to'],
+    etymology: {
+      reconstruction: 'Old French ariver, from Vulgar Latin arripare (to come to shore), from Latin ad- (to) + ripa (shore)',
+      cognates: ['French arriver', 'Spanish arribar', 'Italian arrivare']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'depart',
+    word: 'Depart',
+    meaning: 'To leave or go away',
+    kind: 'V',
+    anglish: ['Leave', 'Go forth', 'Fare forth'],
+    etymology: {
+      reconstruction: 'Old French departir (to divide, separate), from Latin departire, from de- (from) + partire (to divide)',
+      cognates: ['French départir', 'Spanish departir', 'Italian dipartire']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+
+  // Common Adjectives
+  {
+    id: 'difficult',
+    word: 'Difficult',
+    meaning: 'Not easy; requiring effort',
+    kind: 'AJ',
+    anglish: ['Hard', 'Tough', 'Uneasy'],
+    etymology: {
+      reconstruction: 'Latin difficilis (hard, difficult), from dis- (not) + facilis (easy)',
+      cognates: ['French difficile', 'Spanish difícil', 'Italian difficile']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'simple',
+    word: 'Simple',
+    meaning: 'Easy to understand or do',
+    kind: 'AJ',
+    anglish: ['Plain', 'Straightforward', 'Easy'],
+    etymology: {
+      reconstruction: 'Old French simple, from Latin simplus (simple, plain), from sem- (one) + -plus (fold)',
+      cognates: ['French simple', 'Spanish simple', 'Italian semplice']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'necessary',
+    word: 'Necessary',
+    meaning: 'Required or essential',
+    kind: 'AJ',
+    anglish: ['Needful', 'Must-have', 'Nedly'],
+    etymology: {
+      reconstruction: 'Latin necessarius (unavoidable, necessary), from necesse (unavoidable, necessary)',
+      cognates: ['French nécessaire', 'Spanish necesario', 'Italian necessario']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'possible',
+    word: 'Possible',
+    meaning: 'Able to be done or happen',
+    kind: 'AJ',
+    anglish: ['Doable', 'Feasible', 'May-be'],
+    etymology: {
+      reconstruction: 'Old French possible, from Latin possibilis (that can be done), from posse (to be able)',
+      cognates: ['French possible', 'Spanish posible', 'Italian possibile']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'ancient',
+    word: 'Ancient',
+    meaning: 'Very old; from long ago',
+    kind: 'AJ',
+    anglish: ['Old', 'Elder', 'Foreold'],
+    etymology: {
+      reconstruction: 'Old French ancien, from Vulgar Latin anteanus, from Latin ante (before)',
+      cognates: ['French ancien', 'Spanish anciano', 'Italian antico']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'modern',
+    word: 'Modern',
+    meaning: 'Relating to the present time',
+    kind: 'AJ',
+    anglish: ['New', 'Today\'s', 'Newish'],
+    etymology: {
+      reconstruction: 'Late Latin modernus (modern), from Latin modo (just now), from modus (measure, manner)',
+      cognates: ['French moderne', 'Spanish moderno', 'Italian moderno']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'popular',
+    word: 'Popular',
+    meaning: 'Liked by many people',
+    kind: 'AJ',
+    anglish: ['Wellliked', 'Beloved', 'Folkish'],
+    etymology: {
+      reconstruction: 'Latin popularis (of the people), from populus (people)',
+      cognates: ['French populaire', 'Spanish popular', 'Italian popolare']
+    },
+    attestation: 'reconstructed',
+    category: 'social'
+  },
+  {
+    id: 'certain',
+    word: 'Certain',
+    meaning: 'Sure or definite',
+    kind: 'AJ',
+    anglish: ['Sure', 'Sooth', 'Fixed'],
+    etymology: {
+      reconstruction: 'Old French certain, from Latin certus (determined, settled), from cernere (to decide)',
+      cognates: ['French certain', 'Spanish cierto', 'Italian certo']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+
+  // Common Nouns - Abstract Concepts
+  {
+    id: 'animal',
+    word: 'Animal',
+    meaning: 'Living creature that can move',
+    kind: 'N',
+    anglish: ['Beast', 'Deer', 'Livewight'],
+    etymology: {
+      reconstruction: 'Latin animalis (having breath, living), from anima (breath, soul)',
+      cognates: ['French animal', 'Spanish animal', 'Italian animale']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'person',
+    word: 'Person',
+    meaning: 'Individual human being',
+    kind: 'N',
+    anglish: ['Man', 'Wight', 'Being'],
+    etymology: {
+      reconstruction: 'Old French persone, from Latin persona (mask, character, person)',
+      cognates: ['French personne', 'Spanish persona', 'Italian persona']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'society',
+    word: 'Society',
+    meaning: 'Community of people living together',
+    kind: 'N',
+    anglish: ['Fellowship', 'Commonweal', 'Folkship'],
+    etymology: {
+      reconstruction: 'French société, from Latin societas (fellowship), from socius (companion, ally)',
+      cognates: ['French société', 'Spanish sociedad', 'Italian società']
+    },
+    attestation: 'reconstructed',
+    category: 'social'
+  },
+  {
+    id: 'nation',
+    word: 'Nation',
+    meaning: 'Large group of people united by common descent or territory',
+    kind: 'N',
+    anglish: ['Folk', 'Land', 'Folkdom'],
+    etymology: {
+      reconstruction: 'Old French nation, from Latin natio (birth, tribe, nation), from nasci (to be born)',
+      cognates: ['French nation', 'Spanish nación', 'Italian nazione']
+    },
+    attestation: 'attested',
+    category: 'social'
+  },
+  {
+    id: 'religion',
+    word: 'Religion',
+    meaning: 'System of faith and worship',
+    kind: 'N',
+    anglish: ['Belief', 'Faith', 'Godliness'],
+    etymology: {
+      reconstruction: 'Latin religio (reverence, respect for what is sacred), possibly from religare (to bind)',
+      cognates: ['French religion', 'Spanish religión', 'Italian religione']
+    },
+    attestation: 'attested',
+    category: 'social'
+  },
+  {
+    id: 'science',
+    word: 'Science',
+    meaning: 'Systematic study of the natural world',
+    kind: 'N',
+    anglish: ['Knowledge', 'Lore', 'Wisdom'],
+    etymology: {
+      reconstruction: 'Old French science, from Latin scientia (knowledge), from scire (to know)',
+      cognates: ['French science', 'Spanish ciencia', 'Italian scienza']
+    },
+    attestation: 'attested',
+    category: 'academic'
+  },
+  {
+    id: 'justice',
+    word: 'Justice',
+    meaning: 'Fair treatment according to law',
+    kind: 'N',
+    anglish: ['Righteousness', 'Fairness', 'Rightfulness'],
+    etymology: {
+      reconstruction: 'Old French justice, from Latin justitia (righteousness, equity), from justus (just, right)',
+      cognates: ['French justice', 'Spanish justicia', 'Italian giustizia']
+    },
+    attestation: 'attested',
+    category: 'social'
+  },
+  {
+    id: 'freedom',
+    word: 'Freedom',
+    meaning: 'State of being free from restrictions',
+    kind: 'N',
+    anglish: ['Already Anglish!'],
+    etymology: {
+      oldEnglish: 'frēodōm',
+      protoGermanic: '*frijadōmaz',
+      cognates: ['German Freiheit', 'Dutch vrijheid']
+    },
+    attestation: 'attested',
+    category: 'authentic'
+  },
+  {
+    id: 'peace',
+    word: 'Peace',
+    meaning: 'State of harmony without conflict',
+    kind: 'N',
+    anglish: ['Frith', 'Restfulness', 'Stillness'],
+    etymology: {
+      reconstruction: 'Old French pais, from Latin pax (peace)',
+      cognates: ['French paix', 'Spanish paz', 'Italian pace']
+    },
+    attestation: 'attested',
+    category: 'social'
+  },
+  {
+    id: 'power',
+    word: 'Power',
+    meaning: 'Ability or capacity to do something',
+    kind: 'N',
+    anglish: ['Might', 'Strength', 'Main'],
+    etymology: {
+      reconstruction: 'Old French poeir, from Vulgar Latin potere, from Latin potis (able, powerful)',
+      cognates: ['French pouvoir', 'Spanish poder', 'Italian potere']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+
+  // Technology & Business
+  {
+    id: 'industry',
+    word: 'Industry',
+    meaning: 'Economic activity concerned with manufacturing',
+    kind: 'N',
+    anglish: ['Craftwork', 'Making', 'Workfield'],
+    etymology: {
+      reconstruction: 'Latin industria (diligence, activity), from industrius (diligent)',
+      cognates: ['French industrie', 'Spanish industria', 'Italian industria']
+    },
+    attestation: 'reconstructed',
+    category: 'professional'
+  },
+  {
+    id: 'machine',
+    word: 'Machine',
+    meaning: 'Device with moving parts that performs work',
+    kind: 'N',
+    anglish: ['Workcraft', 'Engine', 'Toolwork'],
+    etymology: {
+      reconstruction: 'French machine, from Latin machina (machine, engine), from Greek mēkhanē (device, contrivance)',
+      cognates: ['French machine', 'Spanish máquina', 'Italian macchina']
+    },
+    attestation: 'reconstructed',
+    category: 'technical'
+  },
+  {
+    id: 'energy',
+    word: 'Energy',
+    meaning: 'Power or force needed for activity',
+    kind: 'N',
+    anglish: ['Workfare', 'Strength', 'Might'],
+    etymology: {
+      reconstruction: 'Late Latin energia, from Greek energeia (activity, operation), from en- (in) + ergon (work)',
+      cognates: ['French énergie', 'Spanish energía', 'Italian energia']
+    },
+    attestation: 'reconstructed',
+    category: 'technical'
+  },
+  {
+    id: 'factory',
+    word: 'Factory',
+    meaning: 'Building where goods are manufactured',
+    kind: 'N',
+    anglish: ['Workshed', 'Makehouse', 'Craftstead'],
+    etymology: {
+      reconstruction: 'Late Latin factoria (oil press), from Latin factor (maker, doer), from facere (to make)',
+      cognates: ['French fabrique', 'Spanish fábrica', 'Italian fabbrica']
+    },
+    attestation: 'neologism',
+    category: 'professional'
+  },
+  {
+    id: 'company',
+    word: 'Company',
+    meaning: 'Business organization',
+    kind: 'N',
+    anglish: ['Fellowship', 'Guild', 'Workband'],
+    etymology: {
+      reconstruction: 'Old French compaignie (companionship), from Vulgar Latin companio (one who eats bread with another), from com- (with) + panis (bread)',
+      cognates: ['French compagnie', 'Spanish compañía', 'Italian compagnia']
+    },
+    attestation: 'reconstructed',
+    category: 'professional'
+  },
+
+  // Everyday Life
+  {
+    id: 'moment',
+    word: 'Moment',
+    meaning: 'Very brief period of time',
+    kind: 'N',
+    anglish: ['Blink', 'Eyeblink', 'Wink'],
+    etymology: {
+      reconstruction: 'Latin momentum (movement, moving power, moment), from movere (to move)',
+      cognates: ['French moment', 'Spanish momento', 'Italian momento']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'change',
+    word: 'Change',
+    meaning: 'Act of becoming different',
+    kind: 'N',
+    anglish: ['Shift', 'Swapping', 'Wending'],
+    etymology: {
+      reconstruction: 'Old French changier, from Late Latin cambiare (to exchange, barter), from Celtic *cambion (exchange)',
+      cognates: ['French changer', 'Spanish cambiar', 'Italian cambiare']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'place',
+    word: 'Place',
+    meaning: 'Particular position or location',
+    kind: 'N',
+    anglish: ['Stead', 'Spot', 'Where'],
+    etymology: {
+      reconstruction: 'Old French place (open space), from Latin platea (courtyard, street), from Greek plateia (broad way)',
+      cognates: ['French place', 'Spanish plaza', 'Italian piazza']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'example',
+    word: 'Example',
+    meaning: 'Thing serving as illustration',
+    kind: 'N',
+    anglish: ['Byspel', 'Sample', 'Showing'],
+    etymology: {
+      reconstruction: 'Old French example, from Latin exemplum (sample, copy), from eximere (to take out)',
+      cognates: ['French exemple', 'Spanish ejemplo', 'Italian esempio']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'problem',
+    word: 'Problem',
+    meaning: 'Matter or situation requiring solution',
+    kind: 'N',
+    anglish: ['Riddle', 'Hardship', 'Knot'],
+    etymology: {
+      reconstruction: 'Old French problème, from Latin problema, from Greek problēma (obstacle, problem), from proballein (to throw forward)',
+      cognates: ['French problème', 'Spanish problema', 'Italian problema']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'question',
+    word: 'Question',
+    meaning: 'Sentence seeking information',
+    kind: 'N',
+    anglish: ['Asking', 'Frigging', 'Query'],
+    etymology: {
+      reconstruction: 'Old French question, from Latin quaestio (seeking, inquiry), from quaerere (to seek, ask)',
+      cognates: ['French question', 'Spanish cuestión', 'Italian questione']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'answer',
+    word: 'Answer',
+    meaning: 'Response to a question',
+    kind: 'N',
+    anglish: ['Already Anglish!'],
+    etymology: {
+      oldEnglish: 'andswaru',
+      protoGermanic: '*andswaru',
+      cognates: ['German Antwort', 'Dutch antwoord']
+    },
+    attestation: 'attested',
+    category: 'authentic'
+  },
+
+  // More Common Verbs
+  {
+    id: 'present',
+    word: 'Present',
+    meaning: 'To show or offer for consideration',
+    kind: 'V',
+    anglish: ['Show', 'Give', 'Offer forth'],
+    etymology: {
+      reconstruction: 'Old French presenter, from Latin praesentare (to place before), from praesens (present, at hand)',
+      cognates: ['French présenter', 'Spanish presentar', 'Italian presentare']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'produce',
+    word: 'Produce',
+    meaning: 'To make or manufacture something',
+    kind: 'V',
+    anglish: ['Make', 'Bring forth', 'Yield'],
+    etymology: {
+      reconstruction: 'Latin producere (to bring forth, lead forward), from pro- (forward) + ducere (to lead)',
+      cognates: ['French produire', 'Spanish producir', 'Italian produrre']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'decide',
+    word: 'Decide',
+    meaning: 'To make a choice or judgment',
+    kind: 'V',
+    anglish: ['Choose', 'Settle', 'Make up one\'s mind'],
+    etymology: {
+      reconstruction: 'Latin decidere (to cut off, determine), from de- (off) + caedere (to cut)',
+      cognates: ['French décider', 'Spanish decidir', 'Italian decidere']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'consider',
+    word: 'Consider',
+    meaning: 'To think carefully about something',
+    kind: 'V',
+    anglish: ['Think over', 'Bethink', 'Weigh'],
+    etymology: {
+      reconstruction: 'Latin considerare (to examine, contemplate), possibly from com- (with) + sidus (star)',
+      cognates: ['French considérer', 'Spanish considerar', 'Italian considerare']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'imagine',
+    word: 'Imagine',
+    meaning: 'To form a mental picture of something',
+    kind: 'V',
+    anglish: ['Mind forth', 'Dream up', 'Think up'],
+    etymology: {
+      reconstruction: 'Old French imaginer, from Latin imaginari (to form a mental picture), from imago (image)',
+      cognates: ['French imaginer', 'Spanish imaginar', 'Italian immaginare']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+
+  // More Nouns
+  {
+    id: 'purpose',
+    word: 'Purpose',
+    meaning: 'Reason for which something exists',
+    kind: 'N',
+    anglish: ['Goal', 'Aim', 'End'],
+    etymology: {
+      reconstruction: 'Old French porpos, from Latin propositum (thing put forth), from proponere (to set forth)',
+      cognates: ['French propos', 'Spanish propósito', 'Italian proposito']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'result',
+    word: 'Result',
+    meaning: 'Outcome or consequence of something',
+    kind: 'N',
+    anglish: ['Outcome', 'Upshot', 'Aftermath'],
+    etymology: {
+      reconstruction: 'Medieval Latin resultare (to spring back), from Latin re- (back) + saltare (to leap)',
+      cognates: ['French résultat', 'Spanish resultado', 'Italian risultato']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'opinion',
+    word: 'Opinion',
+    meaning: 'View or judgment about something',
+    kind: 'N',
+    anglish: ['Mind', 'Thought', 'Deeming'],
+    etymology: {
+      reconstruction: 'Old French opinion, from Latin opinio (belief, judgment), from opinari (to think, believe)',
+      cognates: ['French opinion', 'Spanish opinión', 'Italian opinione']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'effort',
+    word: 'Effort',
+    meaning: 'Vigorous attempt to do something',
+    kind: 'N',
+    anglish: ['Struggle', 'Striving', 'Toil'],
+    etymology: {
+      reconstruction: 'French effort, from Old French esforz (force, exertion), from esforcier (to force)',
+      cognates: ['French effort', 'Spanish esfuerzo', 'Italian sforzo']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'experience',
+    word: 'Experience',
+    meaning: 'Knowledge gained through doing',
+    kind: 'N',
+    anglish: ['Undergoing', 'Trial', 'Knowledge'],
+    etymology: {
+      reconstruction: 'Old French experience, from Latin experientia (a trial, proof, experiment), from experiri (to try)',
+      cognates: ['French expérience', 'Spanish experiencia', 'Italian esperienza']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
   }
 ];
 

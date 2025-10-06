@@ -23,14 +23,14 @@
 @tailwind utilities;
 
 :root {
-  font-family: 'JMH Beda', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-  line-height: 1.6;
+  font-family: 'Cardo', 'JMH Beda', Georgia, 'Times New Roman', serif;
+  line-height: 1.7;
   font-weight: 400;
-  font-size: 18px; /* Slightly larger base font size */
+  font-size: 18px;
 
-  color-scheme: dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #0f0f23;
+  color-scheme: light;
+  color: #2C1810;
+  background-color: #F5EED7;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -51,9 +51,10 @@ body {
   width: 100%;
 }
 
-@keyframes scan {
-  0% { transform: translateY(-100vh); }
-  100% { transform: translateY(100vh); }
+/* Medieval parchment texture pattern */
+@keyframes subtleGlow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 0.8; }
 }
 
 /* Custom font sizing and spacing for better readability */
@@ -88,20 +89,80 @@ body {
   font-size: 0.875rem; /* 14px instead of 12px */
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar - Medieval style */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(15, 23, 42, 0.5);
+  background: #EBE1C5;
+  border-left: 1px solid #8B6F47;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(56, 189, 248, 0.3);
-  border-radius: 4px;
+  background: #8B1E3F;
+  border-radius: 2px;
+  border: 1px solid #6B0F1A;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(56, 189, 248, 0.5);
+  background: #A52A2A;
+}
+
+/* Medieval decorative classes */
+.font-medieval-title {
+  font-family: 'IM Fell English', 'Cardo', serif;
+  letter-spacing: 0.03em;
+}
+
+.font-blackletter {
+  font-family: 'UnifrakturMagdeburg', 'IM Fell English', serif;
+}
+
+/* Parchment texture effect */
+.parchment-bg {
+  background-color: #F5EED7;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(139, 111, 71, 0.03) 2px,
+      rgba(139, 111, 71, 0.03) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(139, 111, 71, 0.03) 2px,
+      rgba(139, 111, 71, 0.03) 4px
+    );
+}
+
+/* Decorative border corners */
+.decorative-corners {
+  position: relative;
+}
+
+.decorative-corners::before,
+.decorative-corners::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #8B1E3F;
+}
+
+.decorative-corners::before {
+  top: -1px;
+  left: -1px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.decorative-corners::after {
+  top: -1px;
+  right: -1px;
+  border-left: none;
+  border-bottom: none;
 }

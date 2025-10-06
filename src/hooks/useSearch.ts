@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import Fuse from 'fuse.js';
-import { WordEntry, SearchFilters, WordCategory } from '../types';
+import { WordEntry, SearchFilters, WordCategory, AttestationLevel } from '../types';
 
 interface UseSearchProps {
   data: WordEntry[];
@@ -12,6 +12,10 @@ interface UseSearchReturn {
   setSearchTerm: (term: string) => void;
   selectedCategory: WordCategory;
   setSelectedCategory: (category: WordCategory) => void;
+  selectedAttestation: AttestationLevel | 'all';
+  setSelectedAttestation: (attestation: AttestationLevel | 'all') => void;
+  sortAlphabetically: boolean;
+  setSortAlphabetically: (sort: boolean) => void;
   searchFilters: SearchFilters;
   setSearchFilters: (filters: Partial<SearchFilters>) => void;
   resultsCount: number;
@@ -21,6 +25,8 @@ interface UseSearchReturn {
 export const useSearch = ({ data }: UseSearchProps): UseSearchReturn => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<WordCategory>('all');
+  const [selectedAttestation, setSelectedAttestation] = useState<AttestationLevel | 'all'>('all');
+  const [sortAlphabetically, setSortAlphabetically] = useState(false);
   const [searchFilters, setSearchFilters] = useState<SearchFilters>({
     category: 'all',
     searchTerm: '',
@@ -59,6 +65,11 @@ export const useSearch = ({ data }: UseSearchProps): UseSearchReturn => {
       results = results.filter(entry => entry.category === selectedCategory);
     }
 
+    // Attestation filtering
+    if (selectedAttestation !== 'all') {
+      results = results.filter(entry => entry.attestation === selectedAttestation);
+    }
+
     // Text search with fuzzy matching
     if (searchTerm.trim()) {
       if (searchTerm.length >= 2) {
@@ -66,13 +77,15 @@ export const useSearch = ({ data }: UseSearchProps): UseSearchReturn => {
         const fuseResults = fuse.search(searchTerm);
         const matchingIds = new Set(fuseResults.map(result => result.item.id));
         results = results.filter(entry => matchingIds.has(entry.id));
-        
-        // Sort by relevance score
-        results.sort((a, b) => {
-          const scoreA = fuseResults.find(r => r.item.id === a.id)?.score ?? 1;
-          const scoreB = fuseResults.find(r => r.item.id === b.id)?.score ?? 1;
-          return scoreA - scoreB;
-        });
+
+        // Sort by relevance score (unless alphabetical sort is enabled)
+        if (!sortAlphabetically) {
+          results.sort((a, b) => {
+            const scoreA = fuseResults.find(r => r.item.id === a.id)?.score ?? 1;
+            const scoreB = fuseResults.find(r => r.item.id === b.id)?.score ?? 1;
+            return scoreA - scoreB;
+          });
+        }
       } else {
         // Simple string matching for short terms
         const searchLower = searchTerm.toLowerCase();
@@ -85,6 +98,11 @@ export const useSearch = ({ data }: UseSearchProps): UseSearchReturn => {
       }
     }
 
+    // Alphabetical sorting
+    if (sortAlphabetically) {
+      results.sort((a, b) => a.word.localeCompare(b.word));
+    }
+
     // Additional filters
     if (searchFilters.showOnlyFavorites) {
       // This would require user preferences to be implemented
@@ -92,7 +110,7 @@ export const useSearch = ({ data }: UseSearchProps): UseSearchReturn => {
     }
 
     return results;
-  }, [data, searchTerm, selectedCategory, searchFilters, fuse]);
+  }, [data, searchTerm, selectedCategory, selectedAttestation, sortAlphabetically, searchFilters, fuse]);
 
   // Update search filters when basic filters change
   useMemo(() => {
@@ -109,6 +127,10 @@ export const useSearch = ({ data }: UseSearchProps): UseSearchReturn => {
     setSearchTerm,
     selectedCategory,
     setSelectedCategory,
+    selectedAttestation,
+    setSelectedAttestation,
+    sortAlphabetically,
+    setSortAlphabetically,
     searchFilters,
     setSearchFilters: (filters: Partial<SearchFilters>) => {
       setSearchFilters(prev => ({ ...prev, ...filters }));
