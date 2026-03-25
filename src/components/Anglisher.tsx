@@ -1,6 +1,16 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { Copy, Check, Feather } from 'lucide-react';
+import { Copy, Check, Feather, Trash2 } from 'lucide-react';
 import { authentikWordEntries } from '../data/authenticWordEntries';
+import { useLocalStorage } from '../hooks/useLocalStorage';
+
+// ---------------------------------------------------------------------------
+// Unknown word queue — persisted to localStorage
+// ---------------------------------------------------------------------------
+interface UnknownEntry {
+  word: string;
+  count: number;
+  firstSeen: string; // ISO date
+}
 
 // ---------------------------------------------------------------------------
 // Native Germanic word set — words NOT in the wordbook that are green.
@@ -240,13 +250,36 @@ export const Anglisher: React.FC = () => {
   const [analyzed, setAnalyzed] = useState(false);
   const [openTokenId, setOpenTokenId] = useState<number | null>(null);
   const [copied, setCopied] = useState(false);
+  const [unknownQueue, setUnknownQueue] = useLocalStorage<UnknownEntry[]>('anglisher-unknown-queue', []);
+  const [showQueue, setShowQueue] = useState(false);
+
+  const logUnknownWords = useCallback((newTokens: Token[]) => {
+    const unknowns = newTokens
+      .filter(t => t.kind === 'word' && t.status === 'gray')
+      .map(t => t.text.toLowerCase());
+    if (unknowns.length === 0) return;
+    setUnknownQueue(prev => {
+      const map = new Map(prev.map(e => [e.word, e]));
+      for (const w of unknowns) {
+        const existing = map.get(w);
+        if (existing) {
+          map.set(w, { ...existing, count: existing.count + 1 });
+        } else {
+          map.set(w, { word: w, count: 1, firstSeen: new Date().toISOString() });
+        }
+      }
+      return Array.from(map.values()).sort((a, b) => b.count - a.count);
+    });
+  }, [setUnknownQueue]);
 
   const handleAnalyze = () => {
     if (!inputText.trim()) return;
-    setTokens(tokenize(inputText));
+    const newTokens = tokenize(inputText);
+    setTokens(newTokens);
     setAnalyzed(true);
     setOpenTokenId(null);
     setCopied(false);
+    logUnknownWords(newTokens);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
@@ -434,6 +467,76 @@ export const Anglisher: React.FC = () => {
                     backgroundColor: '#4A7C59',
                   }}
                 />
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Unknown word queue */}
+      {unknownQueue.length > 0 && (
+        <div
+          className="rounded border-2 overflow-hidden"
+          style={{ borderColor: '#9B8B7A', backgroundColor: 'rgba(240, 230, 210, 0.3)' }}
+        >
+          <button
+            onClick={() => setShowQueue(q => !q)}
+            className="w-full flex items-center justify-between px-4 py-3 text-sm font-semibold transition-colors duration-150 hover:bg-amber-100/30"
+            style={{ color: '#5C4F44' }}
+          >
+            <span className="flex items-center gap-2">
+              <span
+                className="inline-flex items-center justify-center w-5 h-5 rounded-full text-xs font-bold"
+                style={{ backgroundColor: '#9B8B7A', color: '#FDF6E3' }}
+              >
+                {unknownQueue.length}
+              </span>
+              Unknown words queue
+              <span className="text-xs font-normal italic" style={{ color: '#8B6F47' }}>
+                — flagged for future wordbook additions
+              </span>
+            </span>
+            <span style={{ color: '#8B6F47' }}>{showQueue ? '▲' : '▼'}</span>
+          </button>
+
+          {showQueue && (
+            <div className="border-t px-4 py-3 space-y-1" style={{ borderColor: '#C4A882' }}>
+              <div className="flex justify-end mb-2">
+                <button
+                  onClick={() => setUnknownQueue([])}
+                  className="flex items-center gap-1 text-xs px-2 py-1 rounded border transition-colors duration-150 hover:bg-red-50"
+                  style={{ borderColor: '#C4A882', color: '#8B6F47' }}
+                >
+                  <Trash2 className="w-3 h-3" />
+                  Clear all
+                </button>
+              </div>
+              <div className="max-h-48 overflow-y-auto space-y-1">
+                {unknownQueue.map(entry => (
+                  <div
+                    key={entry.word}
+                    className="flex items-center justify-between px-3 py-1.5 rounded text-sm"
+                    style={{ backgroundColor: 'rgba(155,139,122,0.1)' }}
+                  >
+                    <span className="font-medium" style={{ color: '#3D2817' }}>{entry.word}</span>
+                    <div className="flex items-center gap-3">
+                      <span className="text-xs" style={{ color: '#8B6F47' }}>
+                        seen {entry.count}×
+                      </span>
+                      <span className="text-xs" style={{ color: '#9B8B7A' }}>
+                        {new Date(entry.firstSeen).toLocaleDateString()}
+                      </span>
+                      <button
+                        onClick={() => setUnknownQueue(prev => prev.filter(e => e.word !== entry.word))}
+                        className="text-xs opacity-50 hover:opacity-100 transition-opacity"
+                        style={{ color: '#8B1E3F' }}
+                        title="Remove from queue"
+                      >
+                        ✕
+                      </button>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           )}
