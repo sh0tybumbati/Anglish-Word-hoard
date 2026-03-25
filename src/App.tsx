@@ -1,8 +1,9 @@
 import React from 'react';
-import { Crown, BookOpen, Download, Grid, List, Shield, Globe2, Tag } from 'lucide-react';
+import { Crown, BookOpen, Download, Grid, List, Shield, Globe2, Tag, Feather } from 'lucide-react';
 import { SearchBar } from './components/SearchBar';
 import { WordCard } from './components/WordCard';
 import { TableView } from './components/TableView';
+import { Anglisher } from './components/Anglisher';
 import { useSearch } from './hooks/useSearch';
 import { useFavorites } from './hooks/useFavorites';
 import { authentikWordEntries } from './data/authenticWordEntries';
@@ -26,6 +27,7 @@ function App() {
 
   const [showOnlyFavorites, setShowOnlyFavorites] = React.useState(false);
   const [viewMode, setViewMode] = React.useState<'cards' | 'table'>('cards');
+  const [mainTab, setMainTab] = React.useState<'wordbook' | 'anglisher'>('wordbook');
 
   // Filter by favorites if enabled
   const displayedWords = React.useMemo(() => {
@@ -127,8 +129,42 @@ function App() {
               </div>
             </div>
 
+            {/* Main Tab Switcher */}
+            <div className="flex items-center gap-2 mb-6 border-b-2 pb-4" style={{ borderColor: '#8B6F47' }}>
+              <button
+                onClick={() => setMainTab('wordbook')}
+                className={`flex items-center gap-2 px-4 py-2 rounded transition-all duration-300 text-sm border-2 ${
+                  mainTab === 'wordbook'
+                    ? 'border-amber-800 shadow-md'
+                    : 'border-amber-700/40 hover:border-amber-700 hover:bg-amber-100/30'
+                }`}
+                style={{
+                  backgroundColor: mainTab === 'wordbook' ? '#8B1E3F' : '#F0E6D2',
+                  color: mainTab === 'wordbook' ? '#F5EED7' : '#4A3728',
+                }}
+              >
+                <BookOpen className="w-4 h-4" />
+                Wordbook
+              </button>
+              <button
+                onClick={() => setMainTab('anglisher')}
+                className={`flex items-center gap-2 px-4 py-2 rounded transition-all duration-300 text-sm border-2 ${
+                  mainTab === 'anglisher'
+                    ? 'border-amber-800 shadow-md'
+                    : 'border-amber-700/40 hover:border-amber-700 hover:bg-amber-100/30'
+                }`}
+                style={{
+                  backgroundColor: mainTab === 'anglisher' ? '#8B1E3F' : '#F0E6D2',
+                  color: mainTab === 'anglisher' ? '#F5EED7' : '#4A3728',
+                }}
+              >
+                <Feather className="w-4 h-4" />
+                Anglisher
+              </button>
+            </div>
+
             {/* View Controls - Medieval Button Style */}
-            <div className="flex justify-between items-center mb-6">
+            {mainTab === 'wordbook' && (<div className="flex justify-between items-center mb-6">
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => setViewMode('cards')}
@@ -173,66 +209,73 @@ function App() {
                   <span className="hidden sm:inline">Export</span>
                 </button>
               </div>
-            </div>
+            </div>)}
 
-            {/* Search and Filter Controls */}
-            <SearchBar
-              searchTerm={searchTerm}
-              onSearchChange={setSearchTerm}
-              selectedCategory={selectedCategory}
-              onCategoryChange={setSelectedCategory}
-              selectedAttestation={selectedAttestation}
-              onAttestationChange={setSelectedAttestation}
-              showOnlyFavorites={showOnlyFavorites}
-              onToggleFavorites={() => setShowOnlyFavorites(!showOnlyFavorites)}
-              sortAlphabetically={sortAlphabetically}
-              onToggleSort={() => setSortAlphabetically(!sortAlphabetically)}
-              resultsCount={showOnlyFavorites ? displayedWords.length : resultsCount}
-              totalCount={totalCount}
-            />
+            {/* Anglisher Tab */}
+            {mainTab === 'anglisher' && <Anglisher />}
 
-            {/* Word Entries Display */}
-            <div className="mt-8 lg:mt-10">
-              {displayedWords.length > 0 ? (
-                viewMode === 'cards' ? (
-                  <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-                    {displayedWords.map((entry) => (
-                      <WordCard
-                        key={entry.id}
-                        entry={entry}
-                        isFavorite={isFavorite(entry.id)}
-                        onToggleFavorite={toggleFavorite}
-                      />
-                    ))}
-                  </div>
-                ) : (
-                  <TableView words={displayedWords} />
-                )
-              ) : (
-                <div className="text-center py-16">
-                  <BookOpen className="w-20 h-20 mx-auto mb-6 opacity-50" style={{ color: '#8B6F47' }} />
-                  <p className="text-xl mb-2" style={{ color: '#3D2817' }}>No entries found</p>
-                  <p style={{ color: '#8B6F47' }}>
-                    {showOnlyFavorites
-                      ? 'You haven\'t added any words to your favorites yet.'
-                      : 'Try adjusting your search terms or filters...'
-                    }
-                  </p>
-                  {showOnlyFavorites && (
-                    <button
-                      onClick={() => setShowOnlyFavorites(false)}
-                      className="mt-4 px-4 py-2 rounded border-2 border-amber-700 transition-colors duration-300"
-                      style={{
-                        backgroundColor: '#8B1E3F',
-                        color: '#F5EED7'
-                      }}
-                    >
-                      Show All Words
-                    </button>
+            {/* Search and Filter Controls — Wordbook only */}
+            {mainTab === 'wordbook' && (
+              <>
+                <SearchBar
+                  searchTerm={searchTerm}
+                  onSearchChange={setSearchTerm}
+                  selectedCategory={selectedCategory}
+                  onCategoryChange={setSelectedCategory}
+                  selectedAttestation={selectedAttestation}
+                  onAttestationChange={setSelectedAttestation}
+                  showOnlyFavorites={showOnlyFavorites}
+                  onToggleFavorites={() => setShowOnlyFavorites(!showOnlyFavorites)}
+                  sortAlphabetically={sortAlphabetically}
+                  onToggleSort={() => setSortAlphabetically(!sortAlphabetically)}
+                  resultsCount={showOnlyFavorites ? displayedWords.length : resultsCount}
+                  totalCount={totalCount}
+                />
+
+                {/* Word Entries Display */}
+                <div className="mt-8 lg:mt-10">
+                  {displayedWords.length > 0 ? (
+                    viewMode === 'cards' ? (
+                      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                        {displayedWords.map((entry) => (
+                          <WordCard
+                            key={entry.id}
+                            entry={entry}
+                            isFavorite={isFavorite(entry.id)}
+                            onToggleFavorite={toggleFavorite}
+                          />
+                        ))}
+                      </div>
+                    ) : (
+                      <TableView words={displayedWords} />
+                    )
+                  ) : (
+                    <div className="text-center py-16">
+                      <BookOpen className="w-20 h-20 mx-auto mb-6 opacity-50" style={{ color: '#8B6F47' }} />
+                      <p className="text-xl mb-2" style={{ color: '#3D2817' }}>No entries found</p>
+                      <p style={{ color: '#8B6F47' }}>
+                        {showOnlyFavorites
+                          ? 'You haven\'t added any words to your favorites yet.'
+                          : 'Try adjusting your search terms or filters...'
+                        }
+                      </p>
+                      {showOnlyFavorites && (
+                        <button
+                          onClick={() => setShowOnlyFavorites(false)}
+                          className="mt-4 px-4 py-2 rounded border-2 border-amber-700 transition-colors duration-300"
+                          style={{
+                            backgroundColor: '#8B1E3F',
+                            color: '#F5EED7'
+                          }}
+                        >
+                          Show All Words
+                        </button>
+                      )}
+                    </div>
                   )}
                 </div>
-              )}
-            </div>
+              </>
+            )}
 
             {/* Footer - Medieval Style */}
             <div className="mt-16 pt-8 border-t-2" style={{ borderColor: '#8B6F47' }}>
