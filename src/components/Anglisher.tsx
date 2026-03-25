@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Copy, Check, Feather, Trash2 } from 'lucide-react';
 import { authentikWordEntries } from '../data/authenticWordEntries';
+import { latinGreekMorphemes, oeAffixes } from '../data/morphemes';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 
 // ---------------------------------------------------------------------------
@@ -71,9 +72,99 @@ for (const entry of authentikWordEntries) {
 }
 
 // ---------------------------------------------------------------------------
+// Morpheme lookup maps (built from the morpheme data files)
+// ---------------------------------------------------------------------------
+const allMorphemes = [...latinGreekMorphemes, ...oeAffixes];
+
+// prefix element (e.g. 'bio-') → entry
+const PREFIX_MAP = new Map(
+  allMorphemes.filter(m => m.kind === 'prefix').map(m => [m.element.replace(/-/g, '').toLowerCase(), m])
+);
+// suffix element (e.g. '-ology') → entry
+const SUFFIX_MAP = new Map(
+  allMorphemes.filter(m => m.kind === 'suffix').map(m => [m.element.replace(/-/g, '').toLowerCase(), m])
+);
+// root element → entry
+const ROOT_MAP = new Map(
+  allMorphemes.filter(m => m.kind === 'root').map(m => [m.element.toLowerCase(), m])
+);
+
+// Sorted longest-first so greedy matching works correctly
+const PREFIXES_SORTED = [...PREFIX_MAP.keys()].sort((a, b) => b.length - a.length);
+const SUFFIXES_SORTED = [...SUFFIX_MAP.keys()].sort((a, b) => b.length - a.length);
+const ROOTS_SORTED = [...ROOT_MAP.keys()].sort((a, b) => b.length - a.length);
+
+/**
+ * Try to decompose a word into morpheme parts.
+ * Returns an array of MorphemePart if at least one known morpheme is found, else null.
+ */
+function decomposeMorphemes(lower: string): MorphemePart[] | null {
+  // Strip known prefixes from the front
+  const parts: MorphemePart[] = [];
+  let remaining = lower;
+
+  for (const p of PREFIXES_SORTED) {
+    if (remaining.startsWith(p) && remaining.length > p.length + 2) {
+      const entry = PREFIX_MAP.get(p)!;
+      parts.push({ text: entry.element, meaning: entry.meaning, anglish: entry.anglishEquivalent, kind: 'prefix' });
+      remaining = remaining.slice(p.length);
+      break;
+    }
+  }
+
+  // Strip known suffixes from the back
+  const suffixParts: MorphemePart[] = [];
+  let suffixLoop = true;
+  while (suffixLoop) {
+    suffixLoop = false;
+    for (const s of SUFFIXES_SORTED) {
+      if (remaining.endsWith(s) && remaining.length > s.length + 2) {
+        const entry = SUFFIX_MAP.get(s)!;
+        suffixParts.unshift({ text: entry.element, meaning: entry.meaning, anglish: entry.anglishEquivalent, kind: 'suffix' });
+        remaining = remaining.slice(0, -s.length);
+        suffixLoop = true;
+        break;
+      }
+    }
+  }
+
+  // Try to match the remaining middle as a root
+  for (const r of ROOTS_SORTED) {
+    if (remaining === r || remaining.startsWith(r) || remaining.endsWith(r)) {
+      const entry = ROOT_MAP.get(r)!;
+      const before = remaining.slice(0, remaining.indexOf(r) === -1 ? 0 : remaining.indexOf(r));
+      const after = remaining.slice((remaining.indexOf(r) === -1 ? 0 : remaining.indexOf(r)) + r.length);
+      if (before) parts.push({ text: before, meaning: '?', kind: 'unknown' });
+      parts.push({ text: entry.element, meaning: entry.meaning, anglish: entry.anglishEquivalent, kind: 'root' });
+      if (after) parts.push({ text: after, meaning: '?', kind: 'unknown' });
+      remaining = '';
+      break;
+    }
+  }
+
+  // Anything left over is unknown
+  if (remaining) {
+    parts.push({ text: remaining, meaning: '?', kind: 'unknown' });
+  }
+
+  // Only return a breakdown if at least one known morpheme was identified
+  const hasKnown = parts.some(p => p.kind !== 'unknown');
+  if (!hasKnown) return null;
+
+  return [...parts, ...suffixParts];
+}
+
+// ---------------------------------------------------------------------------
 // Token types
 // ---------------------------------------------------------------------------
 type TokenKind = 'word' | 'punct';
+
+export interface MorphemePart {
+  text: string;         // the matched substring
+  meaning: string;      // e.g. 'life'
+  anglish?: string;     // e.g. 'life-' or '-lore'
+  kind: 'prefix' | 'suffix' | 'root' | 'unknown';
+}
 
 interface Token {
   id: number;
@@ -86,6 +177,8 @@ interface Token {
   alternatives?: string[];
   /** Whether this word was replaced (turns it green) */
   replaced?: boolean;
+  /** Morpheme breakdown for gray words */
+  breakdown?: MorphemePart[];
 }
 
 // ---------------------------------------------------------------------------
@@ -251,7 +344,8 @@ function tokenize(text: string): Token[] {
       } else if (match && !match.inWordbook) {
         return { id: id++, kind: 'word', text: part, status: 'green' };
       } else {
-        return { id: id++, kind: 'word', text: part, status: 'gray' };
+        const breakdown = decomposeMorphemes(lower) ?? undefined;
+        return { id: id++, kind: 'word', text: part, status: 'gray', breakdown };
       }
     } else {
       return { id: id++, kind: 'punct', text: part };
@@ -325,15 +419,25 @@ const Chip: React.FC<ChipProps> = ({ token, isOpen, onOpen, onClose, onReplace }
       cursorClass = 'cursor-pointer';
       break;
     default: // gray
-      borderColor = '#9B8B7A';
-      bgColor = 'rgba(155, 139, 122, 0.08)';
+      borderColor = token.breakdown ? '#7A6B5A' : '#9B8B7A';
+      bgColor = token.breakdown ? 'rgba(122, 107, 90, 0.12)' : 'rgba(155, 139, 122, 0.08)';
       textColor = '#5C4F44';
+      if (token.breakdown) cursorClass = 'cursor-pointer';
       break;
   }
 
   const handleClick = () => {
-    if (effectiveStatus === 'red') {
+    if (effectiveStatus === 'red' || (effectiveStatus === 'gray' && token.breakdown)) {
       isOpen ? onClose() : onOpen();
+    }
+  };
+
+  const kindColor = (kind: string) => {
+    switch (kind) {
+      case 'prefix': return '#2B4162';
+      case 'suffix': return '#4A5D2A';
+      case 'root':   return '#8B1E3F';
+      default:       return '#9B8B7A';
     }
   };
 
@@ -342,26 +446,27 @@ const Chip: React.FC<ChipProps> = ({ token, isOpen, onOpen, onClose, onReplace }
       <span
         onClick={handleClick}
         className={`inline-block px-1.5 py-0.5 rounded border text-sm font-medium transition-all duration-150 select-none ${cursorClass} ${
-          effectiveStatus === 'red' ? 'hover:shadow-sm' : ''
+          effectiveStatus === 'red' || (effectiveStatus === 'gray' && token.breakdown) ? 'hover:shadow-sm' : ''
         }`}
         style={{
           borderColor,
-          backgroundColor: isOpen ? 'rgba(139, 30, 63, 0.13)' : bgColor,
+          backgroundColor: isOpen ? 'rgba(122, 107, 90, 0.18)' : bgColor,
           color: textColor,
           lineHeight: '1.5',
+          borderStyle: token.breakdown && effectiveStatus === 'gray' ? 'dashed' : 'solid',
         }}
         title={
           effectiveStatus === 'red'
             ? 'Click to see Anglish alternatives'
             : effectiveStatus === 'green'
             ? replaced ? 'Replaced with Anglish word' : 'Already Germanic/Anglish'
-            : 'Unknown word'
+            : token.breakdown ? 'Click to see morpheme breakdown' : 'Unknown word'
         }
       >
         {token.text}
       </span>
 
-      {/* Dropdown popout */}
+      {/* Red word: Anglish alternatives popout */}
       {isOpen && token.alternatives && (
         <div
           ref={dropRef}
@@ -395,6 +500,67 @@ const Chip: React.FC<ChipProps> = ({ token, isOpen, onOpen, onClose, onReplace }
               {alt}
             </button>
           ))}
+        </div>
+      )}
+
+      {/* Gray word with breakdown: morpheme popout */}
+      {isOpen && !token.alternatives && token.breakdown && (
+        <div
+          ref={dropRef}
+          className="absolute z-50 mt-1 rounded border-2 shadow-xl"
+          style={{
+            top: '100%',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            minWidth: '200px',
+            maxWidth: '280px',
+            backgroundColor: '#FDF6E3',
+            borderColor: '#7A6B5A',
+            boxShadow: '0 4px 16px rgba(90, 70, 50, 0.25)',
+          }}
+        >
+          <div
+            className="px-3 py-1.5 text-xs font-semibold border-b"
+            style={{ color: '#5C4F44', borderColor: '#D4AF37', backgroundColor: 'rgba(212, 175, 55, 0.12)' }}
+          >
+            Morpheme breakdown
+          </div>
+          <div className="px-3 py-2 space-y-1.5">
+            {token.breakdown.map((part, i) => (
+              <div key={i} className="flex items-start gap-2 text-xs">
+                <span
+                  className="font-mono font-bold shrink-0 px-1 rounded"
+                  style={{ color: kindColor(part.kind), backgroundColor: `${kindColor(part.kind)}15` }}
+                >
+                  {part.text}
+                </span>
+                <span style={{ color: '#4A3728' }}>
+                  {part.meaning !== '?' ? part.meaning : <span style={{ color: '#9B8B7A' }}>unknown</span>}
+                  {part.anglish && part.anglish !== part.text && (
+                    <span style={{ color: '#4A7C59' }}> → {part.anglish}</span>
+                  )}
+                </span>
+                <span
+                  className="ml-auto shrink-0 text-xs italic"
+                  style={{ color: '#9B8B7A' }}
+                >
+                  {part.kind}
+                </span>
+              </div>
+            ))}
+          </div>
+          {/* Suggested Anglish coinage */}
+          {token.breakdown.some(p => p.anglish) && (
+            <div
+              className="px-3 py-2 border-t text-xs"
+              style={{ borderColor: '#D4AF37', backgroundColor: 'rgba(74, 124, 89, 0.06)' }}
+            >
+              <span style={{ color: '#4A7C59', fontWeight: 600 }}>Anglish coinage: </span>
+              <span style={{ color: '#2E4A2E' }}>
+                {token.breakdown.map(p => (p.anglish ?? p.text).replace(/-/g, '')).join('')}
+              </span>
+            </div>
+          )}
         </div>
       )}
     </span>

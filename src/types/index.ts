@@ -96,3 +96,17 @@ export interface UserPreferences {
   preferredCategories: WordCategory[];
   displayMode: 'card' | 'list' | 'compact';
 }
+
+export type MorphemeKind = 'prefix' | 'suffix' | 'root';
+export type MorphemeOrigin = 'latin' | 'greek' | 'old-english' | 'germanic';
+
+export interface MorphemeEntry {
+  id: string;           // kebab-case unique id, e.g. 'prefix-bio', 'suffix-ology', 'root-cardi'
+  element: string;      // the morpheme as written, e.g. 'bio-', '-ology', 'cardi'
+  kind: MorphemeKind;
+  origin: MorphemeOrigin;
+  meaning: string;      // plain English meaning, e.g. 'life', 'study of', 'heart'
+  anglishEquivalent?: string;  // Anglish/OE equivalent word or affix, e.g. 'life', '-lore', 'heart'
+  examples?: string[];  // example compound words using this morpheme
+  notes?: string;
+}
