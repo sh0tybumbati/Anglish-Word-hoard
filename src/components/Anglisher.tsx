@@ -41,6 +41,17 @@ const NATIVE_GERMANIC: Set<string> = new Set([
   'bright','clear','fair','fresh','green','loud','low','narrow','plain','quick',
   'rough','sharp','short','sick','slow','soft','sweet','thick','thin','wide',
   'wild','wise','young','what','were','get','been','has','its','them',
+  // Common inflected/derived forms of native words
+  'became','become','becomes','becoming',
+  'born','borne','bearing','bears',
+  'raised','raise','raises','raising',
+  'spent','spend','spends','spending',
+  'called','call','calls','calling',
+  'days','weeks','months','years','nights',
+  'town','towns','township',
+  'playground','playgrounds','playmate','playmates',
+  'furthermore','nevertheless','nonetheless','meanwhile','thereafter','whereby',
+  'one','ones',"one's",
   // Common contractions stripped forms
   "it's","don't","doesn't","didn't","can't","won't","isn't","aren't","wasn't",
   "weren't","haven't","hasn't","hadn't","wouldn't","couldn't","shouldn't",

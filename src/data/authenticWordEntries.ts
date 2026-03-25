@@ -3421,6 +3421,226 @@ export const authentikWordEntries: WordEntry[] = [
     category: 'general',
     forms: ['introduces', 'introduced', 'introducing']
   },
+  {
+    id: 'prince',
+    word: 'Prince',
+    meaning: 'Royal or noble son, heir to a throne or lordship',
+    kind: 'N',
+    anglish: ['Ætheling', 'Kingson', "Chieftain's son"],
+    etymology: {
+      reconstruction: 'Old French prince, from Latin princeps (first man, leader), from primus (first) + capere (to take)',
+      cognates: ['French prince', 'Spanish príncipe', 'Italian principe']
+    },
+    attestation: 'attested',
+    category: 'social',
+    notes: 'Ætheling is the Old English term for a royal prince or heir; used throughout the Anglo-Saxon period',
+    forms: ['princes']
+  },
+  {
+    id: 'extensive',
+    word: 'Extensive',
+    meaning: 'Covering a large area or range; having great extent',
+    kind: 'AJ',
+    anglish: ['Widespread', 'Far-reaching', 'Broad'],
+    etymology: {
+      reconstruction: 'Medieval Latin extensivus, from Latin extensus, past participle of extendere (to stretch out), from ex- (out) + tendere (to stretch)',
+      cognates: ['French extensif', 'Spanish extensivo', 'Italian estensivo']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'preparation',
+    word: 'Preparation',
+    meaning: 'The act or process of making ready for a purpose',
+    kind: 'N',
+    anglish: ['Makeready', 'Forework', 'Readying', 'Groundwork'],
+    etymology: {
+      reconstruction: 'Latin praeparatio, from praeparare (to make ready beforehand), from prae- (before) + parare (to make ready)',
+      cognates: ['French préparation', 'Spanish preparación', 'Italian preparazione']
+    },
+    attestation: 'attested',
+    category: 'general',
+    forms: ['preparations']
+  },
+  {
+    id: 'constant',
+    word: 'Constant',
+    meaning: 'Continuing without pause or change; remaining the same',
+    kind: 'AJ',
+    anglish: ['Steadfast', 'Unwavering', 'Ceaseless', 'Ever-steady'],
+    etymology: {
+      reconstruction: 'Old French constant, from Latin constantem, present participle of constare (to stand firm), from com- (together) + stare (to stand)',
+      cognates: ['French constant', 'Spanish constante', 'Italian costante']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'demonstrate',
+    word: 'Demonstrate',
+    meaning: 'To show clearly; to prove or establish by evidence',
+    kind: 'V',
+    anglish: ['Show', 'Prove', 'Make plain', 'Lay bare'],
+    etymology: {
+      reconstruction: 'Latin demonstrare (to point out, show), from de- (completely) + monstrare (to show), from monstrum (omen, sign)',
+      cognates: ['French démontrer', 'Spanish demostrar', 'Italian dimostrare']
+    },
+    attestation: 'attested',
+    category: 'general',
+    forms: ['demonstrates', 'demonstrated', 'demonstrating']
+  },
+  {
+    id: 'sufficient',
+    word: 'Sufficient',
+    meaning: 'Enough to meet the needs of a situation or purpose',
+    kind: 'AJ',
+    anglish: ['Enough', 'Ample', 'Fitting'],
+    etymology: {
+      reconstruction: 'Latin sufficientem, present participle of sufficere (to be enough), from sub- (under) + facere (to make, do)',
+      cognates: ['French suffisant', 'Spanish suficiente', 'Italian sufficiente']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'intelligence',
+    word: 'Intelligence',
+    meaning: 'The ability to acquire and apply knowledge and skills; mental acuity',
+    kind: 'N',
+    anglish: ['Wit', 'Cunning', 'Understanding', 'Shrewdness'],
+    etymology: {
+      reconstruction: 'Old French intelligence, from Latin intelligentia (understanding, discernment), from intelligentem, from intelligere (to understand), from inter- (between) + legere (to choose, read)',
+      cognates: ['French intelligence', 'Spanish inteligencia', 'Italian intelligenza']
+    },
+    attestation: 'attested',
+    category: 'general',
+    forms: ['intelligences']
+  },
+  {
+    id: 'dedication',
+    word: 'Dedication',
+    meaning: 'Wholehearted commitment to a task, purpose, or person',
+    kind: 'N',
+    anglish: ['Devotion', 'Steadfastness', 'Wholehearted giving'],
+    etymology: {
+      reconstruction: 'Latin dedicatio (a consecration), from dedicare (to consecrate, devote), from de- (completely) + dicare (to proclaim, dedicate)',
+      cognates: ['French dédicace', 'Spanish dedicación', 'Italian dedicazione']
+    },
+    attestation: 'attested',
+    category: 'general',
+    forms: ['dedications']
+  },
+  {
+    id: 'succeed',
+    word: 'Succeed',
+    meaning: 'To achieve a desired aim or result; to come after another in sequence or office',
+    kind: 'V',
+    anglish: ['Thrive', 'Prevail', 'Do well', 'Win through'],
+    etymology: {
+      reconstruction: 'Old French succeder, from Latin succedere (to go under, follow after, be successful), from sub- (under, after) + cedere (to go)',
+      cognates: ['French succéder', 'Spanish suceder', 'Italian succedere']
+    },
+    attestation: 'attested',
+    category: 'general',
+    forms: ['succeeds', 'succeeded', 'succeeding']
+  },
+  {
+    id: 'competitive',
+    word: 'Competitive',
+    meaning: 'Having a strong desire to win or be more successful than others',
+    kind: 'AJ',
+    anglish: ['Striving', 'Rivalsome', 'Keen to win'],
+    etymology: {
+      reconstruction: 'From compete + -ive; Latin competere (to strive together), from com- (together) + petere (to seek, strive for)',
+      cognates: ['French compétitif', 'Spanish competitivo', 'Italian competitivo']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'perspective',
+    word: 'Perspective',
+    meaning: 'A particular point of view; the art of representing three-dimensional objects on a flat surface',
+    kind: 'N',
+    anglish: ['Outlook', 'Standpoint', 'Viewpoint', 'Sight-line'],
+    etymology: {
+      reconstruction: 'Medieval Latin perspectiva (ars) (science of optics), from perspectus, past participle of perspicere (to look through), from per- (through) + specere (to look)',
+      cognates: ['French perspective', 'Spanish perspectiva', 'Italian prospettiva']
+    },
+    attestation: 'attested',
+    category: 'general',
+    forms: ['perspectives']
+  },
+  {
+    id: 'global',
+    word: 'Global',
+    meaning: 'Relating to or encompassing the whole world',
+    kind: 'AJ',
+    anglish: ['Worldwide', 'All-world', 'Earthwide'],
+    etymology: {
+      reconstruction: 'French global, from globe, from Latin globus (sphere, ball)',
+      cognates: ['French global', 'Spanish global', 'Italian globale']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'civilization',
+    word: 'Civilization',
+    meaning: 'An advanced stage of human social and cultural development; a human society with its own culture',
+    kind: 'N',
+    anglish: ['Folkhood', 'Culturedom', 'Settled order'],
+    etymology: {
+      reconstruction: 'French civilisation, from civiliser (to civilize), from civil, from Latin civilis (relating to citizens), from civis (citizen)',
+      cognates: ['French civilisation', 'Spanish civilización', 'Italian civiltà']
+    },
+    attestation: 'attested',
+    category: 'social',
+    forms: ['civilizations']
+  },
+  {
+    id: 'transform',
+    word: 'Transform',
+    meaning: 'To make a thorough or dramatic change in the form, nature, or appearance of something',
+    kind: 'V',
+    anglish: ['Reshape', 'Shift', 'Change shape', 'Remake'],
+    etymology: {
+      reconstruction: 'Latin transformare (to change in shape), from trans- (across, beyond) + formare (to form), from forma (form, shape)',
+      cognates: ['French transformer', 'Spanish transformar', 'Italian trasformare']
+    },
+    attestation: 'attested',
+    category: 'general',
+    forms: ['transforms', 'transformed', 'transforming']
+  },
+  {
+    id: 'academic',
+    word: 'Academic',
+    meaning: 'Relating to education, scholarship, or a place of learning',
+    kind: 'AJ',
+    anglish: ['Scholarly', 'Learnèd', 'Lore-bound', 'Bookish'],
+    etymology: {
+      reconstruction: 'Latin academicus, from academia, from Greek Akadēmeia (the grove near Athens where Plato taught), from Akadēmos (a hero of Attica)',
+      cognates: ['French académique', 'Spanish académico', 'Italian accademico']
+    },
+    attestation: 'attested',
+    category: 'academic'
+  },
+  {
+    id: 'standard',
+    word: 'Standard',
+    meaning: 'A level of quality or achievement used as a measure; an accepted norm or model',
+    kind: 'N',
+    anglish: ['Benchmark', 'Yardstick', 'Measure', 'Norm'],
+    etymology: {
+      reconstruction: 'Old French estandart (battle flag, rallying point), from Frankish *standhard (stand firm), from *standan (to stand) + *hard (hard, firm)',
+      cognates: ['French standard', 'Spanish estándar', 'Italian standard']
+    },
+    attestation: 'attested',
+    category: 'general',
+    notes: 'Originally referred to a military banner used as a rallying point; the Germanic roots of the Old French source make this word less purely Latin than it appears',
+    forms: ['standards']
+  },
 ];
 
 export const wordKindLabels = {
