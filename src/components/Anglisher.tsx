@@ -64,19 +64,36 @@ const NATIVE_GERMANIC: Set<string> = new Set([
 // ---------------------------------------------------------------------------
 // Build lookup maps from the wordbook
 // ---------------------------------------------------------------------------
-// Primary: lowercase word → anglish alternatives
-const WORDBOOK_MAP: Map<string, string[]> = new Map(
-  authentikWordEntries.map(entry => [entry.word.toLowerCase(), entry.anglish])
-);
 
-// Forms reverse map: inflected form → anglish alternatives of its root
-// e.g. 'using' → alternatives for 'use'
-const FORMS_MAP: Map<string, string[]> = new Map();
+export interface WordSense {
+  kind: string;
+  meaning: string;
+  anglish: string[];
+}
+
+// Primary: lowercase word → all senses (one entry per definition/etymology)
+const WORDBOOK_MAP: Map<string, WordSense[]> = new Map();
+for (const entry of authentikWordEntries) {
+  const key = entry.word.toLowerCase();
+  const sense: WordSense = { kind: entry.kind, meaning: entry.meaning, anglish: entry.anglish };
+  if (WORDBOOK_MAP.has(key)) {
+    WORDBOOK_MAP.get(key)!.push(sense);
+  } else {
+    WORDBOOK_MAP.set(key, [sense]);
+  }
+}
+
+// Forms reverse map: inflected form → all senses of its root
+const FORMS_MAP: Map<string, WordSense[]> = new Map();
 for (const entry of authentikWordEntries) {
   if (entry.forms) {
+    const sense: WordSense = { kind: entry.kind, meaning: entry.meaning, anglish: entry.anglish };
     for (const form of entry.forms) {
-      if (!FORMS_MAP.has(form.toLowerCase())) {
-        FORMS_MAP.set(form.toLowerCase(), entry.anglish);
+      const key = form.toLowerCase();
+      if (FORMS_MAP.has(key)) {
+        FORMS_MAP.get(key)!.push(sense);
+      } else {
+        FORMS_MAP.set(key, [sense]);
       }
     }
   }
@@ -184,8 +201,8 @@ interface Token {
   text: string;
   /** For words: 'red' | 'green' | 'gray' */
   status?: 'red' | 'green' | 'gray';
-  /** Anglish alternatives (only for red tokens) */
-  alternatives?: string[];
+  /** Anglish alternatives grouped by sense (only for red tokens) */
+  alternatives?: WordSense[];
   /** Whether this word was replaced (turns it green) */
   replaced?: boolean;
   /** Morpheme breakdown for gray words */
@@ -196,13 +213,13 @@ interface Token {
 // Stemmer: tries suffix-stripping rules to find a wordbook/Germanic root.
 // Returns the matched root string, or null if no match found.
 // ---------------------------------------------------------------------------
-function findRoot(lower: string): { root: string; inWordbook: boolean; alts?: string[] } | null {
+function findRoot(lower: string): { root: string; inWordbook: boolean; senses?: WordSense[] } | null {
   // 1. Exact wordbook match
   if (WORDBOOK_MAP.has(lower)) return { root: lower, inWordbook: true };
   // 2. Exact Germanic match
   if (NATIVE_GERMANIC.has(lower)) return { root: lower, inWordbook: false };
   // 3. Explicit forms map (most accurate — beats stemmer)
-  if (FORMS_MAP.has(lower)) return { root: lower, inWordbook: true, alts: FORMS_MAP.get(lower) };
+  if (FORMS_MAP.has(lower)) return { root: lower, inWordbook: true, senses: FORMS_MAP.get(lower) };
 
   // Candidate stems to try, in priority order
   const candidates: string[] = [];
@@ -350,8 +367,8 @@ function tokenize(text: string): Token[] {
       const lower = part.toLowerCase();
       const match = findRoot(lower);
       if (match?.inWordbook) {
-        const alts = match.alts ?? WORDBOOK_MAP.get(match.root)!;
-        return { id: id++, kind: 'word', text: part, status: 'red', alternatives: alts };
+        const senses = match.senses ?? WORDBOOK_MAP.get(match.root)!;
+        return { id: id++, kind: 'word', text: part, status: 'red', alternatives: senses };
       } else if (match && !match.inWordbook) {
         return { id: id++, kind: 'word', text: part, status: 'green' };
       } else {
@@ -498,18 +515,30 @@ const Chip: React.FC<ChipProps> = ({ token, isOpen, onOpen, onClose, onReplace }
           >
             Anglish alternatives
           </div>
-          {token.alternatives.map((alt, i) => (
-            <button
-              key={i}
-              className="block w-full text-left px-3 py-1.5 text-sm transition-colors duration-150 hover:bg-amber-100/60"
-              style={{ color: '#3D2817' }}
-              onClick={() => {
-                onReplace(applyCase(token.text, alt));
-                onClose();
-              }}
-            >
-              {alt}
-            </button>
+          {token.alternatives.map((sense, si) => (
+            <div key={si}>
+              {token.alternatives!.length > 1 && (
+                <div
+                  className="px-3 pt-2 pb-0.5 text-xs italic"
+                  style={{ color: '#8B6F47' }}
+                >
+                  {sense.kind} — {sense.meaning}
+                </div>
+              )}
+              {sense.anglish.map((alt, i) => (
+                <button
+                  key={i}
+                  className="block w-full text-left px-3 py-1.5 text-sm transition-colors duration-150 hover:bg-amber-100/60"
+                  style={{ color: '#3D2817' }}
+                  onClick={() => {
+                    onReplace(applyCase(token.text, alt));
+                    onClose();
+                  }}
+                >
+                  {alt}
+                </button>
+              ))}
+            </div>
           ))}
         </div>
       )}

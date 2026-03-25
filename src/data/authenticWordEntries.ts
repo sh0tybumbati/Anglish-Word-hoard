@@ -1208,6 +1208,21 @@ export const authentikWordEntries: WordEntry[] = [
     forms: ['permits', 'permitted', 'permitting']
   },
   {
+    id: 'permit-n',
+    word: 'Permit',
+    meaning: 'An official document giving authorisation to do something',
+    kind: 'N',
+    anglish: ['Leave', 'Licence', 'Warrant', 'Pass'],
+    etymology: {
+      reconstruction: 'Latin permittere (to let pass through), from per- (through) + mittere (to send); the noun use developed from the verb via nominalization in English',
+      cognates: ['French permis', 'Spanish permiso', 'Italian permesso']
+    },
+    attestation: 'reconstructed',
+    category: 'general',
+    notes: 'The noun and verb are etymologically the same word but function as distinct parts of speech with distinct Anglish equivalents',
+    forms: ['permits']
+  },
+  {
     id: 'continue',
     word: 'Continue',
     meaning: 'To keep doing something without stopping',
@@ -1719,9 +1734,9 @@ export const authentikWordEntries: WordEntry[] = [
   {
     id: 'present',
     word: 'Present',
-    meaning: 'To show or offer for consideration',
+    meaning: 'To show or offer for consideration; to give formally',
     kind: 'V',
-    anglish: ['Show', 'Give', 'Offer forth'],
+    anglish: ['Show', 'Give', 'Offer forth', 'Put forward'],
     etymology: {
       reconstruction: 'Old French presenter, from Latin praesentare (to place before), from praesens (present, at hand)',
       cognates: ['French présenter', 'Spanish presentar', 'Italian presentare']
@@ -1731,11 +1746,53 @@ export const authentikWordEntries: WordEntry[] = [
     forms: ['presents', 'presented', 'presenting']
   },
   {
+    id: 'present-n-gift',
+    word: 'Present',
+    meaning: 'A gift given to someone',
+    kind: 'N',
+    anglish: ['Gift', 'Giving', 'Bestowing'],
+    etymology: {
+      reconstruction: 'Old French present (gift), from mettre en present (to put in the presence of), from Latin praesens; originally "something placed before one"',
+      cognates: ['French cadeau', 'Spanish regalo', 'German Geschenk']
+    },
+    attestation: 'attested',
+    category: 'general',
+    notes: 'Old English "giefu" (gift) is the direct Germanic equivalent',
+    forms: ['presents']
+  },
+  {
+    id: 'present-aj',
+    word: 'Present',
+    meaning: 'Being in a particular place; existing or occurring now',
+    kind: 'AJ',
+    anglish: ['Here', 'At hand', 'Nigh', 'Now-here'],
+    etymology: {
+      reconstruction: 'Old French present, from Latin praesens (at hand, in person), present participle of praeesse (to be before), from prae- (before) + esse (to be)',
+      cognates: ['French présent', 'Spanish presente', 'German gegenwärtig']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'present-n-time',
+    word: 'Present',
+    meaning: 'The current moment in time; the time that is happening now',
+    kind: 'N',
+    anglish: ['Now', 'This day', 'Nowtide', 'This while'],
+    etymology: {
+      reconstruction: 'Old French present (time), from Latin praesens tempus (present time); the substantivized use of the adjective praesens',
+      cognates: ['French présent', 'Spanish presente', 'German Gegenwart']
+    },
+    attestation: 'attested',
+    category: 'general',
+    notes: 'Old English "nu" (now) and "andweard" (present, current) cover this sense'
+  },
+  {
     id: 'produce',
     word: 'Produce',
-    meaning: 'To make or manufacture something',
+    meaning: 'To make or manufacture something; to cause something to exist',
     kind: 'V',
-    anglish: ['Make', 'Bring forth', 'Yield'],
+    anglish: ['Make', 'Bring forth', 'Yield', 'Shape'],
     etymology: {
       reconstruction: 'Latin producere (to bring forth, lead forward), from pro- (forward) + ducere (to lead)',
       cognates: ['French produire', 'Spanish producir', 'Italian produrre']
@@ -1743,6 +1800,20 @@ export const authentikWordEntries: WordEntry[] = [
     attestation: 'attested',
     category: 'general',
     forms: ['produces', 'produced', 'producing']
+  },
+  {
+    id: 'produce-n',
+    word: 'Produce',
+    meaning: 'Fresh fruit and vegetables grown for food',
+    kind: 'N',
+    anglish: ['Growings', 'Garden-yields', 'Earthfood', 'Fresh goods'],
+    etymology: {
+      reconstruction: 'From the verb produce (Latin producere), nominalized to mean "that which is produced from the earth"; the specific sense of fresh food is distinctly English',
+      cognates: ['French produits (maraîchers)', 'Spanish productos (frescos)', 'German Erzeugnisse']
+    },
+    attestation: 'reconstructed',
+    category: 'culinary',
+    notes: 'This noun sense (fresh farm goods) is distinct from the verb and carries different stress in speech (PRO-duce vs pro-DUCE)'
   },
   {
     id: 'decide',
@@ -2522,6 +2593,36 @@ export const authentikWordEntries: WordEntry[] = [
     forms: ['leads', 'led', 'leading']
   },
   {
+    id: 'lead-n-metal',
+    word: 'Lead',
+    meaning: 'A heavy, soft, grey metallic element (symbol Pb)',
+    kind: 'N',
+    anglish: ['Already Anglish!'],
+    etymology: {
+      oldEnglish: 'lēad (the metal)',
+      protoGermanic: '*lauda-',
+      cognates: ['German Lot (plumb, solder)', 'Dutch lood', 'Old Norse lóð']
+    },
+    attestation: 'attested',
+    category: 'authentic',
+    notes: 'The metal name is Old English in origin and etymologically unrelated to the verb "to lead"; the two words are a coincidental homograph'
+  },
+  {
+    id: 'lead-n-leash',
+    word: 'Lead',
+    meaning: 'A strap or cord for restraining or guiding an animal; a cable or wire',
+    kind: 'N',
+    anglish: ['Leash', 'Tether', 'Line'],
+    etymology: {
+      reconstruction: 'From the verb lead (Old English lǣdan), extended to mean "that which leads"; the sense of a dog-leash developed in Middle English',
+      cognates: ['German Leine (leash, cord)', 'Dutch lijn (line, leash)']
+    },
+    attestation: 'attested',
+    category: 'general',
+    notes: 'Old English "rāp" (rope) and "line" serve for the cable sense; "leash" itself comes from Old French',
+    forms: ['leads']
+  },
+  {
     id: 'opportunity',
     word: 'Opportunity',
     meaning: 'A set of circumstances making something possible',
@@ -2832,9 +2933,9 @@ export const authentikWordEntries: WordEntry[] = [
   {
     id: 'project',
     word: 'Project',
-    meaning: 'A planned undertaking or scheme',
+    meaning: 'A planned undertaking or scheme with a defined goal',
     kind: 'N',
-    anglish: ['Scheme', 'Undertaking', 'Forethrow'],
+    anglish: ['Scheme', 'Undertaking', 'Forethrow', 'Task'],
     etymology: {
       reconstruction: 'Latin projectum (thrown forward), from projicere (to throw forth), from pro- (forward) + jacere (to throw)',
       cognates: ['French projet', 'Spanish proyecto', 'Italian progetto']
@@ -2842,6 +2943,21 @@ export const authentikWordEntries: WordEntry[] = [
     attestation: 'neologism',
     category: 'professional',
     forms: ['projects']
+  },
+  {
+    id: 'project-v',
+    word: 'Project',
+    meaning: 'To throw or cast forward; to display an image on a surface; to extend outward',
+    kind: 'V',
+    anglish: ['Throw forth', 'Cast forth', 'Beam', 'Jut out'],
+    etymology: {
+      reconstruction: 'Latin projicere (to throw forth), from pro- (forward) + jacere (to throw); the English verb is formed directly from the Latin stem',
+      cognates: ['French projeter', 'Spanish proyectar', 'Italian proiettare']
+    },
+    attestation: 'attested',
+    category: 'general',
+    notes: 'Old English "weorpan" (to throw) and "sendan" (to send) cover the throwing sense; "beaming" covers the light/display sense',
+    forms: ['projects', 'projected', 'projecting']
   },
   {
     id: 'protect',
@@ -3149,15 +3265,30 @@ export const authentikWordEntries: WordEntry[] = [
   {
     id: 'patient',
     word: 'Patient',
-    meaning: 'Able to wait calmly; a person receiving medical care',
+    meaning: 'Able to wait calmly without becoming annoyed or anxious',
     kind: 'AJ',
-    anglish: ['Long-suffering', 'Steady', 'Forbearing'],
+    anglish: ['Long-suffering', 'Steady', 'Forbearing', 'Enduring'],
     etymology: {
-      reconstruction: 'Old French pacient, from Latin patientem, from pati (to suffer)',
+      reconstruction: 'Old French pacient, from Latin patientem (suffering, bearing), present participle of pati (to suffer)',
       cognates: ['French patient', 'Spanish paciente', 'Italian paziente']
     },
     attestation: 'attested',
     category: 'general'
+  },
+  {
+    id: 'patient-n',
+    word: 'Patient',
+    meaning: 'A person receiving or registered for medical treatment',
+    kind: 'N',
+    anglish: ['Sick man', 'Sickperson', 'Healseeker'],
+    etymology: {
+      reconstruction: 'Medieval Latin patiens (one who suffers), substantivized from the Latin present participle of pati (to suffer); extended in medical Latin to mean one who endures treatment',
+      cognates: ['French malade', 'Spanish paciente', 'German Patient']
+    },
+    attestation: 'attested',
+    category: 'technical',
+    notes: 'Old English "seoc" (sick person) and "se seoce" (the sick one) are the Germanic equivalents',
+    forms: ['patients']
   },
   {
     id: 'correct',
@@ -3355,15 +3486,30 @@ export const authentikWordEntries: WordEntry[] = [
   {
     id: 'general',
     word: 'General',
-    meaning: 'Affecting or relating to all or most things; a high-ranking officer',
+    meaning: 'Affecting or relating to all or most things; not specific or detailed',
     kind: 'AJ',
-    anglish: ['Broad', 'Widespread', 'Overall'],
+    anglish: ['Broad', 'Widespread', 'Overall', 'Common'],
     etymology: {
       reconstruction: 'Old French general, from Latin generalis (of a kind or class), from genus (kind, race)',
       cognates: ['French général', 'Spanish general', 'Italian generale']
     },
     attestation: 'attested',
     category: 'general'
+  },
+  {
+    id: 'general-n',
+    word: 'General',
+    meaning: 'A high-ranking military officer, especially the commander of an army',
+    kind: 'N',
+    anglish: ['War-leader', 'Herewarden', 'Host-chief', 'Army-lord'],
+    etymology: {
+      reconstruction: 'Short for "general officer" or "captain general"; from French général (d\'armée), from the adjective general (Latin generalis) applied to mean "commander of the whole force"',
+      cognates: ['French général', 'Spanish general', 'German General']
+    },
+    attestation: 'attested',
+    category: 'military',
+    notes: 'Old English "heretoga" (army-leader, general) and "fyrdwisa" (army-commander) are the direct Germanic equivalents',
+    forms: ['generals']
   },
   {
     id: 'surface',
@@ -3382,7 +3528,7 @@ export const authentikWordEntries: WordEntry[] = [
   {
     id: 'object',
     word: 'Object',
-    meaning: 'A material thing; to express disagreement',
+    meaning: 'A material thing that can be seen and touched',
     kind: 'N',
     anglish: ['Thing', 'Item', 'Ware'],
     etymology: {
@@ -3392,6 +3538,21 @@ export const authentikWordEntries: WordEntry[] = [
     attestation: 'attested',
     category: 'general',
     forms: ['objects']
+  },
+  {
+    id: 'object-v',
+    word: 'Object',
+    meaning: 'To express opposition or disagreement; to protest against something',
+    kind: 'V',
+    anglish: ['Protest', 'Gainsay', 'Withstand', 'Speak against'],
+    etymology: {
+      reconstruction: 'Latin objectare (to throw against, oppose), frequentative of obicere (to throw before), from ob- (against) + jacere (to throw); the English verb sense of "to protest" developed in the 16th century',
+      cognates: ['French objecter', 'Spanish objetar', 'Italian obiettare']
+    },
+    attestation: 'reconstructed',
+    category: 'general',
+    notes: 'Old English "wiðsacan" (to deny, refuse) and "gainsay" (from Old Norse) cover this sense',
+    forms: ['objects', 'objected', 'objecting']
   },
   {
     id: 'describe',
@@ -3475,6 +3636,21 @@ export const authentikWordEntries: WordEntry[] = [
     },
     attestation: 'attested',
     category: 'general'
+  },
+  {
+    id: 'constant-n',
+    word: 'Constant',
+    meaning: 'A fixed value in mathematics or science that does not change',
+    kind: 'N',
+    anglish: ['Fixed-worth', 'Set value', 'Steadworth'],
+    etymology: {
+      reconstruction: 'From the adjective constant (Latin constantem); substantivized in mathematical and scientific usage from the 17th century to name a fixed quantity',
+      cognates: ['French constante', 'Spanish constante', 'German Konstante']
+    },
+    attestation: 'neologism',
+    category: 'technical',
+    notes: 'The mathematical/scientific noun is a distinct usage from the general adjective; a "constant" in physics (e.g. the speed of light) or maths is a named fixed value',
+    forms: ['constants']
   },
   {
     id: 'demonstrate',
@@ -3633,13 +3809,42 @@ export const authentikWordEntries: WordEntry[] = [
     kind: 'N',
     anglish: ['Benchmark', 'Yardstick', 'Measure', 'Norm'],
     etymology: {
-      reconstruction: 'Old French estandart (battle flag, rallying point), from Frankish *standhard (stand firm), from *standan (to stand) + *hard (hard, firm)',
+      reconstruction: 'Old French estandart (battle flag, rallying point), from Frankish *standhard (stand firm), from *standan (to stand) + *hard (hard, firm); the sense of "a fixed point of reference" derives from the flag sense',
       cognates: ['French standard', 'Spanish estándar', 'Italian standard']
     },
     attestation: 'attested',
     category: 'general',
-    notes: 'Originally referred to a military banner used as a rallying point; the Germanic roots of the Old French source make this word less purely Latin than it appears',
+    notes: 'The "measure/norm" sense developed from the military flag sense — a rallying standard became a reference point',
     forms: ['standards']
+  },
+  {
+    id: 'standard-n-flag',
+    word: 'Standard',
+    meaning: 'A military or ceremonial flag or banner, especially one used as a rallying point',
+    kind: 'N',
+    anglish: ['Banner', 'Flag', 'Guidon', 'War-mark'],
+    etymology: {
+      reconstruction: 'Old French estandart (battle flag), from Frankish *standhard (that which stands firm), from *standan (to stand) + *hard (hard); this is the oldest English sense, entering via the Norman Conquest',
+      cognates: ['French étendard', 'Spanish estandarte', 'Italian stendardo']
+    },
+    attestation: 'attested',
+    category: 'military',
+    notes: 'Old English "guðfana" (battle-banner) and "segn" (sign, banner) are the Germanic equivalents',
+    forms: ['standards']
+  },
+  {
+    id: 'standard-aj',
+    word: 'Standard',
+    meaning: 'Used or accepted as normal or average; not special or unusual',
+    kind: 'AJ',
+    anglish: ['Normal', 'Wonted', 'Everyday', 'Common'],
+    etymology: {
+      reconstruction: 'Adjectival use of the noun standard (from Old French estandart); "up to standard" gave rise to "standard" as an adjective meaning "meeting the accepted norm"',
+      cognates: ['French standard', 'Spanish estándar', 'German standard']
+    },
+    attestation: 'attested',
+    category: 'general',
+    notes: 'Old English "gewunelic" (wonted, customary) and "gemǣne" (common, ordinary) cover this sense'
   },
 ];
 
