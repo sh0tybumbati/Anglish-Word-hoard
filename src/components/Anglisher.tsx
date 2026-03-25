@@ -50,11 +50,25 @@ const NATIVE_GERMANIC: Set<string> = new Set([
 ]);
 
 // ---------------------------------------------------------------------------
-// Build a lookup map from the wordbook: lowercase word → anglish alternatives
+// Build lookup maps from the wordbook
 // ---------------------------------------------------------------------------
+// Primary: lowercase word → anglish alternatives
 const WORDBOOK_MAP: Map<string, string[]> = new Map(
   authentikWordEntries.map(entry => [entry.word.toLowerCase(), entry.anglish])
 );
+
+// Forms reverse map: inflected form → anglish alternatives of its root
+// e.g. 'using' → alternatives for 'use'
+const FORMS_MAP: Map<string, string[]> = new Map();
+for (const entry of authentikWordEntries) {
+  if (entry.forms) {
+    for (const form of entry.forms) {
+      if (!FORMS_MAP.has(form.toLowerCase())) {
+        FORMS_MAP.set(form.toLowerCase(), entry.anglish);
+      }
+    }
+  }
+}
 
 // ---------------------------------------------------------------------------
 // Token types
@@ -78,10 +92,13 @@ interface Token {
 // Stemmer: tries suffix-stripping rules to find a wordbook/Germanic root.
 // Returns the matched root string, or null if no match found.
 // ---------------------------------------------------------------------------
-function findRoot(lower: string): { root: string; inWordbook: boolean } | null {
-  // Check exact first
+function findRoot(lower: string): { root: string; inWordbook: boolean; alts?: string[] } | null {
+  // 1. Exact wordbook match
   if (WORDBOOK_MAP.has(lower)) return { root: lower, inWordbook: true };
+  // 2. Exact Germanic match
   if (NATIVE_GERMANIC.has(lower)) return { root: lower, inWordbook: false };
+  // 3. Explicit forms map (most accurate — beats stemmer)
+  if (FORMS_MAP.has(lower)) return { root: lower, inWordbook: true, alts: FORMS_MAP.get(lower) };
 
   // Candidate stems to try, in priority order
   const candidates: string[] = [];
@@ -229,7 +246,7 @@ function tokenize(text: string): Token[] {
       const lower = part.toLowerCase();
       const match = findRoot(lower);
       if (match?.inWordbook) {
-        const alts = WORDBOOK_MAP.get(match.root)!;
+        const alts = match.alts ?? WORDBOOK_MAP.get(match.root)!;
         return { id: id++, kind: 'word', text: part, status: 'red', alternatives: alts };
       } else if (match && !match.inWordbook) {
         return { id: id++, kind: 'word', text: part, status: 'green' };

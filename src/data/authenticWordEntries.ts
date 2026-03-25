@@ -15,7 +15,8 @@ export const authentikWordEntries: WordEntry[] = [
     },
     attestation: 'neologism',
     category: 'technical',
-    notes: 'Telltale follows the pattern of German "Computer" → "Rechner" (calculator)'
+    notes: 'Telltale follows the pattern of German "Computer" → "Rechner" (calculator)',
+    forms: ['computers']
   },
   {
     id: 'telephone',
@@ -29,7 +30,8 @@ export const authentikWordEntries: WordEntry[] = [
     },
     attestation: 'neologism',
     category: 'technical',
-    notes: 'Direct calque of German "Fernsprecher"'
+    notes: 'Direct calque of German "Fernsprecher"',
+    forms: ['telephones']
   },
   {
     id: 'television',
@@ -42,7 +44,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French télévision', 'Spanish televisión', 'Italian televisione']
     },
     attestation: 'neologism',
-    category: 'technical'
+    category: 'technical',
+    forms: ['televisions']
   },
   {
     id: 'university',
@@ -55,7 +58,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French université', 'Spanish universidad', 'Italian università']
     },
     attestation: 'proposed',
-    category: 'academic'
+    category: 'academic',
+    forms: ['universities']
   },
   {
     id: 'hospital',
@@ -68,7 +72,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French hôpital', 'Spanish hospital', 'Italian ospedale']
     },
     attestation: 'neologism',
-    category: 'professional'
+    category: 'professional',
+    forms: ['hospitals']
   },
 
   // Verbs
@@ -85,7 +90,8 @@ export const authentikWordEntries: WordEntry[] = [
     },
     attestation: 'attested',
     category: 'authentic',
-    notes: 'One of the few abstract verbs that survived from Old English'
+    notes: 'One of the few abstract verbs that survived from Old English',
+    forms: ['understands', 'understood', 'understanding']
   },
   {
     id: 'create',
@@ -98,7 +104,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French créer', 'Spanish crear', 'Italian creare']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['creates', 'created', 'creating']
   },
   {
     id: 'destroy',
@@ -111,10 +118,11 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French détruire', 'Spanish destruir', 'Italian distruggere']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['destroys', 'destroyed', 'destroying']
   },
 
-  // Adjectives  
+  // Adjectives
   {
     id: 'important',
     word: 'Important',
@@ -168,7 +176,8 @@ export const authentikWordEntries: WordEntry[] = [
     },
     attestation: 'neologism',
     category: 'technical',
-    notes: 'Following German "Sauerstoff" pattern'
+    notes: 'Following German "Sauerstoff" pattern',
+    forms: ['oxygens']
   },
   {
     id: 'hydrogen',
@@ -182,7 +191,8 @@ export const authentikWordEntries: WordEntry[] = [
     },
     attestation: 'neologism',
     category: 'technical',
-    notes: 'Following German "Wasserstoff"'
+    notes: 'Following German "Wasserstoff"',
+    forms: ['hydrogens']
   },
   {
     id: 'carbon',
@@ -195,7 +205,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French carbone', 'Spanish carbono', 'Italian carbonio']
     },
     attestation: 'neologism',
-    category: 'technical'
+    category: 'technical',
+    forms: ['carbons']
   },
 
   // Abstract concepts
@@ -210,7 +221,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French philosophie', 'Spanish filosofía', 'Italian filosofia']
     },
     attestation: 'proposed',
-    category: 'academic'
+    category: 'academic',
+    forms: ['philosophies']
   },
   {
     id: 'democracy',
@@ -223,7 +235,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French démocratie', 'Spanish democracia', 'Italian democrazia']
     },
     attestation: 'proposed',
-    category: 'social'
+    category: 'social',
+    forms: ['democracies']
   },
   {
     id: 'geography',
@@ -236,7 +249,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French géographie', 'Spanish geografía', 'Italian geografia']
     },
     attestation: 'neologism',
-    category: 'academic'
+    category: 'academic',
+    forms: ['geographies']
   },
 
   // Already authentic Germanic words
@@ -252,7 +266,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['German Haus', 'Dutch huis', 'Old Norse hús']
     },
     attestation: 'attested',
-    category: 'authentic'
+    category: 'authentic',
+    forms: ['houses']
   },
   {
     id: 'water',
@@ -266,7 +281,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['German Wasser', 'Dutch water', 'Old Norse vatn']
     },
     attestation: 'attested',
-    category: 'authentic'
+    category: 'authentic',
+    forms: ['waters']
   },
   {
     id: 'fire',
@@ -280,7 +296,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['German Feuer', 'Dutch vuur', 'Old Norse fúr']
     },
     attestation: 'attested',
-    category: 'authentic'
+    category: 'authentic',
+    forms: ['fires']
   },
   {
     id: 'earth',
@@ -294,7 +311,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['German Erde', 'Dutch aarde', 'Old Norse jörð']
     },
     attestation: 'attested',
-    category: 'authentic'
+    category: 'authentic',
+    forms: ['earths']
   },
 
   // Food & Cooking
@@ -309,7 +327,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['German Restaurant', 'Dutch restaurant']
     },
     attestation: 'neologism',
-    category: 'culinary'
+    category: 'culinary',
+    forms: ['restaurants']
   },
   {
     id: 'chef',
@@ -322,7 +341,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['German Chefkoch', 'Dutch hoofdkok']
     },
     attestation: 'neologism',
-    category: 'professional'
+    category: 'professional',
+    forms: ['chefs']
   },
   {
     id: 'recipe',
@@ -335,7 +355,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French recette', 'Spanish receta', 'Italian ricetta']
     },
     attestation: 'neologism',
-    category: 'culinary'
+    category: 'culinary',
+    forms: ['recipes']
   },
 
   // Animals
@@ -350,7 +371,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['German Elefant', 'Dutch olifant']
     },
     attestation: 'proposed',
-    category: 'nature'
+    category: 'nature',
+    forms: ['elephants']
   },
   {
     id: 'dolphin',
@@ -363,7 +385,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French dauphin', 'Spanish delfín', 'Italian delfino']
     },
     attestation: 'reconstructed',
-    category: 'nature'
+    category: 'nature',
+    forms: ['dolphins']
   },
   {
     id: 'butterfly',
@@ -376,7 +399,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['German Schmetterling', 'Dutch vlinder']
     },
     attestation: 'attested',
-    category: 'authentic'
+    category: 'authentic',
+    forms: ['butterflies']
   },
 
   // Transportation
@@ -391,7 +415,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['German Kraftwagen', 'Dutch motorwagen']
     },
     attestation: 'neologism',
-    category: 'technical'
+    category: 'technical',
+    forms: ['automobiles']
   },
   {
     id: 'bicycle',
@@ -404,7 +429,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French bicyclette', 'Spanish bicicleta', 'Italian bicicletta']
     },
     attestation: 'neologism',
-    category: 'technical'
+    category: 'technical',
+    forms: ['bicycles']
   },
   {
     id: 'airplane',
@@ -417,7 +443,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French avion', 'Spanish avión', 'Italian aeroplano']
     },
     attestation: 'neologism',
-    category: 'technical'
+    category: 'technical',
+    forms: ['airplanes']
   },
 
   // Medicine & Health
@@ -432,7 +459,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French docteur', 'Spanish doctor', 'Italian dottore']
     },
     attestation: 'attested',
-    category: 'professional'
+    category: 'professional',
+    forms: ['doctors']
   },
   {
     id: 'medicine',
@@ -445,7 +473,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French médecine', 'Spanish medicina', 'Italian medicina']
     },
     attestation: 'reconstructed',
-    category: 'technical'
+    category: 'technical',
+    forms: ['medicines']
   },
   {
     id: 'surgery',
@@ -458,7 +487,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French chirurgie', 'Spanish cirugía', 'Italian chirurgia']
     },
     attestation: 'neologism',
-    category: 'technical'
+    category: 'technical',
+    forms: ['surgeries']
   },
 
   // Education
@@ -473,7 +503,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French étudiant', 'Spanish estudiante', 'Italian studente']
     },
     attestation: 'attested',
-    category: 'academic'
+    category: 'academic',
+    forms: ['students']
   },
   {
     id: 'teacher',
@@ -486,7 +517,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['German Lehrer', 'Dutch onderwijzer']
     },
     attestation: 'attested',
-    category: 'authentic'
+    category: 'authentic',
+    forms: ['teachers']
   },
   {
     id: 'library',
@@ -499,7 +531,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French bibliothèque', 'Spanish biblioteca', 'Italian biblioteca']
     },
     attestation: 'neologism',
-    category: 'academic'
+    category: 'academic',
+    forms: ['libraries']
   },
 
   // Weather & Nature
@@ -514,7 +547,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French ouragan', 'Spanish huracán', 'Italian uragano']
     },
     attestation: 'attested',
-    category: 'nature'
+    category: 'nature',
+    forms: ['hurricanes']
   },
   {
     id: 'rainbow',
@@ -527,7 +561,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['German Regenbogen', 'Dutch regenboog']
     },
     attestation: 'attested',
-    category: 'authentic'
+    category: 'authentic',
+    forms: ['rainbows']
   },
   {
     id: 'earthquake',
@@ -540,7 +575,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['German Erdbeben', 'Dutch aardbeving']
     },
     attestation: 'attested',
-    category: 'authentic'
+    category: 'authentic',
+    forms: ['earthquakes']
   },
 
   // More Verbs
@@ -555,7 +591,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French poursuivre', 'Spanish procurar', 'Italian procurare']
     },
     attestation: 'attested',
-    category: 'authentic'
+    category: 'authentic',
+    forms: ['purchases', 'purchased', 'purchasing']
   },
   {
     id: 'discover',
@@ -568,7 +605,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French découvrir', 'Spanish descubrir', 'Italian scoprire']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['discovers', 'discovered', 'discovering']
   },
   {
     id: 'explain',
@@ -581,7 +619,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French expliquer', 'Spanish explicar', 'Italian spiegare']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['explains', 'explained', 'explaining']
   },
 
   // More Adjectives
@@ -637,7 +676,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French internet', 'Spanish internet', 'Italian internet']
     },
     attestation: 'neologism',
-    category: 'technical'
+    category: 'technical',
+    forms: ['internets']
   },
   {
     id: 'smartphone',
@@ -650,7 +690,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French smartphone', 'Spanish smartphone', 'Italian smartphone']
     },
     attestation: 'neologism',
-    category: 'technical'
+    category: 'technical',
+    forms: ['smartphones']
   },
   {
     id: 'camera',
@@ -663,7 +704,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French caméra', 'Spanish cámara', 'Italian camera']
     },
     attestation: 'neologism',
-    category: 'technical'
+    category: 'technical',
+    forms: ['cameras']
   },
 
   // Colors
@@ -678,7 +720,8 @@ export const authentikWordEntries: WordEntry[] = [
       reconstruction: 'From Latin, but naturalized early'
     },
     attestation: 'attested',
-    category: 'authentic'
+    category: 'authentic',
+    forms: ['purples']
   },
   {
     id: 'orange',
@@ -691,7 +734,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French orange', 'Spanish naranja', 'Italian arancia']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['oranges']
   },
 
   // Body Parts
@@ -706,7 +750,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French estomac', 'Spanish estómago', 'Italian stomaco']
     },
     attestation: 'attested',
-    category: 'authentic'
+    category: 'authentic',
+    forms: ['stomachs']
   },
   {
     id: 'muscle',
@@ -719,7 +764,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French muscle', 'Spanish músculo', 'Italian muscolo']
     },
     attestation: 'attested',
-    category: 'authentic'
+    category: 'authentic',
+    forms: ['muscles']
   },
   {
     id: 'skeleton',
@@ -732,7 +778,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French squelette', 'Spanish esqueleto', 'Italian scheletro']
     },
     attestation: 'neologism',
-    category: 'technical'
+    category: 'technical',
+    forms: ['skeletons']
   },
 
   // Emotions & Mental States
@@ -748,7 +795,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['German Sorge', 'Dutch zorg']
     },
     attestation: 'attested',
-    category: 'authentic'
+    category: 'authentic',
+    forms: ['anxieties']
   },
   {
     id: 'depression',
@@ -761,7 +809,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French dépression', 'Spanish depresión', 'Italian depressione']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['depressions']
   },
   {
     id: 'excitement',
@@ -774,7 +823,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French excitation', 'Spanish excitación', 'Italian eccitamento']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['excitements']
   },
 
   // Time & Calendar
@@ -789,7 +839,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French calendrier', 'Spanish calendario', 'Italian calendario']
     },
     attestation: 'neologism',
-    category: 'general'
+    category: 'general',
+    forms: ['calendars']
   },
   {
     id: 'century',
@@ -802,7 +853,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French siècle', 'Spanish siglo', 'Italian secolo']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['centuries']
   },
   {
     id: 'minute',
@@ -815,7 +867,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French minute', 'Spanish minuto', 'Italian minuto']
     },
     attestation: 'proposed',
-    category: 'general'
+    category: 'general',
+    forms: ['minutes']
   },
 
   // Family & Relationships
@@ -830,7 +883,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French cousin', 'Spanish primo', 'Italian cugino']
     },
     attestation: 'attested',
-    category: 'authentic'
+    category: 'authentic',
+    forms: ['cousins']
   },
   {
     id: 'marriage',
@@ -843,7 +897,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French mariage', 'Spanish matrimonio', 'Italian matrimonio']
     },
     attestation: 'attested',
-    category: 'authentic'
+    category: 'authentic',
+    forms: ['marriages']
   },
   {
     id: 'divorce',
@@ -856,7 +911,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French divorce', 'Spanish divorcio', 'Italian divorzio']
     },
     attestation: 'neologism',
-    category: 'social'
+    category: 'social',
+    forms: ['divorces']
   },
 
   // Clothing & Fashion
@@ -871,7 +927,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French jaquette', 'Spanish chaqueta', 'Italian giacca']
     },
     attestation: 'neologism',
-    category: 'general'
+    category: 'general',
+    forms: ['jackets']
   },
   {
     id: 'fashion',
@@ -884,7 +941,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French façon', 'Spanish facción', 'Italian fazione']
     },
     attestation: 'reconstructed',
-    category: 'social'
+    category: 'social',
+    forms: ['fashions']
   },
   {
     id: 'elegant',
@@ -925,7 +983,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French victoire', 'Spanish victoria', 'Italian vittoria']
     },
     attestation: 'attested',
-    category: 'authentic'
+    category: 'authentic',
+    forms: ['victories']
   },
   {
     id: 'defeat',
@@ -938,7 +997,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French défaite', 'Spanish derrota', 'Italian sconfitta']
     },
     attestation: 'attested',
-    category: 'authentic'
+    category: 'authentic',
+    forms: ['defeats']
   },
 
   // Music & Entertainment
@@ -953,7 +1013,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French concert', 'Spanish concierto', 'Italian concerto']
     },
     attestation: 'neologism',
-    category: 'artistic'
+    category: 'artistic',
+    forms: ['concerts']
   },
   {
     id: 'theater',
@@ -966,7 +1027,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French théâtre', 'Spanish teatro', 'Italian teatro']
     },
     attestation: 'neologism',
-    category: 'artistic'
+    category: 'artistic',
+    forms: ['theaters']
   },
   {
     id: 'audience',
@@ -979,7 +1041,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French audience', 'Spanish audiencia', 'Italian udienza']
     },
     attestation: 'reconstructed',
-    category: 'social'
+    category: 'social',
+    forms: ['audiences']
   },
 
   // Money & Commerce
@@ -1009,7 +1072,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['German kaufen', 'Dutch koop']
     },
     attestation: 'attested',
-    category: 'authentic'
+    category: 'authentic',
+    forms: ['cheaper', 'cheapest']
   },
   {
     id: 'profit',
@@ -1022,7 +1086,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French profit', 'Spanish provecho', 'Italian profitto']
     },
     attestation: 'attested',
-    category: 'authentic'
+    category: 'authentic',
+    forms: ['profits']
   },
 
   // Science & Research  
@@ -1037,7 +1102,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['German Versuch', 'Dutch proef']
     },
     attestation: 'reconstructed',
-    category: 'academic'
+    category: 'academic',
+    forms: ['experiments']
   },
   {
     id: 'laboratory',
@@ -1050,7 +1116,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French laboratoire', 'Spanish laboratorio', 'Italian laboratorio']
     },
     attestation: 'neologism',
-    category: 'academic'
+    category: 'academic',
+    forms: ['laboratories']
   },
   {
     id: 'research',
@@ -1078,7 +1145,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French organiser', 'Spanish organizar', 'Italian organizzare']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['organizes', 'organized', 'organizing']
   },
   {
     id: 'celebrate',
@@ -1091,7 +1159,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French célébrer', 'Spanish celebrar', 'Italian celebrare']
     },
     attestation: 'reconstructed',
-    category: 'social'
+    category: 'social',
+    forms: ['celebrates', 'celebrated', 'celebrating']
   },
   {
     id: 'remember',
@@ -1105,7 +1174,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['German sich erinnern', 'Dutch herinneren']
     },
     attestation: 'attested',
-    category: 'authentic'
+    category: 'authentic',
+    forms: ['remembers', 'remembered', 'remembering']
   },
 
   // Common Verbs - Additional entries
@@ -1120,7 +1190,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French discuter', 'Spanish discutir', 'Italian discutere']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['discusses', 'discussed', 'discussing']
   },
   {
     id: 'permit',
@@ -1133,7 +1204,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French permettre', 'Spanish permitir', 'Italian permettere']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['permits', 'permitted', 'permitting']
   },
   {
     id: 'continue',
@@ -1146,7 +1218,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French continuer', 'Spanish continuar', 'Italian continuare']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['continues', 'continued', 'continuing']
   },
   {
     id: 'receive',
@@ -1159,7 +1232,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French recevoir', 'Spanish recibir', 'Italian ricevere']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['receives', 'received', 'receiving']
   },
   {
     id: 'develop',
@@ -1172,7 +1246,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French développer', 'Spanish desarrollar', 'Italian sviluppare']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['develops', 'developed', 'developing']
   },
   {
     id: 'require',
@@ -1185,7 +1260,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French requérir', 'Spanish requerir', 'Italian richiedere']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['requires', 'required', 'requiring']
   },
   {
     id: 'arrive',
@@ -1198,7 +1274,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French arriver', 'Spanish arribar', 'Italian arrivare']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['arrives', 'arrived', 'arriving']
   },
   {
     id: 'depart',
@@ -1211,7 +1288,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French départir', 'Spanish departir', 'Italian dipartire']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['departs', 'departed', 'departing']
   },
 
   // Common Adjectives
@@ -1239,7 +1317,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French simple', 'Spanish simple', 'Italian semplice']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['simpler', 'simplest']
   },
   {
     id: 'necessary',
@@ -1332,7 +1411,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French animal', 'Spanish animal', 'Italian animale']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['animals']
   },
   {
     id: 'person',
@@ -1345,7 +1425,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French personne', 'Spanish persona', 'Italian persona']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['people', 'persons']
   },
   {
     id: 'society',
@@ -1358,7 +1439,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French société', 'Spanish sociedad', 'Italian società']
     },
     attestation: 'reconstructed',
-    category: 'social'
+    category: 'social',
+    forms: ['societies']
   },
   {
     id: 'nation',
@@ -1371,7 +1453,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French nation', 'Spanish nación', 'Italian nazione']
     },
     attestation: 'attested',
-    category: 'social'
+    category: 'social',
+    forms: ['nations']
   },
   {
     id: 'religion',
@@ -1384,7 +1467,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French religion', 'Spanish religión', 'Italian religione']
     },
     attestation: 'attested',
-    category: 'social'
+    category: 'social',
+    forms: ['religions']
   },
   {
     id: 'science',
@@ -1397,7 +1481,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French science', 'Spanish ciencia', 'Italian scienza']
     },
     attestation: 'attested',
-    category: 'academic'
+    category: 'academic',
+    forms: ['sciences']
   },
   {
     id: 'justice',
@@ -1410,7 +1495,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French justice', 'Spanish justicia', 'Italian giustizia']
     },
     attestation: 'attested',
-    category: 'social'
+    category: 'social',
+    forms: ['justices']
   },
   {
     id: 'freedom',
@@ -1424,7 +1510,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['German Freiheit', 'Dutch vrijheid']
     },
     attestation: 'attested',
-    category: 'authentic'
+    category: 'authentic',
+    forms: ['freedoms']
   },
   {
     id: 'peace',
@@ -1437,7 +1524,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French paix', 'Spanish paz', 'Italian pace']
     },
     attestation: 'attested',
-    category: 'social'
+    category: 'social',
+    forms: ['peaces']
   },
   {
     id: 'power',
@@ -1450,7 +1538,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French pouvoir', 'Spanish poder', 'Italian potere']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['powers']
   },
 
   // Technology & Business
@@ -1465,7 +1554,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French industrie', 'Spanish industria', 'Italian industria']
     },
     attestation: 'reconstructed',
-    category: 'professional'
+    category: 'professional',
+    forms: ['industries']
   },
   {
     id: 'machine',
@@ -1478,7 +1568,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French machine', 'Spanish máquina', 'Italian macchina']
     },
     attestation: 'reconstructed',
-    category: 'technical'
+    category: 'technical',
+    forms: ['machines']
   },
   {
     id: 'energy',
@@ -1491,7 +1582,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French énergie', 'Spanish energía', 'Italian energia']
     },
     attestation: 'reconstructed',
-    category: 'technical'
+    category: 'technical',
+    forms: ['energies']
   },
   {
     id: 'factory',
@@ -1504,7 +1596,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French fabrique', 'Spanish fábrica', 'Italian fabbrica']
     },
     attestation: 'neologism',
-    category: 'professional'
+    category: 'professional',
+    forms: ['factories']
   },
   {
     id: 'company',
@@ -1517,7 +1610,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French compagnie', 'Spanish compañía', 'Italian compagnia']
     },
     attestation: 'reconstructed',
-    category: 'professional'
+    category: 'professional',
+    forms: ['companies']
   },
 
   // Everyday Life
@@ -1532,7 +1626,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French moment', 'Spanish momento', 'Italian momento']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['moments']
   },
   {
     id: 'change',
@@ -1545,7 +1640,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French changer', 'Spanish cambiar', 'Italian cambiare']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['changes']
   },
   {
     id: 'place',
@@ -1558,7 +1654,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French place', 'Spanish plaza', 'Italian piazza']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['places']
   },
   {
     id: 'example',
@@ -1571,7 +1668,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French exemple', 'Spanish ejemplo', 'Italian esempio']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['examples']
   },
   {
     id: 'problem',
@@ -1584,7 +1682,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French problème', 'Spanish problema', 'Italian problema']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['problems']
   },
   {
     id: 'question',
@@ -1597,7 +1696,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French question', 'Spanish cuestión', 'Italian questione']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['questions']
   },
   {
     id: 'answer',
@@ -1611,7 +1711,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['German Antwort', 'Dutch antwoord']
     },
     attestation: 'attested',
-    category: 'authentic'
+    category: 'authentic',
+    forms: ['answers']
   },
 
   // More Common Verbs
@@ -1626,7 +1727,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French présenter', 'Spanish presentar', 'Italian presentare']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['presents', 'presented', 'presenting']
   },
   {
     id: 'produce',
@@ -1639,7 +1741,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French produire', 'Spanish producir', 'Italian produrre']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['produces', 'produced', 'producing']
   },
   {
     id: 'decide',
@@ -1652,7 +1755,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French décider', 'Spanish decidir', 'Italian decidere']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['decides', 'decided', 'deciding']
   },
   {
     id: 'consider',
@@ -1665,7 +1769,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French considérer', 'Spanish considerar', 'Italian considerare']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['considers', 'considered', 'considering']
   },
   {
     id: 'imagine',
@@ -1678,7 +1783,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French imaginer', 'Spanish imaginar', 'Italian immaginare']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['imagines', 'imagined', 'imagining']
   },
 
   // More Nouns
@@ -1693,7 +1799,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French propos', 'Spanish propósito', 'Italian proposito']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['purposes']
   },
   {
     id: 'result',
@@ -1706,7 +1813,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French résultat', 'Spanish resultado', 'Italian risultato']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['results']
   },
   {
     id: 'opinion',
@@ -1719,7 +1827,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French opinion', 'Spanish opinión', 'Italian opinione']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['opinions']
   },
   {
     id: 'effort',
@@ -1732,7 +1841,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French effort', 'Spanish esfuerzo', 'Italian sforzo']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['efforts']
   },
   {
     id: 'experience',
@@ -1745,7 +1855,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French expérience', 'Spanish experiencia', 'Italian esperienza']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['experiences']
   },
 
   // High-frequency words with Latin/French/Greek roots — new entries
@@ -1762,7 +1873,8 @@ export const authentikWordEntries: WordEntry[] = [
     },
     attestation: 'attested',
     category: 'general',
-    notes: 'Old English had "folc" (folk) for the same concept'
+    notes: 'Old English had "folc" (folk) for the same concept',
+    forms: ['peoples']
   },
   {
     id: 'language',
@@ -1776,7 +1888,8 @@ export const authentikWordEntries: WordEntry[] = [
     },
     attestation: 'attested',
     category: 'general',
-    notes: 'Old English "tunge" (tongue) was used for language'
+    notes: 'Old English "tunge" (tongue) was used for language',
+    forms: ['languages']
   },
   {
     id: 'number',
@@ -1789,7 +1902,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French nombre', 'Spanish número', 'Italian numero']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['numbers']
   },
   {
     id: 'move',
@@ -1802,7 +1916,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French mouvoir', 'Spanish mover', 'Italian muovere']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['moves', 'moved', 'moving']
   },
   {
     id: 'point',
@@ -1815,7 +1930,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French point', 'Spanish punto', 'Italian punto']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['points']
   },
   {
     id: 'place-v',
@@ -1828,7 +1944,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French placer', 'Spanish colocar', 'Italian collocare']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['places', 'placed', 'placing']
   },
   {
     id: 'use',
@@ -1841,7 +1958,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French user', 'Spanish usar', 'Italian usare']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['uses', 'used', 'using']
   },
   {
     id: 'cause',
@@ -1854,7 +1972,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French cause', 'Spanish causa', 'Italian causa']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['causes']
   },
   {
     id: 'action',
@@ -1868,7 +1987,8 @@ export const authentikWordEntries: WordEntry[] = [
     },
     attestation: 'attested',
     category: 'general',
-    notes: 'Old English "dæd" (deed) covers this meaning'
+    notes: 'Old English "dæd" (deed) covers this meaning',
+    forms: ['actions']
   },
   {
     id: 'form',
@@ -1881,7 +2001,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French forme', 'Spanish forma', 'Italian forma']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['forms']
   },
   {
     id: 'matter',
@@ -1894,7 +2015,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French matière', 'Spanish materia', 'Italian materia']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['matters']
   },
   {
     id: 'case',
@@ -1907,7 +2029,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French cas', 'Spanish caso', 'Italian caso']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['cases']
   },
   {
     id: 'level',
@@ -1920,7 +2043,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French niveau', 'Spanish nivel', 'Italian livello']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['levels']
   },
   {
     id: 'increase',
@@ -1933,7 +2057,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French accroître', 'Spanish aumentar', 'Italian aumentare']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['increases', 'increased', 'increasing']
   },
   {
     id: 'provide',
@@ -1946,7 +2071,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French pourvoir', 'Spanish proveer', 'Italian provvedere']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['provides', 'provided', 'providing']
   },
   {
     id: 'environment',
@@ -1959,7 +2085,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French environnement', 'Spanish ambiente', 'Italian ambiente']
     },
     attestation: 'neologism',
-    category: 'nature'
+    category: 'nature',
+    forms: ['environments']
   },
   {
     id: 'government',
@@ -1972,7 +2099,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French gouvernement', 'Spanish gobierno', 'Italian governo']
     },
     attestation: 'attested',
-    category: 'social'
+    category: 'social',
+    forms: ['governments']
   },
   {
     id: 'information',
@@ -1998,7 +2126,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French large', 'Spanish largo', 'Italian largo']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['larger', 'largest']
   },
   {
     id: 'special',
@@ -2063,7 +2192,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French situation', 'Spanish situación', 'Italian situazione']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['situations']
   },
   {
     id: 'area',
@@ -2076,7 +2206,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French aire', 'Spanish área', 'Italian area']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['areas']
   },
   {
     id: 'family',
@@ -2090,7 +2221,8 @@ export const authentikWordEntries: WordEntry[] = [
     },
     attestation: 'attested',
     category: 'social',
-    notes: 'Old English "cynn" (kin, family) is the direct Germanic parallel'
+    notes: 'Old English "cynn" (kin, family) is the direct Germanic parallel',
+    forms: ['families']
   },
   {
     id: 'body',
@@ -2104,7 +2236,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['German Körper', 'Dutch lichaam']
     },
     attestation: 'attested',
-    category: 'authentic'
+    category: 'authentic',
+    forms: ['bodies']
   },
   {
     id: 'face',
@@ -2118,7 +2251,8 @@ export const authentikWordEntries: WordEntry[] = [
     },
     attestation: 'attested',
     category: 'general',
-    notes: 'Old English "andwlita" (face) and "ansyn" (face, appearance) are the authentic forms'
+    notes: 'Old English "andwlita" (face) and "ansyn" (face, appearance) are the authentic forms',
+    forms: ['faces']
   },
   {
     id: 'child',
@@ -2132,7 +2266,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['German Kind', 'Dutch kind']
     },
     attestation: 'attested',
-    category: 'authentic'
+    category: 'authentic',
+    forms: ['children']
   },
   {
     id: 'city',
@@ -2146,7 +2281,8 @@ export const authentikWordEntries: WordEntry[] = [
     },
     attestation: 'attested',
     category: 'general',
-    notes: 'Old English "burg/burh" was used for fortified towns'
+    notes: 'Old English "burg/burh" was used for fortified towns',
+    forms: ['cities']
   },
   {
     id: 'group',
@@ -2159,7 +2295,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French groupe', 'Spanish grupo', 'Italian gruppo']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['groups']
   },
   {
     id: 'order',
@@ -2172,7 +2309,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French ordre', 'Spanish orden', 'Italian ordine']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['orders']
   },
   {
     id: 'age',
@@ -2186,7 +2324,8 @@ export const authentikWordEntries: WordEntry[] = [
     },
     attestation: 'attested',
     category: 'general',
-    notes: 'Old English "ieldu/yldo" (age, old age) and "eald" (old) are the authentic roots'
+    notes: 'Old English "ieldu/yldo" (age, old age) and "eald" (old) are the authentic roots',
+    forms: ['ages']
   },
   {
     id: 'member',
@@ -2199,7 +2338,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French membre', 'Spanish miembro', 'Italian membro']
     },
     attestation: 'attested',
-    category: 'social'
+    category: 'social',
+    forms: ['members']
   },
   {
     id: 'service',
@@ -2212,7 +2352,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French service', 'Spanish servicio', 'Italian servizio']
     },
     attestation: 'reconstructed',
-    category: 'professional'
+    category: 'professional',
+    forms: ['services']
   },
   {
     id: 'office',
@@ -2225,7 +2366,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French bureau', 'Spanish oficina', 'Italian ufficio']
     },
     attestation: 'neologism',
-    category: 'professional'
+    category: 'professional',
+    forms: ['offices']
   },
   {
     id: 'social',
@@ -2264,7 +2406,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French condition', 'Spanish condición', 'Italian condizione']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['conditions']
   },
   {
     id: 'process',
@@ -2277,7 +2420,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French processus', 'Spanish proceso', 'Italian processo']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['processes']
   },
   {
     id: 'study',
@@ -2290,7 +2434,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French étudier', 'Spanish estudiar', 'Italian studiare']
     },
     attestation: 'attested',
-    category: 'academic'
+    category: 'academic',
+    forms: ['studies', 'studied', 'studying']
   },
   {
     id: 'complete',
@@ -2316,7 +2461,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French achever', 'Spanish lograr', 'Italian raggiungere']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['achieves', 'achieved', 'achieving']
   },
   {
     id: 'property',
@@ -2329,7 +2475,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French propriété', 'Spanish propiedad', 'Italian proprietà']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['properties']
   },
   {
     id: 'relate',
@@ -2342,7 +2489,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French relater', 'Spanish relatar', 'Italian relazionare']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['relates', 'related', 'relating']
   },
   {
     id: 'reduce',
@@ -2355,7 +2503,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French réduire', 'Spanish reducir', 'Italian ridurre']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['reduces', 'reduced', 'reducing']
   },
   {
     id: 'lead',
@@ -2369,7 +2518,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['German leiten', 'Dutch leiden']
     },
     attestation: 'attested',
-    category: 'authentic'
+    category: 'authentic',
+    forms: ['leads', 'led', 'leading']
   },
   {
     id: 'opportunity',
@@ -2382,7 +2532,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French opportunité', 'Spanish oportunidad', 'Italian opportunità']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['opportunities']
   },
   {
     id: 'value',
@@ -2395,7 +2546,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French valeur', 'Spanish valor', 'Italian valore']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['values']
   },
   {
     id: 'culture',
@@ -2408,7 +2560,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French culture', 'Spanish cultura', 'Italian cultura']
     },
     attestation: 'neologism',
-    category: 'social'
+    category: 'social',
+    forms: ['cultures']
   },
   {
     id: 'message',
@@ -2421,7 +2574,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French message', 'Spanish mensaje', 'Italian messaggio']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['messages']
   },
   {
     id: 'nature',
@@ -2434,7 +2588,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French nature', 'Spanish naturaleza', 'Italian natura']
     },
     attestation: 'attested',
-    category: 'nature'
+    category: 'nature',
+    forms: ['natures']
   },
   {
     id: 'clear',
@@ -2447,7 +2602,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French clair', 'Spanish claro', 'Italian chiaro']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['clearer', 'clearest']
   },
   {
     id: 'period',
@@ -2460,7 +2616,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French période', 'Spanish período', 'Italian periodo']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['periods']
   },
   {
     id: 'community',
@@ -2473,7 +2630,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French communauté', 'Spanish comunidad', 'Italian comunità']
     },
     attestation: 'neologism',
-    category: 'social'
+    category: 'social',
+    forms: ['communities']
   },
   {
     id: 'individual',
@@ -2486,7 +2644,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French individu', 'Spanish individuo', 'Italian individuo']
     },
     attestation: 'neologism',
-    category: 'general'
+    category: 'general',
+    forms: ['individuals']
   },
   {
     id: 'evidence',
@@ -2499,7 +2658,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French preuve', 'Spanish evidencia', 'Italian evidenza']
     },
     attestation: 'reconstructed',
-    category: 'academic'
+    category: 'academic',
+    forms: ['evidences']
   },
   {
     id: 'report',
@@ -2512,7 +2672,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French rapport', 'Spanish informe', 'Italian rapporto']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['reports']
   },
   {
     id: 'apply',
@@ -2525,7 +2686,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French appliquer', 'Spanish aplicar', 'Italian applicare']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['applies', 'applied', 'applying']
   },
   {
     id: 'support',
@@ -2538,7 +2700,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French soutenir', 'Spanish apoyar', 'Italian sostenere']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['supports', 'supported', 'supporting']
   },
   {
     id: 'involve',
@@ -2551,7 +2714,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French impliquer', 'Spanish involucrar', 'Italian coinvolgere']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['involves', 'involved', 'involving']
   },
   {
     id: 'control',
@@ -2564,7 +2728,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French contrôler', 'Spanish controlar', 'Italian controllare']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['controls', 'controlled', 'controlling']
   },
   {
     id: 'accept',
@@ -2577,7 +2742,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French accepter', 'Spanish aceptar', 'Italian accettare']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['accepts', 'accepted', 'accepting']
   },
   {
     id: 'join',
@@ -2590,7 +2756,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French joindre', 'Spanish juntar', 'Italian unire']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['joins', 'joined', 'joining']
   },
   {
     id: 'force',
@@ -2603,7 +2770,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French force', 'Spanish fuerza', 'Italian forza']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['forces']
   },
   {
     id: 'attention',
@@ -2616,7 +2784,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French attention', 'Spanish atención', 'Italian attenzione']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['attentions']
   },
   {
     id: 'identify',
@@ -2629,7 +2798,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French identifier', 'Spanish identificar', 'Italian identificare']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['identifies', 'identified', 'identifying']
   },
   {
     id: 'movement',
@@ -2642,7 +2812,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French mouvement', 'Spanish movimiento', 'Italian movimento']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['movements']
   },
   {
     id: 'center',
@@ -2655,7 +2826,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French centre', 'Spanish centro', 'Italian centro']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['centers']
   },
   {
     id: 'project',
@@ -2668,7 +2840,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French projet', 'Spanish proyecto', 'Italian progetto']
     },
     attestation: 'neologism',
-    category: 'professional'
+    category: 'professional',
+    forms: ['projects']
   },
   {
     id: 'protect',
@@ -2681,7 +2854,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French protéger', 'Spanish proteger', 'Italian proteggere']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['protects', 'protected', 'protecting']
   },
   {
     id: 'different',
@@ -2746,7 +2920,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French activité', 'Spanish actividad', 'Italian attività']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['activities']
   },
   {
     id: 'structure',
@@ -2759,7 +2934,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French structure', 'Spanish estructura', 'Italian struttura']
     },
     attestation: 'neologism',
-    category: 'technical'
+    category: 'technical',
+    forms: ['structures']
   },
   {
     id: 'respond',
@@ -2772,7 +2948,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French répondre', 'Spanish responder', 'Italian rispondere']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['responds', 'responded', 'responding']
   },
   {
     id: 'likely',
@@ -2786,7 +2963,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['German wahrscheinlich', 'Dutch waarschijnlijk']
     },
     attestation: 'attested',
-    category: 'authentic'
+    category: 'authentic',
+    forms: ['likelier', 'likeliest']
   },
   {
     id: 'physical',
@@ -2839,7 +3017,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French effectuer', 'Spanish realizar', 'Italian eseguire']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['performs', 'performed', 'performing']
   },
   {
     id: 'establish',
@@ -2852,7 +3031,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French établir', 'Spanish establecer', 'Italian stabilire']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['establishes', 'established', 'establishing']
   },
   {
     id: 'collect',
@@ -2865,7 +3045,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French collecter', 'Spanish coleccionar', 'Italian raccogliere']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['collects', 'collected', 'collecting']
   },
   {
     id: 'indicate',
@@ -2878,7 +3059,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French indiquer', 'Spanish indicar', 'Italian indicare']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['indicates', 'indicated', 'indicating']
   },
   {
     id: 'suggest',
@@ -2891,7 +3073,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French suggérer', 'Spanish sugerir', 'Italian suggerire']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['suggests', 'suggested', 'suggesting']
   },
   {
     id: 'prevent',
@@ -2904,7 +3087,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French prévenir', 'Spanish prevenir', 'Italian prevenire']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['prevents', 'prevented', 'preventing']
   },
   {
     id: 'difference',
@@ -2917,7 +3101,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French différence', 'Spanish diferencia', 'Italian differenza']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['differences']
   },
   {
     id: 'usual',
@@ -2944,7 +3129,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French police', 'Spanish policía', 'Italian polizia']
     },
     attestation: 'neologism',
-    category: 'social'
+    category: 'social',
+    forms: ['polices']
   },
   {
     id: 'economy',
@@ -2957,7 +3143,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French économie', 'Spanish economía', 'Italian economia']
     },
     attestation: 'reconstructed',
-    category: 'professional'
+    category: 'professional',
+    forms: ['economies']
   },
   {
     id: 'patient',
@@ -3009,7 +3196,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French événement', 'Spanish evento', 'Italian evento']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['events']
   },
   {
     id: 'history',
@@ -3022,7 +3210,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French histoire', 'Spanish historia', 'Italian storia']
     },
     attestation: 'neologism',
-    category: 'academic'
+    category: 'academic',
+    forms: ['histories']
   },
   {
     id: 'influence',
@@ -3035,7 +3224,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French influence', 'Spanish influencia', 'Italian influenza']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['influences']
   },
   {
     id: 'distance',
@@ -3048,7 +3238,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French distance', 'Spanish distancia', 'Italian distanza']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['distances']
   },
   {
     id: 'type',
@@ -3061,7 +3252,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French type', 'Spanish tipo', 'Italian tipo']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['types']
   },
   {
     id: 'series',
@@ -3074,7 +3266,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French série', 'Spanish serie', 'Italian serie']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['series']
   },
   {
     id: 'style',
@@ -3087,7 +3280,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French style', 'Spanish estilo', 'Italian stile']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['styles']
   },
   {
     id: 'former',
@@ -3114,7 +3308,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French exister', 'Spanish existir', 'Italian esistere']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['exists', 'existed', 'existing']
   },
   {
     id: 'contain',
@@ -3127,7 +3322,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French contenir', 'Spanish contener', 'Italian contenere']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['contains', 'contained', 'containing']
   },
   {
     id: 'remain',
@@ -3140,7 +3336,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French rester', 'Spanish permanecer', 'Italian rimanere']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['remains', 'remained', 'remaining']
   },
   {
     id: 'military',
@@ -3179,7 +3376,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French surface', 'Spanish superficie', 'Italian superficie']
     },
     attestation: 'neologism',
-    category: 'general'
+    category: 'general',
+    forms: ['surfaces']
   },
   {
     id: 'object',
@@ -3192,7 +3390,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French objet', 'Spanish objeto', 'Italian oggetto']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['objects']
   },
   {
     id: 'describe',
@@ -3205,7 +3404,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French décrire', 'Spanish describir', 'Italian descrivere']
     },
     attestation: 'attested',
-    category: 'general'
+    category: 'general',
+    forms: ['describes', 'described', 'describing']
   },
   {
     id: 'introduce',
@@ -3218,7 +3418,8 @@ export const authentikWordEntries: WordEntry[] = [
       cognates: ['French introduire', 'Spanish introducir', 'Italian introdurre']
     },
     attestation: 'reconstructed',
-    category: 'general'
+    category: 'general',
+    forms: ['introduces', 'introduced', 'introducing']
   },
 ];
 

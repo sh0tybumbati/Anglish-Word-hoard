@@ -12,8 +12,8 @@ export interface WordEntry {
   category?: WordCategory;
   dateAdded?: string;
   notes?: string;
-  // Future: conjugations/inflections for stemmer matching (not displayed in UI)
-  // forms?: string[]; // e.g. ['uses', 'used', 'using', 'user'] for 'use'
+  /** All inflected/conjugated forms of this word — used by the Anglisher for root matching. Not displayed in UI. */
+  forms?: string[];
 }
 
 export interface EtymologyInfo {
