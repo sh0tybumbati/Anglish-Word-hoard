@@ -12,6 +12,8 @@ export interface WordEntry {
   category?: WordCategory;
   dateAdded?: string;
   notes?: string;
+  // Future: conjugations/inflections for stemmer matching (not displayed in UI)
+  // forms?: string[]; // e.g. ['uses', 'used', 'using', 'user'] for 'use'
 }
 
 export interface EtymologyInfo {

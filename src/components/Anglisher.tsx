@@ -75,6 +75,148 @@ interface Token {
 }
 
 // ---------------------------------------------------------------------------
+// Stemmer: tries suffix-stripping rules to find a wordbook/Germanic root.
+// Returns the matched root string, or null if no match found.
+// ---------------------------------------------------------------------------
+function findRoot(lower: string): { root: string; inWordbook: boolean } | null {
+  // Check exact first
+  if (WORDBOOK_MAP.has(lower)) return { root: lower, inWordbook: true };
+  if (NATIVE_GERMANIC.has(lower)) return { root: lower, inWordbook: false };
+
+  // Candidate stems to try, in priority order
+  const candidates: string[] = [];
+
+  // -ing stripping (running→run, making→make, using→use)
+  if (lower.endsWith('ing') && lower.length > 5) {
+    const base = lower.slice(0, -3);
+    candidates.push(base);          // walk+ing → walk
+    candidates.push(base + 'e');    // us+ing   → use
+    // doubled consonant: running → runn → run
+    if (base.length > 2 && base[base.length - 1] === base[base.length - 2]) {
+      candidates.push(base.slice(0, -1));
+    }
+  }
+
+  // -ed stripping
+  if (lower.endsWith('ed') && lower.length > 4) {
+    const base = lower.slice(0, -2);
+    candidates.push(base);          // walked → walk
+    candidates.push(base + 'e');    // used → use
+    if (base.length > 2 && base[base.length - 1] === base[base.length - 2]) {
+      candidates.push(base.slice(0, -1)); // planned → plan
+    }
+  }
+
+  // -ies → -y  (cities→city, families→family)
+  if (lower.endsWith('ies') && lower.length > 4) {
+    candidates.push(lower.slice(0, -3) + 'y');
+  }
+
+  // -ied → -y  (tried→try)
+  if (lower.endsWith('ied') && lower.length > 4) {
+    candidates.push(lower.slice(0, -3) + 'y');
+  }
+
+  // -es stripping (processes→process, churches→church)
+  if (lower.endsWith('es') && lower.length > 4) {
+    candidates.push(lower.slice(0, -2));
+    candidates.push(lower.slice(0, -1)); // takes→take (remove just s)
+  }
+
+  // -s stripping (runs→run, books→book)
+  if (lower.endsWith('s') && lower.length > 3 && !lower.endsWith('ss')) {
+    candidates.push(lower.slice(0, -1));
+  }
+
+  // -er stripping (runner→run, teacher→teach, bigger→big)
+  if (lower.endsWith('er') && lower.length > 4) {
+    const base = lower.slice(0, -2);
+    candidates.push(base);
+    candidates.push(base + 'e');
+    if (base.length > 2 && base[base.length - 1] === base[base.length - 2]) {
+      candidates.push(base.slice(0, -1));
+    }
+  }
+
+  // -est stripping (biggest→big, latest→late)
+  if (lower.endsWith('est') && lower.length > 5) {
+    const base = lower.slice(0, -3);
+    candidates.push(base);
+    candidates.push(base + 'e');
+    if (base.length > 2 && base[base.length - 1] === base[base.length - 2]) {
+      candidates.push(base.slice(0, -1));
+    }
+  }
+
+  // -ly stripping (quickly→quick, completely→complete)
+  if (lower.endsWith('ly') && lower.length > 4) {
+    candidates.push(lower.slice(0, -2));
+    candidates.push(lower.slice(0, -2) + 'e');
+  }
+
+  // -ness stripping (darkness→dark, completeness→complete)
+  if (lower.endsWith('ness') && lower.length > 6) {
+    candidates.push(lower.slice(0, -4));
+    candidates.push(lower.slice(0, -4) + 'e');
+  }
+
+  // -ful stripping (beautiful→beauty handled separately; powerful→power)
+  if (lower.endsWith('ful') && lower.length > 5) {
+    candidates.push(lower.slice(0, -3));
+  }
+
+  // -less stripping (powerless→power, hopeless→hope)
+  if (lower.endsWith('less') && lower.length > 6) {
+    candidates.push(lower.slice(0, -4));
+    candidates.push(lower.slice(0, -4) + 'e');
+  }
+
+  // -able / -ible (capable→? not useful; notable→note)
+  if (lower.endsWith('able') && lower.length > 6) {
+    candidates.push(lower.slice(0, -4));
+    candidates.push(lower.slice(0, -4) + 'e');
+  }
+  if (lower.endsWith('ible') && lower.length > 6) {
+    candidates.push(lower.slice(0, -4));
+  }
+
+  // -ment (government→govern, movement→move)
+  if (lower.endsWith('ment') && lower.length > 6) {
+    candidates.push(lower.slice(0, -4));
+    candidates.push(lower.slice(0, -4) + 'e');
+  }
+
+  // -tion / -sion (education→educate, production→produce)
+  if (lower.endsWith('tion') && lower.length > 6) {
+    candidates.push(lower.slice(0, -4));
+    candidates.push(lower.slice(0, -4) + 'e');
+    candidates.push(lower.slice(0, -3)); // nation → nate? skip; but action → act
+  }
+  if (lower.endsWith('sion') && lower.length > 6) {
+    candidates.push(lower.slice(0, -4));
+    candidates.push(lower.slice(0, -4) + 'e');
+  }
+
+  // -ity (activity→active, university→universe)
+  if (lower.endsWith('ity') && lower.length > 5) {
+    candidates.push(lower.slice(0, -3));
+    candidates.push(lower.slice(0, -3) + 'e');
+  }
+
+  // Check candidates: wordbook first, then Germanic
+  for (const c of candidates) {
+    if (c.length < 2) continue;
+    if (WORDBOOK_MAP.has(c)) return { root: c, inWordbook: true };
+  }
+  for (const c of candidates) {
+    if (c.length < 2) continue;
+    if (NATIVE_GERMANIC.has(c)) return { root: c, inWordbook: false };
+  }
+
+  return null;
+}
+
+// ---------------------------------------------------------------------------
 // Tokenizer: splits text preserving punctuation as separate tokens
 // ---------------------------------------------------------------------------
 function tokenize(text: string): Token[] {
@@ -85,10 +227,11 @@ function tokenize(text: string): Token[] {
     // Is it a word?
     if (/^[A-Za-z]/.test(part)) {
       const lower = part.toLowerCase();
-      if (WORDBOOK_MAP.has(lower)) {
-        const alts = WORDBOOK_MAP.get(lower)!;
+      const match = findRoot(lower);
+      if (match?.inWordbook) {
+        const alts = WORDBOOK_MAP.get(match.root)!;
         return { id: id++, kind: 'word', text: part, status: 'red', alternatives: alts };
-      } else if (NATIVE_GERMANIC.has(lower)) {
+      } else if (match && !match.inWordbook) {
         return { id: id++, kind: 'word', text: part, status: 'green' };
       } else {
         return { id: id++, kind: 'word', text: part, status: 'gray' };
