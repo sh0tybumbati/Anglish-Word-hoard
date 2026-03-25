@@ -1746,7 +1746,1480 @@ export const authentikWordEntries: WordEntry[] = [
     },
     attestation: 'reconstructed',
     category: 'general'
-  }
+  },
+
+  // High-frequency words with Latin/French/Greek roots — new entries
+
+  {
+    id: 'people',
+    word: 'People',
+    meaning: 'Human beings in general; a group of persons',
+    kind: 'N',
+    anglish: ['Folk', 'Kith', 'Wightkin'],
+    etymology: {
+      reconstruction: 'Old French peuple, from Latin populus (people, nation)',
+      cognates: ['French peuple', 'Spanish pueblo', 'Italian popolo']
+    },
+    attestation: 'attested',
+    category: 'general',
+    notes: 'Old English had "folc" (folk) for the same concept'
+  },
+  {
+    id: 'language',
+    word: 'Language',
+    meaning: 'System of communication using words and grammar',
+    kind: 'N',
+    anglish: ['Tongue', 'Speech', 'Wordcraft'],
+    etymology: {
+      reconstruction: 'Old French language, from Latin lingua (tongue, language)',
+      cognates: ['French langue', 'Spanish lengua', 'Italian lingua']
+    },
+    attestation: 'attested',
+    category: 'general',
+    notes: 'Old English "tunge" (tongue) was used for language'
+  },
+  {
+    id: 'number',
+    word: 'Number',
+    meaning: 'Arithmetical value; a quantity',
+    kind: 'N',
+    anglish: ['Tally', 'Count', 'Reckoning'],
+    etymology: {
+      reconstruction: 'Old French nombre, from Latin numerus (number)',
+      cognates: ['French nombre', 'Spanish número', 'Italian numero']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'move',
+    word: 'Move',
+    meaning: 'To go from one place to another; to change position',
+    kind: 'V',
+    anglish: ['Stir', 'Wend', 'Shift'],
+    etymology: {
+      reconstruction: 'Anglo-French mover, from Latin movere (to move)',
+      cognates: ['French mouvoir', 'Spanish mover', 'Italian muovere']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'point',
+    word: 'Point',
+    meaning: 'A specific location or moment; the tip of something',
+    kind: 'N',
+    anglish: ['Spot', 'Tip', 'Neb'],
+    etymology: {
+      reconstruction: 'Old French point, from Latin punctum (prick, point), from pungere (to prick)',
+      cognates: ['French point', 'Spanish punto', 'Italian punto']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'place-v',
+    word: 'Place (verb)',
+    meaning: 'To put something in a particular position',
+    kind: 'V',
+    anglish: ['Set', 'Put', 'Lay'],
+    etymology: {
+      reconstruction: 'Old French placer, from place (open space), from Latin platea',
+      cognates: ['French placer', 'Spanish colocar', 'Italian collocare']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'use',
+    word: 'Use',
+    meaning: 'To employ something for a purpose',
+    kind: 'V',
+    anglish: ['Wield', 'Handle', 'Work with'],
+    etymology: {
+      reconstruction: 'Old French user, from Vulgar Latin usare, from Latin usus (use), from uti (to use)',
+      cognates: ['French user', 'Spanish usar', 'Italian usare']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'cause',
+    word: 'Cause',
+    meaning: 'Something that brings about an effect or result',
+    kind: 'N',
+    anglish: ['Root', 'Grounds', 'Sake'],
+    etymology: {
+      reconstruction: 'Old French cause, from Latin causa (reason, cause)',
+      cognates: ['French cause', 'Spanish causa', 'Italian causa']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'action',
+    word: 'Action',
+    meaning: 'The process of doing something',
+    kind: 'N',
+    anglish: ['Deed', 'Doing', 'Work'],
+    etymology: {
+      reconstruction: 'Old French action, from Latin actio (a doing), from agere (to do, act)',
+      cognates: ['French action', 'Spanish acción', 'Italian azione']
+    },
+    attestation: 'attested',
+    category: 'general',
+    notes: 'Old English "dæd" (deed) covers this meaning'
+  },
+  {
+    id: 'form',
+    word: 'Form',
+    meaning: 'The shape or structure of something',
+    kind: 'N',
+    anglish: ['Shape', 'Mold', 'Cast'],
+    etymology: {
+      reconstruction: 'Old French forme, from Latin forma (shape, mold)',
+      cognates: ['French forme', 'Spanish forma', 'Italian forma']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'matter',
+    word: 'Matter',
+    meaning: 'Physical substance; something of concern',
+    kind: 'N',
+    anglish: ['Stuff', 'Thing', 'Substance'],
+    etymology: {
+      reconstruction: 'Old French matere, from Latin materia (matter, material, wood)',
+      cognates: ['French matière', 'Spanish materia', 'Italian materia']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'case',
+    word: 'Case',
+    meaning: 'Instance or situation; a legal matter',
+    kind: 'N',
+    anglish: ['Instance', 'Happening', 'Affair'],
+    etymology: {
+      reconstruction: 'Old French cas, from Latin casus (fall, event), from cadere (to fall)',
+      cognates: ['French cas', 'Spanish caso', 'Italian caso']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'level',
+    word: 'Level',
+    meaning: 'A position on a scale; a flat surface',
+    kind: 'N',
+    anglish: ['Floor', 'Step', 'Flat'],
+    etymology: {
+      reconstruction: 'Old French livel, from Vulgar Latin libellum, from Latin libella (a small balance)',
+      cognates: ['French niveau', 'Spanish nivel', 'Italian livello']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'increase',
+    word: 'Increase',
+    meaning: 'To become or make larger in size or amount',
+    kind: 'V',
+    anglish: ['Grow', 'Rise', 'Swell'],
+    etymology: {
+      reconstruction: 'Old French encreistre, from Latin increscere (to grow into), from in- (in) + crescere (to grow)',
+      cognates: ['French accroître', 'Spanish aumentar', 'Italian aumentare']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'provide',
+    word: 'Provide',
+    meaning: 'To supply or make available',
+    kind: 'V',
+    anglish: ['Give', 'Yield', 'Furnish'],
+    etymology: {
+      reconstruction: 'Latin providere (to foresee, provide), from pro- (before) + videre (to see)',
+      cognates: ['French pourvoir', 'Spanish proveer', 'Italian provvedere']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'environment',
+    word: 'Environment',
+    meaning: 'The surroundings in which something lives',
+    kind: 'N',
+    anglish: ['Surroundings', 'Outworld', 'Garth'],
+    etymology: {
+      reconstruction: 'Old French environ (around), from en (in) + viron (circle, circuit)',
+      cognates: ['French environnement', 'Spanish ambiente', 'Italian ambiente']
+    },
+    attestation: 'neologism',
+    category: 'nature'
+  },
+  {
+    id: 'government',
+    word: 'Government',
+    meaning: 'The system by which a state is governed',
+    kind: 'N',
+    anglish: ['Rule', 'Ruleship', 'Stewardship'],
+    etymology: {
+      reconstruction: 'Old French governement, from Latin gubernare (to govern), from Greek kybernan (to steer)',
+      cognates: ['French gouvernement', 'Spanish gobierno', 'Italian governo']
+    },
+    attestation: 'attested',
+    category: 'social'
+  },
+  {
+    id: 'information',
+    word: 'Information',
+    meaning: 'Facts or knowledge about something',
+    kind: 'N',
+    anglish: ['Tidings', 'Lore', 'Wording'],
+    etymology: {
+      reconstruction: 'Old French information, from Latin informatio (concept, idea), from informare (to form, instruct)',
+      cognates: ['French information', 'Spanish información', 'Italian informazione']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'large',
+    word: 'Large',
+    meaning: 'Of great size; big',
+    kind: 'AJ',
+    anglish: ['Big', 'Great', 'Broad'],
+    etymology: {
+      reconstruction: 'Old French large (wide, broad), from Latin larga (feminine of largus, ample)',
+      cognates: ['French large', 'Spanish largo', 'Italian largo']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'special',
+    word: 'Special',
+    meaning: 'Distinguished from what is ordinary',
+    kind: 'AJ',
+    anglish: ['Wyrd', 'Chosen', 'Hallmark'],
+    etymology: {
+      reconstruction: 'Old French especial, from Latin specialis (particular), from species (kind, sort)',
+      cognates: ['French spécial', 'Spanish especial', 'Italian speciale']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'public',
+    word: 'Public',
+    meaning: 'Relating to or done by all the people',
+    kind: 'AJ',
+    anglish: ['Folkly', 'Open', 'Common'],
+    etymology: {
+      reconstruction: 'Old French public, from Latin publicus (of the people), from populus (people)',
+      cognates: ['French public', 'Spanish público', 'Italian pubblico']
+    },
+    attestation: 'reconstructed',
+    category: 'social'
+  },
+  {
+    id: 'private',
+    word: 'Private',
+    meaning: 'Not open to the public; personal',
+    kind: 'AJ',
+    anglish: ['Own', 'Closeted', 'Hid'],
+    etymology: {
+      reconstruction: 'Latin privatus (apart from public life), from privare (to deprive), from privus (one\'s own)',
+      cognates: ['French privé', 'Spanish privado', 'Italian privato']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'real',
+    word: 'Real',
+    meaning: 'Actually existing or happening',
+    kind: 'AJ',
+    anglish: ['True', 'Sooth', 'Steadfast'],
+    etymology: {
+      reconstruction: 'Old French reel, from Late Latin realis (actual), from Latin res (thing)',
+      cognates: ['French réel', 'Spanish real', 'Italian reale']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'situation',
+    word: 'Situation',
+    meaning: 'A set of circumstances at a particular time',
+    kind: 'N',
+    anglish: ['Plight', 'Standing', 'State'],
+    etymology: {
+      reconstruction: 'French situation, from Late Latin situationem, from situare (to place), from situs (position)',
+      cognates: ['French situation', 'Spanish situación', 'Italian situazione']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'area',
+    word: 'Area',
+    meaning: 'A region or part of a place',
+    kind: 'N',
+    anglish: ['Field', 'Stretch', 'Ground'],
+    etymology: {
+      reconstruction: 'Latin area (open space, threshing floor)',
+      cognates: ['French aire', 'Spanish área', 'Italian area']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'family',
+    word: 'Family',
+    meaning: 'A group of related people',
+    kind: 'N',
+    anglish: ['Kin', 'Kindred', 'Homefolk'],
+    etymology: {
+      reconstruction: 'Latin familia (household, family), from famulus (servant)',
+      cognates: ['French famille', 'Spanish familia', 'Italian famiglia']
+    },
+    attestation: 'attested',
+    category: 'social',
+    notes: 'Old English "cynn" (kin, family) is the direct Germanic parallel'
+  },
+  {
+    id: 'body',
+    word: 'Body',
+    meaning: 'The physical structure of a person or animal',
+    kind: 'N',
+    anglish: ['Already Anglish!'],
+    etymology: {
+      oldEnglish: 'bodig',
+      protoGermanic: '*budagą',
+      cognates: ['German Körper', 'Dutch lichaam']
+    },
+    attestation: 'attested',
+    category: 'authentic'
+  },
+  {
+    id: 'face',
+    word: 'Face',
+    meaning: 'The front of the head; a surface',
+    kind: 'N',
+    anglish: ['Mug', 'Visage', 'Andwlita'],
+    etymology: {
+      reconstruction: 'Old French face, from Vulgar Latin facia, from Latin facies (form, shape, face)',
+      cognates: ['French face', 'Spanish faz', 'Italian faccia']
+    },
+    attestation: 'attested',
+    category: 'general',
+    notes: 'Old English "andwlita" (face) and "ansyn" (face, appearance) are the authentic forms'
+  },
+  {
+    id: 'child',
+    word: 'Child',
+    meaning: 'A young human being',
+    kind: 'N',
+    anglish: ['Already Anglish!'],
+    etymology: {
+      oldEnglish: 'cild',
+      protoGermanic: '*kelþaz',
+      cognates: ['German Kind', 'Dutch kind']
+    },
+    attestation: 'attested',
+    category: 'authentic'
+  },
+  {
+    id: 'city',
+    word: 'City',
+    meaning: 'Large and important town',
+    kind: 'N',
+    anglish: ['Burgh', 'Burgstead', 'Greattown'],
+    etymology: {
+      reconstruction: 'Old French cite, from Latin civitas (citizenship, city), from civis (citizen)',
+      cognates: ['French cité', 'Spanish ciudad', 'Italian città']
+    },
+    attestation: 'attested',
+    category: 'general',
+    notes: 'Old English "burg/burh" was used for fortified towns'
+  },
+  {
+    id: 'group',
+    word: 'Group',
+    meaning: 'A number of people or things gathered together',
+    kind: 'N',
+    anglish: ['Band', 'Cluster', 'Gang'],
+    etymology: {
+      reconstruction: 'French groupe, from Italian gruppo (bunch, cluster), from Germanic *kruppaz (round mass)',
+      cognates: ['French groupe', 'Spanish grupo', 'Italian gruppo']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'order',
+    word: 'Order',
+    meaning: 'Arrangement; a command; a sequence',
+    kind: 'N',
+    anglish: ['Array', 'Bode', 'Row'],
+    etymology: {
+      reconstruction: 'Old French ordre, from Latin ordo (row, rank, order)',
+      cognates: ['French ordre', 'Spanish orden', 'Italian ordine']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'age',
+    word: 'Age',
+    meaning: 'Length of time something has existed; a historical period',
+    kind: 'N',
+    anglish: ['Eld', 'Tide', 'Yore'],
+    etymology: {
+      reconstruction: 'Old French aage, from Latin aetatem (accusative of aetas, age, time of life)',
+      cognates: ['French âge', 'Spanish edad', 'Italian età']
+    },
+    attestation: 'attested',
+    category: 'general',
+    notes: 'Old English "ieldu/yldo" (age, old age) and "eald" (old) are the authentic roots'
+  },
+  {
+    id: 'member',
+    word: 'Member',
+    meaning: 'A person belonging to a group or organization',
+    kind: 'N',
+    anglish: ['Fellow', 'Sharer', 'Partaker'],
+    etymology: {
+      reconstruction: 'Old French membre, from Latin membrum (limb, member)',
+      cognates: ['French membre', 'Spanish miembro', 'Italian membro']
+    },
+    attestation: 'attested',
+    category: 'social'
+  },
+  {
+    id: 'service',
+    word: 'Service',
+    meaning: 'Work done for others; a system providing public needs',
+    kind: 'N',
+    anglish: ['Help', 'Thane-work', 'Bondwork'],
+    etymology: {
+      reconstruction: 'Old French service, from Latin servitium (servitude), from servus (slave, servant)',
+      cognates: ['French service', 'Spanish servicio', 'Italian servizio']
+    },
+    attestation: 'reconstructed',
+    category: 'professional'
+  },
+  {
+    id: 'office',
+    word: 'Office',
+    meaning: 'A room for professional work; a position of authority',
+    kind: 'N',
+    anglish: ['Workroom', 'Deskroom', 'High-seat'],
+    etymology: {
+      reconstruction: 'Old French office, from Latin officium (duty, service), from opus (work) + facere (to do)',
+      cognates: ['French bureau', 'Spanish oficina', 'Italian ufficio']
+    },
+    attestation: 'neologism',
+    category: 'professional'
+  },
+  {
+    id: 'social',
+    word: 'Social',
+    meaning: 'Relating to society or human interaction',
+    kind: 'AJ',
+    anglish: ['Fellowly', 'Folksome', 'Togetherly'],
+    etymology: {
+      reconstruction: 'Latin socialis (of companionship), from socius (companion, ally)',
+      cognates: ['French social', 'Spanish social', 'Italian sociale']
+    },
+    attestation: 'neologism',
+    category: 'social'
+  },
+  {
+    id: 'natural',
+    word: 'Natural',
+    meaning: 'Existing in or derived from nature',
+    kind: 'AJ',
+    anglish: ['Earthy', 'Kindly', 'Wildborn'],
+    etymology: {
+      reconstruction: 'Old French naturel, from Latin naturalis (by birth, natural), from natura (nature)',
+      cognates: ['French naturel', 'Spanish natural', 'Italian naturale']
+    },
+    attestation: 'reconstructed',
+    category: 'nature'
+  },
+  {
+    id: 'condition',
+    word: 'Condition',
+    meaning: 'State of something; a requirement',
+    kind: 'N',
+    anglish: ['State', 'Plight', 'Standing'],
+    etymology: {
+      reconstruction: 'Old French condicion, from Latin conditionem (agreement, stipulation), from condicere (to speak with)',
+      cognates: ['French condition', 'Spanish condición', 'Italian condizione']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'process',
+    word: 'Process',
+    meaning: 'A series of actions to achieve an end',
+    kind: 'N',
+    anglish: ['Course', 'Going', 'Working'],
+    etymology: {
+      reconstruction: 'Old French proces, from Latin processus (a going forward), from procedere (to go forward)',
+      cognates: ['French processus', 'Spanish proceso', 'Italian processo']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'study',
+    word: 'Study',
+    meaning: 'To learn by reading and research',
+    kind: 'V',
+    anglish: ['Learn', 'Read', 'Delve'],
+    etymology: {
+      reconstruction: 'Old French estudier, from Latin studere (to be diligent, study)',
+      cognates: ['French étudier', 'Spanish estudiar', 'Italian studiare']
+    },
+    attestation: 'attested',
+    category: 'academic'
+  },
+  {
+    id: 'complete',
+    word: 'Complete',
+    meaning: 'Having all parts; finished entirely',
+    kind: 'AJ',
+    anglish: ['Whole', 'Full', 'Done'],
+    etymology: {
+      reconstruction: 'Latin completus (filled up, complete), past participle of complere (to fill up)',
+      cognates: ['French complet', 'Spanish completo', 'Italian completo']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'achieve',
+    word: 'Achieve',
+    meaning: 'To reach a desired goal by effort',
+    kind: 'V',
+    anglish: ['Win', 'Reach', 'Bring off'],
+    etymology: {
+      reconstruction: 'Old French achever (to bring to a head), from a chief (to a head), from Latin caput (head)',
+      cognates: ['French achever', 'Spanish lograr', 'Italian raggiungere']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'property',
+    word: 'Property',
+    meaning: 'A thing or things owned; land and buildings',
+    kind: 'N',
+    anglish: ['Goods', 'Belongings', 'Holdings'],
+    etymology: {
+      reconstruction: 'Old French propriete, from Latin proprietas (ownership), from proprius (one\'s own)',
+      cognates: ['French propriété', 'Spanish propiedad', 'Italian proprietà']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'relate',
+    word: 'Relate',
+    meaning: 'To make a connection; to tell a story',
+    kind: 'V',
+    anglish: ['Link', 'Connect', 'Tell'],
+    etymology: {
+      reconstruction: 'Latin relatus (past participle of referre), from re- (back) + ferre (to carry)',
+      cognates: ['French relater', 'Spanish relatar', 'Italian relazionare']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'reduce',
+    word: 'Reduce',
+    meaning: 'To make smaller in amount or size',
+    kind: 'V',
+    anglish: ['Shrink', 'Lessen', 'Lower'],
+    etymology: {
+      reconstruction: 'Latin reducere (to bring back), from re- (back) + ducere (to lead)',
+      cognates: ['French réduire', 'Spanish reducir', 'Italian ridurre']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'lead',
+    word: 'Lead',
+    meaning: 'To guide or direct; to be in charge',
+    kind: 'V',
+    anglish: ['Already Anglish!'],
+    etymology: {
+      oldEnglish: 'lǣdan',
+      protoGermanic: '*laidijaną',
+      cognates: ['German leiten', 'Dutch leiden']
+    },
+    attestation: 'attested',
+    category: 'authentic'
+  },
+  {
+    id: 'opportunity',
+    word: 'Opportunity',
+    meaning: 'A set of circumstances making something possible',
+    kind: 'N',
+    anglish: ['Opening', 'Chance', 'Windfall'],
+    etymology: {
+      reconstruction: 'Latin opportunitas, from opportunus (convenient, fit), from ob- (before) + portus (harbor)',
+      cognates: ['French opportunité', 'Spanish oportunidad', 'Italian opportunità']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'value',
+    word: 'Value',
+    meaning: 'Worth or importance; the price of something',
+    kind: 'N',
+    anglish: ['Worth', 'Weight', 'Dearness'],
+    etymology: {
+      reconstruction: 'Old French value, from valoir (to be worth), from Latin valere (to be strong, be worth)',
+      cognates: ['French valeur', 'Spanish valor', 'Italian valore']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'culture',
+    word: 'Culture',
+    meaning: 'The customs and arts of a society',
+    kind: 'N',
+    anglish: ['Folkways', 'Heritage', 'Lore'],
+    etymology: {
+      reconstruction: 'French culture, from Latin cultura (tilling, cultivation), from colere (to till)',
+      cognates: ['French culture', 'Spanish cultura', 'Italian cultura']
+    },
+    attestation: 'neologism',
+    category: 'social'
+  },
+  {
+    id: 'message',
+    word: 'Message',
+    meaning: 'A communication sent from one person to another',
+    kind: 'N',
+    anglish: ['Word', 'Errand', 'Tidings'],
+    etymology: {
+      reconstruction: 'Old French message, from Medieval Latin missaticum (mission), from Latin missus (sent)',
+      cognates: ['French message', 'Spanish mensaje', 'Italian messaggio']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'nature',
+    word: 'Nature',
+    meaning: 'The physical world; innate character',
+    kind: 'N',
+    anglish: ['Worldkind', 'Kind', 'Wilding'],
+    etymology: {
+      reconstruction: 'Old French nature, from Latin natura (birth, nature), from nasci (to be born)',
+      cognates: ['French nature', 'Spanish naturaleza', 'Italian natura']
+    },
+    attestation: 'attested',
+    category: 'nature'
+  },
+  {
+    id: 'clear',
+    word: 'Clear',
+    meaning: 'Easy to understand; free from obstruction',
+    kind: 'AJ',
+    anglish: ['Bright', 'Open', 'Plain'],
+    etymology: {
+      reconstruction: 'Old French cler, from Latin clarus (clear, bright)',
+      cognates: ['French clair', 'Spanish claro', 'Italian chiaro']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'period',
+    word: 'Period',
+    meaning: 'A length of time; a full stop in writing',
+    kind: 'N',
+    anglish: ['Span', 'While', 'Tide'],
+    etymology: {
+      reconstruction: 'Old French periode, from Late Latin periodus, from Greek periodos (going around), from peri- (around) + hodos (way)',
+      cognates: ['French période', 'Spanish período', 'Italian periodo']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'community',
+    word: 'Community',
+    meaning: 'A group of people living in the same place',
+    kind: 'N',
+    anglish: ['Neighborhood', 'Fellowship', 'Folkstead'],
+    etymology: {
+      reconstruction: 'Old French comunete, from Latin communitas (community), from communis (common, shared)',
+      cognates: ['French communauté', 'Spanish comunidad', 'Italian comunità']
+    },
+    attestation: 'neologism',
+    category: 'social'
+  },
+  {
+    id: 'individual',
+    word: 'Individual',
+    meaning: 'A single person considered separately',
+    kind: 'N',
+    anglish: ['Single', 'Ownsome', 'One'],
+    etymology: {
+      reconstruction: 'Medieval Latin individualis (inseparable), from Latin individuus (undivided), from in- (not) + dividere (to divide)',
+      cognates: ['French individu', 'Spanish individuo', 'Italian individuo']
+    },
+    attestation: 'neologism',
+    category: 'general'
+  },
+  {
+    id: 'evidence',
+    word: 'Evidence',
+    meaning: 'Available facts showing whether something is true',
+    kind: 'N',
+    anglish: ['Proof', 'Token', 'Showing'],
+    etymology: {
+      reconstruction: 'Old French evidence, from Latin evidentia (proof), from evidens (obvious), from e- (out) + videre (to see)',
+      cognates: ['French preuve', 'Spanish evidencia', 'Italian evidenza']
+    },
+    attestation: 'reconstructed',
+    category: 'academic'
+  },
+  {
+    id: 'report',
+    word: 'Report',
+    meaning: 'An account of something observed or investigated',
+    kind: 'N',
+    anglish: ['Account', 'Telling', 'Witness'],
+    etymology: {
+      reconstruction: 'Old French reporter (to carry back), from Latin reportare, from re- (back) + portare (to carry)',
+      cognates: ['French rapport', 'Spanish informe', 'Italian rapporto']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'apply',
+    word: 'Apply',
+    meaning: 'To put to use; to make a formal request',
+    kind: 'V',
+    anglish: ['Put to use', 'Lay on', 'Seek'],
+    etymology: {
+      reconstruction: 'Old French aplier, from Latin applicare (to attach), from ad- (to) + plicare (to fold)',
+      cognates: ['French appliquer', 'Spanish aplicar', 'Italian applicare']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'support',
+    word: 'Support',
+    meaning: 'To hold up; to help or back someone',
+    kind: 'V',
+    anglish: ['Hold up', 'Back', 'Uphold'],
+    etymology: {
+      reconstruction: 'Old French supporter, from Latin supportare (to carry), from sub- (up from below) + portare (to carry)',
+      cognates: ['French soutenir', 'Spanish apoyar', 'Italian sostenere']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'involve',
+    word: 'Involve',
+    meaning: 'To include or affect; to include as a necessary part',
+    kind: 'V',
+    anglish: ['Entangle', 'Draw in', 'Take in'],
+    etymology: {
+      reconstruction: 'Latin involvere (to roll into, envelop), from in- (into) + volvere (to roll)',
+      cognates: ['French impliquer', 'Spanish involucrar', 'Italian coinvolgere']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'control',
+    word: 'Control',
+    meaning: 'To have power over; to regulate',
+    kind: 'V',
+    anglish: ['Steer', 'Wield', 'Hold'],
+    etymology: {
+      reconstruction: 'Old French controler (to check accounts), from contre (counter) + rôle (roll, account)',
+      cognates: ['French contrôler', 'Spanish controlar', 'Italian controllare']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'accept',
+    word: 'Accept',
+    meaning: 'To take or receive willingly',
+    kind: 'V',
+    anglish: ['Take', 'Welcome', 'Agree to'],
+    etymology: {
+      reconstruction: 'Old French accepter, from Latin acceptare (to receive, take), from accipere (to take to)',
+      cognates: ['French accepter', 'Spanish aceptar', 'Italian accettare']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'join',
+    word: 'Join',
+    meaning: 'To come together; to become a member',
+    kind: 'V',
+    anglish: ['Link', 'Knit', 'Meet'],
+    etymology: {
+      reconstruction: 'Old French joindre, from Latin jungere (to yoke, join)',
+      cognates: ['French joindre', 'Spanish juntar', 'Italian unire']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'force',
+    word: 'Force',
+    meaning: 'Physical strength or power; to compel',
+    kind: 'N',
+    anglish: ['Might', 'Drive', 'Strength'],
+    etymology: {
+      reconstruction: 'Old French force, from Vulgar Latin fortia (strength), from Latin fortis (strong)',
+      cognates: ['French force', 'Spanish fuerza', 'Italian forza']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'attention',
+    word: 'Attention',
+    meaning: 'Focusing the mind on something',
+    kind: 'N',
+    anglish: ['Heed', 'Mind', 'Watch'],
+    etymology: {
+      reconstruction: 'Latin attentio, from attendere (to stretch toward, pay heed to), from ad- (to) + tendere (to stretch)',
+      cognates: ['French attention', 'Spanish atención', 'Italian attenzione']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'identify',
+    word: 'Identify',
+    meaning: 'To recognize or name something',
+    kind: 'V',
+    anglish: ['Name', 'Mark', 'Know out'],
+    etymology: {
+      reconstruction: 'Medieval Latin identificare (to make the same), from Latin idem (same) + facere (to make)',
+      cognates: ['French identifier', 'Spanish identificar', 'Italian identificare']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'movement',
+    word: 'Movement',
+    meaning: 'The act of moving; a group working toward a goal',
+    kind: 'N',
+    anglish: ['Stirring', 'Wending', 'Drive'],
+    etymology: {
+      reconstruction: 'Old French movement, from mouvement, from mouvoir (to move), from Latin movere',
+      cognates: ['French mouvement', 'Spanish movimiento', 'Italian movimento']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'center',
+    word: 'Center',
+    meaning: 'The middle point of something',
+    kind: 'N',
+    anglish: ['Middle', 'Heart', 'Hub'],
+    etymology: {
+      reconstruction: 'Old French centre, from Latin centrum, from Greek kentron (center, sharp point), from kentein (to prick)',
+      cognates: ['French centre', 'Spanish centro', 'Italian centro']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'project',
+    word: 'Project',
+    meaning: 'A planned undertaking or scheme',
+    kind: 'N',
+    anglish: ['Scheme', 'Undertaking', 'Forethrow'],
+    etymology: {
+      reconstruction: 'Latin projectum (thrown forward), from projicere (to throw forth), from pro- (forward) + jacere (to throw)',
+      cognates: ['French projet', 'Spanish proyecto', 'Italian progetto']
+    },
+    attestation: 'neologism',
+    category: 'professional'
+  },
+  {
+    id: 'protect',
+    word: 'Protect',
+    meaning: 'To keep safe from harm',
+    kind: 'V',
+    anglish: ['Shield', 'Guard', 'Warden'],
+    etymology: {
+      reconstruction: 'Latin protectus (past participle of protegere), from pro- (in front) + tegere (to cover)',
+      cognates: ['French protéger', 'Spanish proteger', 'Italian proteggere']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'different',
+    word: 'Different',
+    meaning: 'Not the same as another',
+    kind: 'AJ',
+    anglish: ['Unlike', 'Other', 'Unalike'],
+    etymology: {
+      reconstruction: 'Old French different, from Latin differentem, from differre (to differ), from dis- (apart) + ferre (to carry)',
+      cognates: ['French différent', 'Spanish diferente', 'Italian differente']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'similar',
+    word: 'Similar',
+    meaning: 'Resembling but not identical',
+    kind: 'AJ',
+    anglish: ['Like', 'Alike', 'Kin'],
+    etymology: {
+      reconstruction: 'French similaire, from Latin similis (like, resembling)',
+      cognates: ['French similaire', 'Spanish similar', 'Italian simile']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'major',
+    word: 'Major',
+    meaning: 'Greater in importance or size',
+    kind: 'AJ',
+    anglish: ['Greater', 'Main', 'Chief'],
+    etymology: {
+      reconstruction: 'Latin major (greater), comparative of magnus (great)',
+      cognates: ['French majeur', 'Spanish mayor', 'Italian maggiore']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'minor',
+    word: 'Minor',
+    meaning: 'Lesser in importance or size',
+    kind: 'AJ',
+    anglish: ['Lesser', 'Small', 'Trifling'],
+    etymology: {
+      reconstruction: 'Latin minor (lesser), comparative of parvus (small)',
+      cognates: ['French mineur', 'Spanish menor', 'Italian minore']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'activity',
+    word: 'Activity',
+    meaning: 'The condition of being active; a thing done',
+    kind: 'N',
+    anglish: ['Doing', 'Bustle', 'Goings-on'],
+    etymology: {
+      reconstruction: 'Medieval Latin activitas, from Latin activus (active), from agere (to do, act)',
+      cognates: ['French activité', 'Spanish actividad', 'Italian attività']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'structure',
+    word: 'Structure',
+    meaning: 'The arrangement of parts; a building',
+    kind: 'N',
+    anglish: ['Framework', 'Build', 'Layout'],
+    etymology: {
+      reconstruction: 'Latin structura (structure), from struere (to build, arrange)',
+      cognates: ['French structure', 'Spanish estructura', 'Italian struttura']
+    },
+    attestation: 'neologism',
+    category: 'technical'
+  },
+  {
+    id: 'respond',
+    word: 'Respond',
+    meaning: 'To say or do something in reply',
+    kind: 'V',
+    anglish: ['Answer', 'Reply', 'Speak back'],
+    etymology: {
+      reconstruction: 'Old French respondre, from Latin respondere (to answer), from re- (back) + spondere (to pledge)',
+      cognates: ['French répondre', 'Spanish responder', 'Italian rispondere']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'likely',
+    word: 'Likely',
+    meaning: 'Probable; having a good chance of happening',
+    kind: 'AJ',
+    anglish: ['Already Anglish!'],
+    etymology: {
+      oldEnglish: 'geliclic',
+      protoGermanic: '*galīkō',
+      cognates: ['German wahrscheinlich', 'Dutch waarschijnlijk']
+    },
+    attestation: 'attested',
+    category: 'authentic'
+  },
+  {
+    id: 'physical',
+    word: 'Physical',
+    meaning: 'Relating to the body or material world',
+    kind: 'AJ',
+    anglish: ['Bodily', 'Fleshly', 'Worldly'],
+    etymology: {
+      reconstruction: 'Medieval Latin physicalis (of nature), from Latin physica (natural science), from Greek physike (natural science)',
+      cognates: ['French physique', 'Spanish físico', 'Italian fisico']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'available',
+    word: 'Available',
+    meaning: 'Able to be used or obtained',
+    kind: 'AJ',
+    anglish: ['Handy', 'To hand', 'On offer'],
+    etymology: {
+      reconstruction: 'Old French availer (to be useful), from a- (to) + valoir (to be worth), from Latin valere (to be strong)',
+      cognates: ['French disponible', 'Spanish disponible', 'Italian disponibile']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'various',
+    word: 'Various',
+    meaning: 'Of many different kinds',
+    kind: 'AJ',
+    anglish: ['Sundry', 'Manifold', 'Divers'],
+    etymology: {
+      reconstruction: 'Latin varius (varied, diverse, different)',
+      cognates: ['French varié', 'Spanish varios', 'Italian vario']
+    },
+    attestation: 'attested',
+    category: 'general',
+    notes: '"Sundry" (Old English syndrig) is the best direct Germanic replacement'
+  },
+  {
+    id: 'perform',
+    word: 'Perform',
+    meaning: 'To carry out an action; to entertain an audience',
+    kind: 'V',
+    anglish: ['Do', 'Play', 'Put on'],
+    etymology: {
+      reconstruction: 'Anglo-French parfourmer, from Old French parfournir (to complete), from par- (through) + fournir (to furnish)',
+      cognates: ['French effectuer', 'Spanish realizar', 'Italian eseguire']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'establish',
+    word: 'Establish',
+    meaning: 'To set up on a permanent basis',
+    kind: 'V',
+    anglish: ['Found', 'Set up', 'Build'],
+    etymology: {
+      reconstruction: 'Old French establir (to settle, establish), from Latin stabilire (to make stable), from stabilis (stable)',
+      cognates: ['French établir', 'Spanish establecer', 'Italian stabilire']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'collect',
+    word: 'Collect',
+    meaning: 'To gather things together',
+    kind: 'V',
+    anglish: ['Gather', 'Heap', 'Rake in'],
+    etymology: {
+      reconstruction: 'Latin collectus (past participle of colligere), from col- (together) + legere (to gather)',
+      cognates: ['French collecter', 'Spanish coleccionar', 'Italian raccogliere']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'indicate',
+    word: 'Indicate',
+    meaning: 'To point out or show',
+    kind: 'V',
+    anglish: ['Point to', 'Show', 'Mark'],
+    etymology: {
+      reconstruction: 'Latin indicare (to point out), from in- (toward) + dicare (to proclaim)',
+      cognates: ['French indiquer', 'Spanish indicar', 'Italian indicare']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'suggest',
+    word: 'Suggest',
+    meaning: 'To put forward an idea for consideration',
+    kind: 'V',
+    anglish: ['Offer', 'Hint', 'Put forward'],
+    etymology: {
+      reconstruction: 'Latin suggerere (to carry from below, suggest), from sub- (under) + gerere (to carry)',
+      cognates: ['French suggérer', 'Spanish sugerir', 'Italian suggerire']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'prevent',
+    word: 'Prevent',
+    meaning: 'To keep something from happening',
+    kind: 'V',
+    anglish: ['Stop', 'Ward off', 'Hinder'],
+    etymology: {
+      reconstruction: 'Latin praevenire (to come before), from prae- (before) + venire (to come)',
+      cognates: ['French prévenir', 'Spanish prevenir', 'Italian prevenire']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'difference',
+    word: 'Difference',
+    meaning: 'A way in which things are not alike',
+    kind: 'N',
+    anglish: ['Unlike-ness', 'Gap', 'Otherness'],
+    etymology: {
+      reconstruction: 'Old French difference, from Latin differentia (diversity), from differre (to differ)',
+      cognates: ['French différence', 'Spanish diferencia', 'Italian differenza']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
+  {
+    id: 'usual',
+    word: 'Usual',
+    meaning: 'Happening or done most of the time',
+    kind: 'AJ',
+    anglish: ['Wonted', 'Common', 'Everyday'],
+    etymology: {
+      reconstruction: 'Old French usuel, from Late Latin usualis (ordinary), from Latin usus (use)',
+      cognates: ['French usuel', 'Spanish usual', 'Italian usuale']
+    },
+    attestation: 'attested',
+    category: 'general',
+    notes: 'Old English "gewunelic" (wonted, usual) is the direct parallel'
+  },
+  {
+    id: 'police',
+    word: 'Police',
+    meaning: 'Civil force responsible for law enforcement',
+    kind: 'N',
+    anglish: ['Lawkeepers', 'Sheriffband', 'Watchmen'],
+    etymology: {
+      reconstruction: 'French police, from Latin politia (civil administration), from Greek politeia (state, constitution), from polis (city)',
+      cognates: ['French police', 'Spanish policía', 'Italian polizia']
+    },
+    attestation: 'neologism',
+    category: 'social'
+  },
+  {
+    id: 'economy',
+    word: 'Economy',
+    meaning: 'The system of production and trade of a country',
+    kind: 'N',
+    anglish: ['Husbandry', 'Wealthcraft', 'Landsteering'],
+    etymology: {
+      reconstruction: 'Old French economie, from Latin oeconomia, from Greek oikonomia (household management), from oikos (house) + nomos (law)',
+      cognates: ['French économie', 'Spanish economía', 'Italian economia']
+    },
+    attestation: 'reconstructed',
+    category: 'professional'
+  },
+  {
+    id: 'patient',
+    word: 'Patient',
+    meaning: 'Able to wait calmly; a person receiving medical care',
+    kind: 'AJ',
+    anglish: ['Long-suffering', 'Steady', 'Forbearing'],
+    etymology: {
+      reconstruction: 'Old French pacient, from Latin patientem, from pati (to suffer)',
+      cognates: ['French patient', 'Spanish paciente', 'Italian paziente']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'correct',
+    word: 'Correct',
+    meaning: 'Free from error; right',
+    kind: 'AJ',
+    anglish: ['Right', 'True', 'Rightful'],
+    etymology: {
+      reconstruction: 'Latin correctus (past participle of corrigere), from cor- (together) + regere (to rule, guide)',
+      cognates: ['French correct', 'Spanish correcto', 'Italian corretto']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'original',
+    word: 'Original',
+    meaning: 'First or earliest; new and novel',
+    kind: 'AJ',
+    anglish: ['First', 'Firstborn', 'Fresh'],
+    etymology: {
+      reconstruction: 'Old French original, from Late Latin originalis (first), from Latin origo (origin), from oriri (to rise)',
+      cognates: ['French original', 'Spanish original', 'Italian originale']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'event',
+    word: 'Event',
+    meaning: 'Something that happens; an organized occasion',
+    kind: 'N',
+    anglish: ['Happening', 'Befall', 'Tide'],
+    etymology: {
+      reconstruction: 'Latin eventus (outcome), from evenire (to come out, happen), from e- (out) + venire (to come)',
+      cognates: ['French événement', 'Spanish evento', 'Italian evento']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'history',
+    word: 'History',
+    meaning: 'The study of past events; a record of the past',
+    kind: 'N',
+    anglish: ['Storylore', 'Wording-of-old', 'Eldlore'],
+    etymology: {
+      reconstruction: 'Latin historia (inquiry, narrative), from Greek historia (inquiry, account), from histor (learned, knowing)',
+      cognates: ['French histoire', 'Spanish historia', 'Italian storia']
+    },
+    attestation: 'neologism',
+    category: 'academic'
+  },
+  {
+    id: 'influence',
+    word: 'Influence',
+    meaning: 'The power to affect someone or something',
+    kind: 'N',
+    anglish: ['Sway', 'Leverage', 'Hold'],
+    etymology: {
+      reconstruction: 'Old French influence (emanation from the stars), from Medieval Latin influentia, from Latin influere (to flow into)',
+      cognates: ['French influence', 'Spanish influencia', 'Italian influenza']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'distance',
+    word: 'Distance',
+    meaning: 'The length of space between two points',
+    kind: 'N',
+    anglish: ['Farness', 'Gap', 'Stretch'],
+    etymology: {
+      reconstruction: 'Old French distance, from Latin distantia (difference, distance), from distare (to stand apart)',
+      cognates: ['French distance', 'Spanish distancia', 'Italian distanza']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'type',
+    word: 'Type',
+    meaning: 'A category of things sharing common characteristics',
+    kind: 'N',
+    anglish: ['Kind', 'Sort', 'Breed'],
+    etymology: {
+      reconstruction: 'Latin typus (figure, image), from Greek typos (blow, impression), from typtein (to strike)',
+      cognates: ['French type', 'Spanish tipo', 'Italian tipo']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'series',
+    word: 'Series',
+    meaning: 'A number of things of the same kind coming one after another',
+    kind: 'N',
+    anglish: ['String', 'Run', 'Row'],
+    etymology: {
+      reconstruction: 'Latin series (row, chain), from serere (to join)',
+      cognates: ['French série', 'Spanish serie', 'Italian serie']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'style',
+    word: 'Style',
+    meaning: 'A distinctive manner or way of doing something',
+    kind: 'N',
+    anglish: ['Way', 'Manner', 'Wone'],
+    etymology: {
+      reconstruction: 'Old French stile, from Latin stilus (pointed instrument for writing), later used for manner of writing',
+      cognates: ['French style', 'Spanish estilo', 'Italian stile']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'former',
+    word: 'Former',
+    meaning: 'From an earlier time; the first of two',
+    kind: 'AJ',
+    anglish: ['Earlier', 'Erst', 'Yore'],
+    etymology: {
+      reconstruction: 'Middle English former (comparative of forme, first), from Old English forma (first)',
+      oldEnglish: 'forma (first)',
+      cognates: ['German früher', 'Dutch vroeger']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'exist',
+    word: 'Exist',
+    meaning: 'To have actual being; to be real',
+    kind: 'V',
+    anglish: ['Be', 'Live', 'Stand'],
+    etymology: {
+      reconstruction: 'Latin existere (to stand out, come into being), from ex- (out) + sistere (to cause to stand)',
+      cognates: ['French exister', 'Spanish existir', 'Italian esistere']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'contain',
+    word: 'Contain',
+    meaning: 'To have inside; to hold within limits',
+    kind: 'V',
+    anglish: ['Hold', 'Have within', 'Keep in'],
+    etymology: {
+      reconstruction: 'Old French contenir, from Latin continere (to hold together), from con- (together) + tenere (to hold)',
+      cognates: ['French contenir', 'Spanish contener', 'Italian contenere']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'remain',
+    word: 'Remain',
+    meaning: 'To stay in the same place; to be left over',
+    kind: 'V',
+    anglish: ['Stay', 'Abide', 'Bide'],
+    etymology: {
+      reconstruction: 'Old French remaindre, from Latin remanere (to stay behind), from re- (back) + manere (to stay)',
+      cognates: ['French rester', 'Spanish permanecer', 'Italian rimanere']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'military',
+    word: 'Military',
+    meaning: 'Relating to armed forces or warfare',
+    kind: 'AJ',
+    anglish: ['Warlike', 'Foeship', 'Armsly'],
+    etymology: {
+      reconstruction: 'Latin militaris (of soldiers), from miles (soldier)',
+      cognates: ['French militaire', 'Spanish militar', 'Italian militare']
+    },
+    attestation: 'neologism',
+    category: 'military'
+  },
+  {
+    id: 'general',
+    word: 'General',
+    meaning: 'Affecting or relating to all or most things; a high-ranking officer',
+    kind: 'AJ',
+    anglish: ['Broad', 'Widespread', 'Overall'],
+    etymology: {
+      reconstruction: 'Old French general, from Latin generalis (of a kind or class), from genus (kind, race)',
+      cognates: ['French général', 'Spanish general', 'Italian generale']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'surface',
+    word: 'Surface',
+    meaning: 'The outside or top layer of something',
+    kind: 'N',
+    anglish: ['Outside', 'Upside', 'Outlay'],
+    etymology: {
+      reconstruction: 'French surface, from sur (above) + face (face), calqued from Latin superficies',
+      cognates: ['French surface', 'Spanish superficie', 'Italian superficie']
+    },
+    attestation: 'neologism',
+    category: 'general'
+  },
+  {
+    id: 'object',
+    word: 'Object',
+    meaning: 'A material thing; to express disagreement',
+    kind: 'N',
+    anglish: ['Thing', 'Item', 'Ware'],
+    etymology: {
+      reconstruction: 'Medieval Latin objectum (thing thrown before the mind), from Latin obicere (to throw before), from ob- (before) + jacere (to throw)',
+      cognates: ['French objet', 'Spanish objeto', 'Italian oggetto']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'describe',
+    word: 'Describe',
+    meaning: 'To give an account of something in words',
+    kind: 'V',
+    anglish: ['Tell of', 'Limn', 'Depict'],
+    etymology: {
+      reconstruction: 'Latin describere (to write down, sketch), from de- (down) + scribere (to write)',
+      cognates: ['French décrire', 'Spanish describir', 'Italian descrivere']
+    },
+    attestation: 'attested',
+    category: 'general'
+  },
+  {
+    id: 'introduce',
+    word: 'Introduce',
+    meaning: 'To present someone for the first time; to bring in something new',
+    kind: 'V',
+    anglish: ['Bring in', 'Foreshow', 'Make known'],
+    etymology: {
+      reconstruction: 'Latin introducere (to lead in), from intro- (inward) + ducere (to lead)',
+      cognates: ['French introduire', 'Spanish introducir', 'Italian introdurre']
+    },
+    attestation: 'reconstructed',
+    category: 'general'
+  },
 ];
 
 export const wordKindLabels = {
